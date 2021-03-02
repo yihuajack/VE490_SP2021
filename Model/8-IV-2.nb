@@ -1,0 +1,899 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     36407,        891]
+NotebookOptionsPosition[     34652,        851]
+NotebookOutlinePosition[     35104,        869]
+CellTagsIndexPosition[     35061,        866]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["v", "L0"], "=", 
+     FractionBox["\[Epsilon]", 
+      RowBox[{"2", "\[Eta]", 
+       SqrtBox["k"], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "+", "k"}], ")"}], "2"]}]]}], ";"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Omega]", "0"], "=", 
+     FractionBox[
+      RowBox[{"2", 
+       SubscriptBox["\[Lambda]", "D"], "*", "\[Sigma]"}], 
+      RowBox[{"\[Epsilon]", "*", "Pi"}]]}], ";"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   SubscriptBox["v", "DL"], "=", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      SubscriptBox["v", "L0"], "x"]}], "*", 
+    SubsuperscriptBox["\[CapitalPsi]", "0", "2"], "*", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"\[Omega]", "*", "x"}], 
+        SubscriptBox["\[Omega]", "0"]], ")"}], "2"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox[
+           RowBox[{"\[Omega]", "*", "x"}], 
+           SubscriptBox["\[Omega]", "0"]], ")"}], "2"]}], ")"}], 
+      "2"]]}]}]}]], "Input",
+ CellChangeTimes->{{3.823247248796114*^9, 3.8232472506215997`*^9}, {
+   3.8232473131996565`*^9, 3.8232473783613796`*^9}, {3.8232475884466133`*^9, 
+   3.823247610116333*^9}, {3.8232476572276974`*^9, 3.8232476762140107`*^9}, {
+   3.8232477615427284`*^9, 3.8232478039309726`*^9}, {3.8232538956847095`*^9, 
+   3.8232540338575897`*^9}, 3.82325569023306*^9, {3.8232561279850655`*^9, 
+   3.8232561290806627`*^9}, 3.823256331490779*^9, 3.823257714568472*^9, {
+   3.8232910221479545`*^9, 3.8232910243687096`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"0177b94c-54a3-49b0-abab-1b6882ba639e"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"x", " ", 
+    SuperscriptBox["\[Omega]", "2"], " ", 
+    SubscriptBox["v", "L0"], " ", 
+    SubsuperscriptBox["\[CapitalPsi]", "0", "2"]}], 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["x", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], 
+        SubsuperscriptBox["\[Omega]", "0", "2"]]}], ")"}], "2"], " ", 
+    SubsuperscriptBox["\[Omega]", "0", "2"]}]]}]], "Output",
+ CellChangeTimes->{{3.8232540301373105`*^9, 3.8232540349307194`*^9}, {
+   3.823255693587158*^9, 3.823255705681738*^9}, 3.8232563337067533`*^9, 
+   3.823257727463048*^9, 3.8232910275012894`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"5abfc556-30ff-4246-a505-32d703b60844"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["v", "ave"], "=", 
+  FractionBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", 
+     SubscriptBox["x", "min"], 
+     SubscriptBox["x", "max"]], 
+    RowBox[{
+     SubscriptBox["v", "DL"], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], 
+   RowBox[{
+    SubscriptBox["x", "max"], "-", 
+    SubscriptBox["x", "min"]}]]}]], "Input",
+ CellChangeTimes->{{3.8232561337937145`*^9, 3.823256149798086*^9}, {
+  3.823256361062975*^9, 3.8232564240588555`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"14f65f07-04dc-45f4-8358-98337776d570"],
+
+Cell[BoxData[
+ TemplateBox[{
+   FractionBox[
+    RowBox[{"\[Epsilon]", " ", 
+      SuperscriptBox["\[Omega]", "2"], " ", 
+      SubsuperscriptBox["\[CapitalPsi]", "0", "2"], " ", 
+      SubsuperscriptBox["\[Omega]", "0", "2"], " ", 
+      RowBox[{"(", 
+        RowBox[{
+          RowBox[{"-", 
+            FractionBox["1", 
+             RowBox[{
+               RowBox[{"2", " ", 
+                 SuperscriptBox["\[Omega]", "4"], " ", 
+                 SubsuperscriptBox["x", "max", "2"]}], "+", 
+               RowBox[{"2", " ", 
+                 SuperscriptBox["\[Omega]", "2"], " ", 
+                 SubsuperscriptBox["\[Omega]", "0", "2"]}]}]]}], "+", 
+          FractionBox["1", 
+           RowBox[{
+             RowBox[{"2", " ", 
+               SuperscriptBox["\[Omega]", "4"], " ", 
+               SubsuperscriptBox["x", "min", "2"]}], "+", 
+             RowBox[{"2", " ", 
+               SuperscriptBox["\[Omega]", "2"], " ", 
+               SubsuperscriptBox["\[Omega]", "0", "2"]}]}]]}], ")"}]}], 
+    RowBox[{"2", " ", 
+      SqrtBox["k"], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+         RowBox[{"1", "+", "k"}], ")"}], "2"], " ", "\[Eta]", " ", 
+      RowBox[{"(", 
+        RowBox[{
+          SubscriptBox["x", "max"], "-", 
+          SubscriptBox["x", "min"]}], ")"}]}]], 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       StyleBox[
+        TagBox[
+         TooltipBox["\"condition\"", 
+          TagBox[
+           RowBox[{
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}], ">", 
+                   RowBox[{"1", "+", 
+                    RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}]}]}], "||", 
+                 RowBox[{
+                   RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}], "<", 
+                   RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}]}], "||", 
+                 RowBox[{
+                   RowBox[{
+                    RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}], "+", 
+                    RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}]}], "\[NotEqual]", 
+                   "0"}]}], ")"}], "&&", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   RowBox[{
+                    RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}], "+", 
+                    RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}]}], ">", "0"}], "||", 
+                 RowBox[{
+                   RowBox[{"1", "+", 
+                    RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}], "+", 
+                    RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}]}], "<", "0"}], "||", 
+                 RowBox[{
+                   RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}], "\[NotEqual]", 
+                   RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}]}]}], ")"}]}], 
+           Short[#, 7]& ]], Annotation[#, 
+          Short[
+           And[
+            Or[
+            Im[($CellContext`\[Omega] 
+                  Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+               Subscript[$CellContext`\[Omega], 0]] > 
+             1 + Re[(Subscript[$CellContext`x, $CellContext`max] - 
+                  Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`x, $CellContext`min]], 
+             Im[($CellContext`\[Omega] 
+                  Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+               Subscript[$CellContext`\[Omega], 0]] < 
+             Re[(Subscript[$CellContext`x, $CellContext`max] - 
+                 Subscript[$CellContext`x, $CellContext`min])^(-1) 
+               Subscript[$CellContext`x, $CellContext`min]], 
+             Im[(Subscript[$CellContext`x, $CellContext`max] - 
+                  Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`x, $CellContext`min]] + 
+              Re[($CellContext`\[Omega] 
+                   Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`\[Omega], 0]] != 0], 
+            Or[
+            Im[($CellContext`\[Omega] 
+                   Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`\[Omega], 0]] + 
+              Re[(Subscript[$CellContext`x, $CellContext`max] - 
+                  Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`x, $CellContext`min]] > 0, 
+             1 + Im[($CellContext`\[Omega] 
+                   Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`\[Omega], 0]] + 
+              Re[(Subscript[$CellContext`x, $CellContext`max] - 
+                  Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`x, $CellContext`min]] < 0, 
+             Im[(Subscript[$CellContext`x, $CellContext`max] - 
+                 Subscript[$CellContext`x, $CellContext`min])^(-1) 
+               Subscript[$CellContext`x, $CellContext`min]] != 
+             Re[($CellContext`\[Omega] 
+                  Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+               Subscript[$CellContext`\[Omega], 0]]]], 7], "Tooltip"]& ], 
+        "IconizedCustomName", StripOnInput -> False], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["And", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["6976", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]}, "IconizedObject"]], 
+    And[
+     Or[Im[($CellContext`\[Omega] 
+           Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+        Subscript[$CellContext`\[Omega], 0]] > 
+      1 + Re[(Subscript[$CellContext`x, $CellContext`max] - 
+           Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`x, $CellContext`min]], 
+      Im[($CellContext`\[Omega] 
+           Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+        Subscript[$CellContext`\[Omega], 0]] < 
+      Re[(Subscript[$CellContext`x, $CellContext`max] - 
+          Subscript[$CellContext`x, $CellContext`min])^(-1) 
+        Subscript[$CellContext`x, $CellContext`min]], 
+      Im[(Subscript[$CellContext`x, $CellContext`max] - 
+           Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`x, $CellContext`min]] + 
+       Re[($CellContext`\[Omega] 
+            Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`\[Omega], 0]] != 0], 
+     Or[Im[($CellContext`\[Omega] 
+            Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`\[Omega], 0]] + 
+       Re[(Subscript[$CellContext`x, $CellContext`max] - 
+           Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`x, $CellContext`min]] > 0, 
+      1 + Im[($CellContext`\[Omega] 
+            Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`\[Omega], 0]] + 
+       Re[(Subscript[$CellContext`x, $CellContext`max] - 
+           Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`x, $CellContext`min]] < 0, 
+      Im[(Subscript[$CellContext`x, $CellContext`max] - 
+          Subscript[$CellContext`x, $CellContext`min])^(-1) 
+        Subscript[$CellContext`x, $CellContext`min]] != 
+      Re[($CellContext`\[Omega] 
+           Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+        Subscript[$CellContext`\[Omega], 0]]]], SelectWithContents -> True, 
+    Selectable -> False]},
+  "ConditionalExpression"]], "Output",
+ CellChangeTimes->{3.823256557700426*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"8f92fbea-a894-430d-bf08-380d539acff1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["v", "ave"], "=", 
+  FractionBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", 
+     SubscriptBox["x", "min"], 
+     SubscriptBox["x", "max"]], 
+    RowBox[{
+     SubscriptBox["v", "DL"], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], 
+   RowBox[{
+    SubscriptBox["x", "max"], "-", 
+    SubscriptBox["x", "min"]}]]}]], "Input",
+ CellLabel->"In[2]:=",ExpressionUUID->"eea39443-09fd-4fde-b8bd-9200af925112"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"-", 
+     FractionBox[
+      RowBox[{
+        SuperscriptBox["\[Omega]", "2"], " ", 
+        SubscriptBox["v", "L0"], " ", 
+        SubsuperscriptBox["\[CapitalPsi]", "0", "2"], " ", 
+        SubsuperscriptBox["\[Omega]", "0", "2"], " ", 
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{"-", 
+              FractionBox["1", 
+               RowBox[{
+                 RowBox[{"2", " ", 
+                   SuperscriptBox["\[Omega]", "4"], " ", 
+                   SubsuperscriptBox["x", "max", "2"]}], "+", 
+                 RowBox[{"2", " ", 
+                   SuperscriptBox["\[Omega]", "2"], " ", 
+                   SubsuperscriptBox["\[Omega]", "0", "2"]}]}]]}], "+", 
+            FractionBox["1", 
+             RowBox[{
+               RowBox[{"2", " ", 
+                 SuperscriptBox["\[Omega]", "4"], " ", 
+                 SubsuperscriptBox["x", "min", "2"]}], "+", 
+               RowBox[{"2", " ", 
+                 SuperscriptBox["\[Omega]", "2"], " ", 
+                 SubsuperscriptBox["\[Omega]", "0", "2"]}]}]]}], ")"}]}], 
+      RowBox[{
+        SubscriptBox["x", "max"], "-", 
+        SubscriptBox["x", "min"]}]]}], 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       StyleBox[
+        TagBox[
+         TooltipBox["\"condition\"", 
+          TagBox[
+           RowBox[{
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}], ">", 
+                   RowBox[{"1", "+", 
+                    RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}]}]}], "||", 
+                 RowBox[{
+                   RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}], "<", 
+                   RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}]}], "||", 
+                 RowBox[{
+                   RowBox[{
+                    RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}], "+", 
+                    RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}]}], "\[NotEqual]", 
+                   "0"}]}], ")"}], "&&", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   RowBox[{
+                    RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}], "+", 
+                    RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}]}], ">", "0"}], "||", 
+                 RowBox[{
+                   RowBox[{"1", "+", 
+                    RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}], "+", 
+                    RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}]}], "<", "0"}], "||", 
+                 RowBox[{
+                   RowBox[{"Im", "[", 
+                    FractionBox[
+                    SubscriptBox["x", "min"], 
+                    RowBox[{
+                    SubscriptBox["x", "max"], "-", 
+                    SubscriptBox["x", "min"]}]], "]"}], "\[NotEqual]", 
+                   RowBox[{"Re", "[", 
+                    FractionBox[
+                    SubscriptBox["\[Omega]", "0"], 
+                    RowBox[{
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "max"]}], "-", 
+                    RowBox[{"\[Omega]", " ", 
+                    SubscriptBox["x", "min"]}]}]], "]"}]}]}], ")"}]}], 
+           Short[#, 7]& ]], Annotation[#, 
+          Short[
+           And[
+            Or[
+            Im[($CellContext`\[Omega] 
+                  Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+               Subscript[$CellContext`\[Omega], 0]] > 
+             1 + Re[(Subscript[$CellContext`x, $CellContext`max] - 
+                  Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`x, $CellContext`min]], 
+             Im[($CellContext`\[Omega] 
+                  Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+               Subscript[$CellContext`\[Omega], 0]] < 
+             Re[(Subscript[$CellContext`x, $CellContext`max] - 
+                 Subscript[$CellContext`x, $CellContext`min])^(-1) 
+               Subscript[$CellContext`x, $CellContext`min]], 
+             Im[(Subscript[$CellContext`x, $CellContext`max] - 
+                  Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`x, $CellContext`min]] + 
+              Re[($CellContext`\[Omega] 
+                   Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`\[Omega], 0]] != 0], 
+            Or[
+            Im[($CellContext`\[Omega] 
+                   Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`\[Omega], 0]] + 
+              Re[(Subscript[$CellContext`x, $CellContext`max] - 
+                  Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`x, $CellContext`min]] > 0, 
+             1 + Im[($CellContext`\[Omega] 
+                   Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`\[Omega], 0]] + 
+              Re[(Subscript[$CellContext`x, $CellContext`max] - 
+                  Subscript[$CellContext`x, $CellContext`min])^(-1) 
+                Subscript[$CellContext`x, $CellContext`min]] < 0, 
+             Im[(Subscript[$CellContext`x, $CellContext`max] - 
+                 Subscript[$CellContext`x, $CellContext`min])^(-1) 
+               Subscript[$CellContext`x, $CellContext`min]] != 
+             Re[($CellContext`\[Omega] 
+                  Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+               Subscript[$CellContext`\[Omega], 0]]]], 7], "Tooltip"]& ], 
+        "IconizedCustomName", StripOnInput -> False], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["And", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["6976", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]}, "IconizedObject"]], 
+    And[
+     Or[Im[($CellContext`\[Omega] 
+           Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+        Subscript[$CellContext`\[Omega], 0]] > 
+      1 + Re[(Subscript[$CellContext`x, $CellContext`max] - 
+           Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`x, $CellContext`min]], 
+      Im[($CellContext`\[Omega] 
+           Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+        Subscript[$CellContext`\[Omega], 0]] < 
+      Re[(Subscript[$CellContext`x, $CellContext`max] - 
+          Subscript[$CellContext`x, $CellContext`min])^(-1) 
+        Subscript[$CellContext`x, $CellContext`min]], 
+      Im[(Subscript[$CellContext`x, $CellContext`max] - 
+           Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`x, $CellContext`min]] + 
+       Re[($CellContext`\[Omega] 
+            Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`\[Omega], 0]] != 0], 
+     Or[Im[($CellContext`\[Omega] 
+            Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`\[Omega], 0]] + 
+       Re[(Subscript[$CellContext`x, $CellContext`max] - 
+           Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`x, $CellContext`min]] > 0, 
+      1 + Im[($CellContext`\[Omega] 
+            Subscript[$CellContext`x, $CellContext`max] - $CellContext`\
+\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`\[Omega], 0]] + 
+       Re[(Subscript[$CellContext`x, $CellContext`max] - 
+           Subscript[$CellContext`x, $CellContext`min])^(-1) 
+         Subscript[$CellContext`x, $CellContext`min]] < 0, 
+      Im[(Subscript[$CellContext`x, $CellContext`max] - 
+          Subscript[$CellContext`x, $CellContext`min])^(-1) 
+        Subscript[$CellContext`x, $CellContext`min]] != 
+      Re[($CellContext`\[Omega] 
+           Subscript[$CellContext`x, $CellContext`max] - \
+$CellContext`\[Omega] Subscript[$CellContext`x, $CellContext`min])^(-1) 
+        Subscript[$CellContext`\[Omega], 0]]]], SelectWithContents -> True, 
+    Selectable -> False]},
+  "ConditionalExpression"]], "Output",
+ CellChangeTimes->{3.8232577627855186`*^9, 3.823291049805477*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"8332c095-ce9f-4ac0-9b28-bddd369ea6b0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Refine", "[", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["v", "ave"], "=", 
+    FractionBox[
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", 
+       SubscriptBox["x", "min"], 
+       SubscriptBox["x", "max"]], 
+      RowBox[{
+       SubscriptBox["v", "DL"], 
+       RowBox[{"\[DifferentialD]", "x"}]}]}], 
+     RowBox[{
+      SubscriptBox["x", "max"], "-", 
+      SubscriptBox["x", "min"]}]]}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Element", "[", 
+      RowBox[{
+       SubscriptBox["\[Omega]", "0"], ",", "Reals"}], "]"}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{"\[Omega]", ",", "Reals"}], "]"}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{
+       SubscriptBox["x", "max"], ",", "Reals"}], "]"}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{
+       SubscriptBox["x", "min"], ",", "Reals"}], "]"}], ",", 
+     RowBox[{
+      SubscriptBox["x", "max"], ">", 
+      SubscriptBox["x", "min"]}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{"x", ",", "Reals"}], "]"}], ",", 
+     RowBox[{
+      SubscriptBox["\[Omega]", "0"], ">", "0"}], ",", 
+     RowBox[{"\[Omega]", ">", "0"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8232940737968698`*^9, 3.823294204036098*^9}, {
+  3.823294264128321*^9, 3.823294266275903*^9}, {3.8232943153546925`*^9, 
+  3.823294340356354*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"ff8cb8f5-7243-4858-8ae1-844ec0ecefff"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["\[Omega]", "2"], " ", 
+    SubscriptBox["v", "L0"], " ", 
+    SubsuperscriptBox["\[CapitalPsi]", "0", "2"], " ", 
+    SubsuperscriptBox["\[Omega]", "0", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          SuperscriptBox["\[Omega]", "4"], " ", 
+          SubsuperscriptBox["x", "max", "2"]}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["\[Omega]", "2"], " ", 
+          SubsuperscriptBox["\[Omega]", "0", "2"]}]}]]}], "+", 
+      FractionBox["1", 
+       RowBox[{
+        RowBox[{"2", " ", 
+         SuperscriptBox["\[Omega]", "4"], " ", 
+         SubsuperscriptBox["x", "min", "2"]}], "+", 
+        RowBox[{"2", " ", 
+         SuperscriptBox["\[Omega]", "2"], " ", 
+         SubsuperscriptBox["\[Omega]", "0", "2"]}]}]]}], ")"}]}], 
+   RowBox[{
+    SubscriptBox["x", "max"], "-", 
+    SubscriptBox["x", "min"]}]]}]], "Output",
+ CellChangeTimes->{3.8232942244362645`*^9, 3.8232944703390627`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"09f7397b-8d80-42df-a49a-9e837bc0ae9f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Lambda]", "D"], "=", 
+   RowBox[{"30", "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "9"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Sigma]", "=", "0.00123"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "6.12"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["v", "L0"], "=", 
+   RowBox[{"2.82", "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "9"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Omega]", "0"], "=", "0.03318"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["x", "min"], "=", 
+   RowBox[{"1.6", "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "6"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["x", "max"], "=", 
+   RowBox[{"12", "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "6"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[CapitalPsi]", "0"], "=", "0.8"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"\[Omega]", "=", 
+  FractionBox[
+   SubscriptBox["\[Omega]", "0"], 
+   SqrtBox[
+    RowBox[{
+     SubscriptBox["x", "min"], "*", 
+     SubscriptBox["x", "max"]}]]]}], "\[IndentingNewLine]", 
+ SubscriptBox["v", "ave"]}], "Input",
+ CellChangeTimes->{{3.8233025899613643`*^9, 3.8233026245121326`*^9}, {
+  3.823302664378254*^9, 3.8233027863093843`*^9}, {3.8233028359210896`*^9, 
+  3.8233028472745233`*^9}, {3.8233028876065693`*^9, 3.823302949270587*^9}, {
+  3.823303119776825*^9, 3.8233031199671245`*^9}, {3.8233041309996595`*^9, 
+  3.8233041686151786`*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"4183837e-67ac-415e-acc9-4e36ef076a8e"],
+
+Cell[BoxData["7572.264357508923`"], "Output",
+ CellChangeTimes->{{3.8233030926447563`*^9, 3.823303120534641*^9}, 
+   3.8233041362711487`*^9, 3.823304172367122*^9},
+ CellLabel->"Out[39]=",ExpressionUUID->"99fabc2f-0dfc-4e86-806a-2f523710245f"],
+
+Cell[BoxData[
+ RowBox[{"-", "0.00006635294117647059`"}]], "Output",
+ CellChangeTimes->{{3.8233030926447563`*^9, 3.823303120534641*^9}, 
+   3.8233041362711487`*^9, 3.8233041723731055`*^9},
+ CellLabel->"Out[40]=",ExpressionUUID->"f5c9a40d-43ed-4eb9-8ca3-d00eced8b4fb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["v", "aveo"], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SubsuperscriptBox["\[CapitalPsi]", "0", "2"], "*", 
+     SubscriptBox["v", "L0"]}], 
+    RowBox[{"2", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["x", "max"], "-", 
+       SubscriptBox["x", "min"]}], ")"}]}]], "*", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"\[Omega]", 
+         SqrtBox[
+          RowBox[{
+           SubscriptBox["x", "min"], "*", 
+           SubscriptBox["x", "max"]}]]}], 
+        SubscriptBox["\[Omega]", "0"]], ")"}], "2"], 
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox["x", "max"], 
+        SubscriptBox["x", "min"]], "-", 
+       FractionBox[
+        SubscriptBox["x", "min"], 
+        SubscriptBox["x", "max"]]}], ")"}]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{"\[Omega]", 
+           SqrtBox[
+            RowBox[{
+             SubscriptBox["x", "min"], "*", 
+             SubscriptBox["x", "max"]}]]}], 
+          SubscriptBox["\[Omega]", "0"]], ")"}], "2"], "+", 
+       FractionBox[
+        SubscriptBox["x", "min"], 
+        SubscriptBox["x", "max"]]}], ")"}], 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{"\[Omega]", 
+           SqrtBox[
+            RowBox[{
+             SubscriptBox["x", "min"], "*", 
+             SubscriptBox["x", "max"]}]]}], 
+          SubscriptBox["\[Omega]", "0"]], ")"}], "2"], "+", 
+       FractionBox[
+        SubscriptBox["x", "max"], 
+        SubscriptBox["x", "min"]]}], ")"}]}]]}]}]], "Input",
+ CellChangeTimes->{{3.8233042408759522`*^9, 3.8233042571573825`*^9}, {
+  3.823304373332003*^9, 3.8233043979367676`*^9}, {3.8233046931097555`*^9, 
+  3.8233047952263584`*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"46539429-cdb8-4df6-ae99-c8319d8a8879"],
+
+Cell[BoxData["0.00006635294117647061`"], "Output",
+ CellChangeTimes->{3.8233049834359093`*^9},
+ CellLabel->"Out[41]=",ExpressionUUID->"83d0ce90-85ee-4156-a9fe-2e47b913bb68"]
+}, Open  ]]
+},
+WindowSize->{571.8, 509.4},
+WindowMargins->{{40.199999999999996`, Automatic}, {
+  14.399999999999977`, Automatic}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (2020\:5e746\:67089\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b450bb27-f8b8-4077-a479-0a05feff9099"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1817, 51, 133, "Input",ExpressionUUID->"0177b94c-54a3-49b0-abab-1b6882ba639e"],
+Cell[2400, 75, 799, 20, 69, "Output",ExpressionUUID->"5abfc556-30ff-4246-a505-32d703b60844"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3236, 100, 566, 16, 55, "Input",ExpressionUUID->"14f65f07-04dc-45f4-8358-98337776d570"],
+Cell[3805, 118, 11683, 248, 81, "Output",ExpressionUUID->"8f92fbea-a894-430d-bf08-380d539acff1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15525, 371, 447, 14, 55, "Input",ExpressionUUID->"eea39443-09fd-4fde-b8bd-9200af925112"],
+Cell[15975, 387, 11599, 244, 78, "Output",ExpressionUUID->"8332c095-ce9f-4ac0-9b28-bddd369ea6b0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27611, 636, 1418, 40, 153, "Input",ExpressionUUID->"ff8cb8f5-7243-4858-8ae1-844ec0ecefff"],
+Cell[29032, 678, 1156, 31, 66, "Output",ExpressionUUID->"09f7397b-8d80-42df-a49a-9e837bc0ae9f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30225, 714, 1696, 50, 231, "Input",ExpressionUUID->"4183837e-67ac-415e-acc9-4e36ef076a8e"],
+Cell[31924, 766, 242, 3, 32, "Output",ExpressionUUID->"99fabc2f-0dfc-4e86-806a-2f523710245f"],
+Cell[32169, 771, 266, 4, 32, "Output",ExpressionUUID->"f5c9a40d-43ed-4eb9-8ca3-d00eced8b4fb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32472, 780, 1988, 64, 77, "Input",ExpressionUUID->"46539429-cdb8-4df6-ae99-c8319d8a8879"],
+Cell[34463, 846, 173, 2, 55, "Output",ExpressionUUID->"83d0ce90-85ee-4156-a9fe-2e47b913bb68"]
+}, Open  ]]
+}
+]
+*)
+
