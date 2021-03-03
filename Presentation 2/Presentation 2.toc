@@ -1,0 +1,8 @@
+\beamer@sectionintoc {1}{Basic Frame}{2}{0}{1}
+\beamer@sectionintoc {2}{Resistance}{3}{0}{2}
+\beamer@sectionintoc {3}{Capacitance}{4}{0}{3}
+\beamer@sectionintoc {4}{Electric Field}{5}{0}{4}
+\beamer@sectionintoc {5}{Velocity}{7}{0}{5}
+\beamer@sectionintoc {6}{Unresolved Problem}{10}{0}{6}
+\beamer@sectionintoc {7}{Velocity}{11}{0}{7}
+\beamer@sectionintoc {8}{Velocity}{12}{0}{8}
