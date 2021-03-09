@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.5.19)  4 MAR 2021 19:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.5.19)  9 MAR 2021 14:47
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -498,18 +498,49 @@ Package: amsthm 2017/10/31 v2.20.4
 ) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerbasethemes.sty)) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerthemedefault.sty (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty
 \beamer@dima=\dimen275
 \beamer@dimb=\dimen276
-) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty))) (e:/texlive/2020/texmf-dist/tex/latex/mmacells/mmacells.sty (e:/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
+\sympureletters=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 4.
+ (e:/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup7
+\symboldletters=\mathgroup8
+\symboldsymbols=\mathgroup9
+\symboldpureletters=\mathgroup10
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+) (e:/texlive/2020/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen277
+\lightrulewidth=\dimen278
+\cmidrulewidth=\dimen279
+\belowrulesep=\dimen280
+\belowbottomsep=\dimen281
+\aboverulesep=\dimen282
+\abovetopsep=\dimen283
+\cmidrulesep=\dimen284
+\cmidrulekern=\dimen285
+\defaultaddspace=\dimen286
+\@cmidla=\count310
+\@cmidlb=\count311
+\@aboverulesep=\dimen287
+\@belowrulesep=\dimen288
+\@thisruleclass=\count312
+\@lastruleclass=\count313
+\@thisrulewidth=\dimen289
+) (e:/texlive/2020/texmf-dist/tex/latex/mmacells/mmacells.sty (e:/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2020-03-06 L3 programming layer (loader) 
  (e:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count310
+\l__kernel_color_stack_int=\count314
 \l__pdf_internal_box=\box73
 )) (e:/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2020-03-06 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count311
-\g__xparse_grabber_int=\count312
-\l__xparse_m_args_int=\count313
-\l__xparse_v_nesting_int=\count314
+\l__xparse_current_arg_int=\count315
+\g__xparse_grabber_int=\count316
+\l__xparse_m_args_int=\count317
+\l__xparse_v_nesting_int=\count318
 )
 Package: mmacells 2017/01/03 v0.3.2 Mathematica front end cells
  (e:/texlive/2020/texmf-dist/tex/latex/bbm-macros/bbm.sty
@@ -520,42 +551,42 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 ) (e:/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count315
+\FV@CodeLineNo=\count319
 \FV@InFile=\read3
 \FV@TabBox=\box74
-\c@FancyVerbLine=\count316
-\FV@StepNumber=\count317
+\c@FancyVerbLine=\count320
+\FV@StepNumber=\count321
 \FV@OutFile=\write5
 ) (e:/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count318
+\lst@mode=\count322
 \lst@gtempboxa=\box75
 \lst@token=\toks44
-\lst@length=\count319
-\lst@currlwidth=\dimen277
-\lst@column=\count320
-\lst@pos=\count321
-\lst@lostspace=\dimen278
-\lst@width=\dimen279
-\lst@newlines=\count322
-\lst@lineno=\count323
-\lst@maxwidth=\dimen280
+\lst@length=\count323
+\lst@currlwidth=\dimen290
+\lst@column=\count324
+\lst@pos=\count325
+\lst@lostspace=\dimen291
+\lst@width=\dimen292
+\lst@newlines=\count326
+\lst@lineno=\count327
+\lst@maxwidth=\dimen293
  (e:/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count324
-\lst@skipnumbers=\count325
+\c@lstnumber=\count328
+\lst@skipnumbers=\count329
 \lst@framebox=\box76
 ) (e:/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-\g_mmacells_index_int=\count326
-\g_mmacells_next_emph_class_int=\count327
+\g_mmacells_index_int=\count330
+\g_mmacells_next_emph_class_int=\count331
 \l_mmacells_label_box=\box77
-\l_mmacells_leftmargin_dim=\dimen281
-\l_mmacells_label_dim=\dimen282
-\l_mmacells_label_sep_dim=\dimen283
-\l_mmacells_x_offset_dim=\dimen284
-\l_mmacells_y_offset_dim=\dimen285
+\l_mmacells_leftmargin_dim=\dimen294
+\l_mmacells_label_dim=\dimen295
+\l_mmacells_label_sep_dim=\dimen296
+\l_mmacells_x_offset_dim=\dimen297
+\l_mmacells_y_offset_dim=\dimen298
  (e:/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \lstFV@gtempboxa=\box78
@@ -565,25 +596,148 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (e:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-)) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerthemeAnnArbor.sty (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamercolorthemewolverine.sty)) (./Presentation 3.aux)
+)) (e:/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+ (e:/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+ (e:/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (e:/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+) (e:/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count332
+\output=\toks45
+\linenoprevgraf=\count333
+\linenumbersep=\dimen299
+\linenumberwidth=\dimen300
+\c@linenumber=\count334
+\c@pagewiselinenumber=\count335
+\c@LN@truepage=\count336
+\c@internallinenumber=\count337
+\c@internallinenumbers=\count338
+\quotelinenumbersep=\dimen301
+\bframerule=\dimen302
+\bframesep=\dimen303
+\bframebox=\box79
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count339
+\c@FV@TrueTabCounter=\count340
+\FV@TabBox@Group=\box80
+\FV@TmpLength=\skip63
+\c@FV@HighlightLinesStart=\count341
+\c@FV@HighlightLinesStop=\count342
+\FV@LoopCount=\count343
+\FV@NCharsBox=\box81
+\FV@BreakIndent=\dimen304
+\FV@BreakIndentNChars=\count344
+\FV@BreakSymbolSepLeft=\dimen305
+\FV@BreakSymbolSepLeftNChars=\count345
+\FV@BreakSymbolSepRight=\dimen306
+\FV@BreakSymbolSepRightNChars=\count346
+\FV@BreakSymbolIndentLeft=\dimen307
+\FV@BreakSymbolIndentLeftNChars=\count347
+\FV@BreakSymbolIndentRight=\dimen308
+\FV@BreakSymbolIndentRightNChars=\count348
+\c@FancyVerbLineBreakLast=\count349
+\FV@LineBox=\box82
+\FV@LineIndentBox=\box83
+\FV@LineWidth=\dimen309
+) (e:/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count350
+\calc@Bcount=\count351
+\calc@Adimen=\dimen310
+\calc@Bdimen=\dimen311
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count352
+\calc@Cskip=\skip66
+) (e:/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+) (e:/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (e:/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+) (e:/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)) (e:/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty (e:/texlive/2020/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count353
+\decimalpart=\count354
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+) (e:/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip67
+\fb@frw=\dimen312
+\fb@frh=\dimen313
+\FrameRule=\dimen314
+\FrameSep=\dimen315
+) (e:/texlive/2020/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count355
+\float@exts=\toks46
+\float@box=\box84
+\@float@everytoks=\toks47
+\@floatcapt=\box85
+)
+\minted@appexistsfile=\read4
+\minted@bgbox=\box86
+\minted@code=\write6
+\c@minted@FancyVerbLineTemp=\count356
+\c@minted@pygmentizecounter=\count357
+\@float@every@listing=\toks48
+\c@listing=\count358
+)
+runsystem(if not exist _minted-Presentation_3 mkdir _minted-Presentation_3)...executed.
+
+ (e:/texlive/2020/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+ (e:/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen316
+\ar@mcellbox=\box87
+\extrarowheight=\dimen317
+\NC@list=\toks49
+\extratabsurround=\skip68
+\backup@length=\skip69
+\ar@cellbox=\box88
+)
+\TX@col@width=\dimen318
+\TX@old@table=\dimen319
+\TX@old@col=\dimen320
+\TX@target=\dimen321
+\TX@delta=\dimen322
+\TX@cols=\count359
+\TX@ftn=\toks50
+) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerthemeAnnArbor.sty (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty) (e:/texlive/2020/texmf-dist/tex/latex/beamer/beamercolorthemewolverine.sty))
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > Presentation_3.aex <nul: /p x=^%~$PATH:i>> Presentation_3.aex)...executed.
+
+runsystem(del Presentation_3.aex)...executed.
+
+ (./Presentation 3.aux)
 \openout1 = `"Presentation 3.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -621,25 +775,25 @@ LaTeX Font Info:    ... okay on input line 5.
 
 (e:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count328
-\scratchdimen=\dimen286
-\scratchbox=\box79
-\nofMPsegments=\count329
-\nofMParguments=\count330
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count331
-\MPscratchDim=\dimen287
-\MPnumerator=\count332
-\makeMPintoPDFobject=\count333
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count360
+\scratchdimen=\dimen323
+\scratchbox=\box89
+\nofMPsegments=\count361
+\nofMParguments=\count362
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count363
+\MPscratchDim=\dimen324
+\MPnumerator=\count364
+\makeMPintoPDFobject=\count365
+\everyMPtoPDFconversion=\toks52
 ) (e:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (e:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box80
-Package hyperref Info: Link coloring OFF on input line 5.
+\AtBeginShipoutBox=\box90
+Package hyperref Info: Link coloring OFF on input line 18.
  (e:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (e:/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -647,64 +801,64 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (e:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count334
+\c@section@level=\count366
 )
-LaTeX Info: Redefining \ref on input line 5.
-LaTeX Info: Redefining \pageref on input line 5.
-LaTeX Info: Redefining \nameref on input line 5.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
  (./Presentation 3.out) (./Presentation 3.out)
-\@outlinefile=\write6
-\openout6 = `"Presentation 3.out"'.
+\@outlinefile=\write7
+\openout7 = `"Presentation 3.out"'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 5.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 18.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 5.
-\symnumbers=\mathgroup6
-\sympureletters=\mathgroup7
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 5.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 5.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 5.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 5.
-LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 5.
-LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 5.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 5.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 5.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 18.
+\symnumbers=\mathgroup11
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 18.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 5.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/cmss/m/it on input line 18.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 5.
+(Font)                  OT1/mathkerncmss/bx/sl --> OT1/cmss/m/it on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 18.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 18.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 18.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 18.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 18.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 5.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 18.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 18.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 18.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 18.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 18.
  (e:/texlive/2020/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (e:/texlive/2020/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
@@ -717,16 +871,20 @@ Dictionary: translator-months-dictionary, Language: English
 Dictionary: translator-numbers-dictionary, Language: English 
 ) (e:/texlive/2020/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
+) (e:/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-\c@lstlisting=\count335
+\c@lstlisting=\count367
  (./Presentation 3.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 8.
+(hyperref)                setting the option has no effect on input line 21.
 
 [1
 
-{e:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{e:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Presentation 3.toc) [2
+
+]
 \openout4 = `"Presentation 3.vrb"'.
 
  (./Presentation 3.vrb
@@ -748,88 +906,250 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <6> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 3.
-) [2
+) [3
 
 ]
 \openout4 = `"Presentation 3.vrb"'.
 
- (./Presentation 3.vrb) [3
+ (./Presentation 3.vrb) [4
 
 ]
 Package epstopdf Info: Source file: <1.eps>
-(epstopdf)                    date: 2021-03-04 19:39:44
-(epstopdf)                    size: 186052 bytes
+(epstopdf)                    date: 2021-03-05 10:54:08
+(epstopdf)                    size: 180219 bytes
 (epstopdf)             Output file: <1-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-03-04 19:40:36
-(epstopdf)                    size: 81425 bytes
+(epstopdf)                    date: 2021-03-05 10:54:45
+(epstopdf)                    size: 80740 bytes
 (epstopdf)             Command: <epstopdf --outfile=1-eps-converted-to.pdf 1.eps>
-(epstopdf)             \includegraphics on input line 55.
+(epstopdf)             \includegraphics on input line 57.
 Package epstopdf Info: Output file is already uptodate.
-<1-eps-converted-to.pdf, id=120, 598.235pt x 845.1575pt>
+<1-eps-converted-to.pdf, id=164, 598.235pt x 845.1575pt>
 File: 1-eps-converted-to.pdf Graphic file (type pdf)
 <use 1-eps-converted-to.pdf>
-Package pdftex.def Info: 1-eps-converted-to.pdf  used on input line 55.
+Package pdftex.def Info: 1-eps-converted-to.pdf  used on input line 57.
 (pdftex.def)             Requested size: 308.06367pt x 435.21584pt.
 
-Overfull \vbox (229.21185pt too high) detected at line 55
- []
-
-[4
-
- <./1-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <2.eps>
-(epstopdf)                    date: 2021-03-04 19:40:27
-(epstopdf)                    size: 121940 bytes
-(epstopdf)             Output file: <2-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-03-04 19:40:37
-(epstopdf)                    size: 39083 bytes
-(epstopdf)             Command: <epstopdf --outfile=2-eps-converted-to.pdf 2.eps>
-(epstopdf)             \includegraphics on input line 58.
-Package epstopdf Info: Output file is already uptodate.
-<2-eps-converted-to.pdf, id=200, 598.235pt x 845.1575pt>
-File: 2-eps-converted-to.pdf Graphic file (type pdf)
-<use 2-eps-converted-to.pdf>
-Package pdftex.def Info: 2-eps-converted-to.pdf  used on input line 58.
-(pdftex.def)             Requested size: 342.2953pt x 483.58891pt.
-
-Overfull \vbox (277.58493pt too high) detected at line 58
+Overfull \vbox (217.21185pt too high) detected at line 57
  []
 
 [5
 
- <./2-eps-converted-to.pdf>] [6
+ <./1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <2.eps>
+(epstopdf)                    date: 2021-03-05 10:54:33
+(epstopdf)                    size: 120624 bytes
+(epstopdf)             Output file: <2-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-03-05 10:54:46
+(epstopdf)                    size: 38199 bytes
+(epstopdf)             Command: <epstopdf --outfile=2-eps-converted-to.pdf 2.eps>
+(epstopdf)             \includegraphics on input line 60.
+Package epstopdf Info: Output file is already uptodate.
+<2-eps-converted-to.pdf, id=244, 598.235pt x 845.1575pt>
+File: 2-eps-converted-to.pdf Graphic file (type pdf)
+<use 2-eps-converted-to.pdf>
+Package pdftex.def Info: 2-eps-converted-to.pdf  used on input line 60.
+(pdftex.def)             Requested size: 342.2953pt x 483.58891pt.
+
+Overfull \vbox (265.58493pt too high) detected at line 60
+ []
+
+[6
+
+ <./2-eps-converted-to.pdf>]
+<6.jpg, id=307, 215.84317pt x 178.3788pt>
+File: 6.jpg Graphic file (type jpg)
+<use 6.jpg>
+Package pdftex.def Info: 6.jpg  used on input line 76.
+(pdftex.def)             Requested size: 119.80544pt x 99.01228pt.
+ [7
+
+ <./6.jpg>]
+<5.jpg, id=337, 192.4791pt x 343.0416pt>
+File: 5.jpg Graphic file (type jpg)
+<use 5.jpg>
+Package pdftex.def Info: 5.jpg  used on input line 87.
+(pdftex.def)             Requested size: 119.80544pt x 213.52107pt.
+Package epstopdf Info: Source file: <3.eps>
+(epstopdf)                    date: 2021-03-05 12:52:18
+(epstopdf)                    size: 29877 bytes
+(epstopdf)             Output file: <3-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-03-05 14:52:47
+(epstopdf)                    size: 8215 bytes
+(epstopdf)             Command: <epstopdf --outfile=3-eps-converted-to.pdf 3.eps>
+(epstopdf)             \includegraphics on input line 87.
+Package epstopdf Info: Output file is already uptodate.
+<3-eps-converted-to.pdf, id=338, 1156.32pt x 566.115pt>
+File: 3-eps-converted-to.pdf Graphic file (type pdf)
+<use 3-eps-converted-to.pdf>
+Package pdftex.def Info: 3-eps-converted-to.pdf  used on input line 87.
+(pdftex.def)             Requested size: 205.37926pt x 100.54874pt.
+Package epstopdf Info: Source file: <4.eps>
+(epstopdf)                    date: 2021-03-05 12:52:30
+(epstopdf)                    size: 25245 bytes
+(epstopdf)             Output file: <4-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-03-05 14:52:48
+(epstopdf)                    size: 7376 bytes
+(epstopdf)             Command: <epstopdf --outfile=4-eps-converted-to.pdf 4.eps>
+(epstopdf)             \includegraphics on input line 87.
+Package epstopdf Info: Output file is already uptodate.
+<4-eps-converted-to.pdf, id=339, 1156.32pt x 566.115pt>
+File: 4-eps-converted-to.pdf Graphic file (type pdf)
+<use 4-eps-converted-to.pdf>
+Package pdftex.def Info: 4-eps-converted-to.pdf  used on input line 87.
+(pdftex.def)             Requested size: 205.37926pt x 100.54874pt.
+ [8
+
+ <./5.jpg> <./3-eps-converted-to.pdf> <./4-eps-converted-to.pdf>]
+\openout4 = `"Presentation 3.vrb"'.
+
+ (./Presentation 3.vrb (./_minted-Presentation_3/default-pyg-prefix.pygstyle) (./_minted-Presentation_3/emacs.pygstyle) (./_minted-Presentation_3/19290525C86170053B010ABBD565835B6C9A151A0233D3573A32565D31168E5A.pygtex))
+Overfull \vbox (22.39603pt too high) detected at line 90
+ []
+
+[9
+
+] [10
+
+] [11
 
 ]
-\tf@nav=\write7
-\openout7 = `"Presentation 3.nav"'.
+Overfull \vbox (1.2713pt too high) detected at line 126
+ []
 
-\tf@toc=\write8
-\openout8 = `"Presentation 3.toc"'.
+[12
 
-\tf@snm=\write9
-\openout9 = `"Presentation 3.snm"'.
+] [13
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
+] [14
+
+] [15
+
+] [16
+
+]
+Overfull \hbox (1.58537pt too wide) detected at line 174
+\OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/10.95 u \OML/cmm/m/it/10.95 >\OT1/cmss/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^@[][] [] \OT1/cmss/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^@[]\OT1/cmss/m/n/10.95 ^^C[] [] = \OMS/cmsy/m/n/10.95 ^^@[]\OT1/cmss/m/n/10.95 ^^C[]\OMS/cmsy/m/n/10.95 j\OT1/cmss/m/n/10.95 ^^H \OMS/cmsy/m/n/10.95 ^^@ \OT1/mathkerncmss/m/sl/10.95 V[]\OMS/cmsy/m/n/10.95 j[]
+ []
+
+[17
+
+] [18
+
+]
+<7-rasterized.pdf, id=660, 978.65625pt x 251.43938pt>
+File: 7-rasterized.pdf Graphic file (type pdf)
+<use 7-rasterized.pdf>
+Package pdftex.def Info: 7-rasterized.pdf  used on input line 191.
+(pdftex.def)             Requested size: 342.2953pt x 87.94371pt.
+ [19
+
+ <./7-rasterized.pdf>]
+<8.png, id=695, 314.97675pt x 80.09924pt>
+File: 8.png Graphic file (type png)
+<use 8.png>
+Package pdftex.def Info: 8.png  used on input line 197.
+(pdftex.def)             Requested size: 273.83728pt x 69.63809pt.
+ [20
+
+ <./8.png (PNG copy)>]
+<9.png, id=723, 574.5465pt x 417.9615pt>
+File: 9.png Graphic file (type png)
+<use 9.png>
+Package pdftex.def Info: 9.png  used on input line 201.
+(pdftex.def)             Requested size: 273.83728pt x 199.2098pt.
+
+Overfull \vbox (8.93498pt too high) detected at line 201
+ []
+
+[21
+
+ <./9.png (PNG copy)>]
+<10.png, id=752, 322.20375pt x 395.67825pt>
+File: 10.png Graphic file (type png)
+<use 10.png>
+Package pdftex.def Info: 10.png  used on input line 204.
+(pdftex.def)             Requested size: 205.37926pt x 252.22493pt.
+
+Overfull \vbox (46.22095pt too high) detected at line 204
+ []
+
+[22
+
+ <./10.png (PNG copy)>]
+<11.png, id=780, 574.5465pt x 417.9615pt>
+File: 11.png Graphic file (type png)
+<use 11.png>
+Package pdftex.def Info: 11.png  used on input line 207.
+(pdftex.def)             Requested size: 273.83728pt x 199.2098pt.
+ [23
+
+ <./11.png (PNG copy)>]
+<12.png, id=808, 575.14874pt x 417.9615pt>
+File: 12.png Graphic file (type png)
+<use 12.png>
+Package pdftex.def Info: 12.png  used on input line 210.
+(pdftex.def)             Requested size: 273.83728pt x 198.99933pt.
+ [24
+
+ <./12.png (PNG copy)>]
+<13.png, id=836, 574.5465pt x 417.9615pt>
+File: 13.png Graphic file (type png)
+<use 13.png>
+Package pdftex.def Info: 13.png  used on input line 213.
+(pdftex.def)             Requested size: 273.83728pt x 199.2098pt.
+ [25
+
+ <./13.png (PNG copy)>]
+<14.png, id=866, 575.14874pt x 418.56375pt>
+File: 14.png Graphic file (type png)
+<use 14.png>
+Package pdftex.def Info: 14.png  used on input line 216.
+(pdftex.def)             Requested size: 273.83728pt x 199.28607pt.
+ [26
+
+ <./14.png (PNG copy)>]
+<15.png, id=894, 573.94424pt x 418.56375pt>
+File: 15.png Graphic file (type png)
+<use 15.png>
+Package pdftex.def Info: 15.png  used on input line 219.
+(pdftex.def)             Requested size: 273.83728pt x 199.7012pt.
+ [27
+
+ <./15.png (PNG copy)>] [28
+
+] [29
+
+]
+\tf@nav=\write8
+\openout8 = `"Presentation 3.nav"'.
+
+\tf@toc=\write9
+\openout9 = `"Presentation 3.toc"'.
+
+\tf@snm=\write10
+\openout10 = `"Presentation 3.snm"'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
  (./Presentation 3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
 Package rerunfilecheck Info: File `"Presentation 3".out' has not changed.
-(rerunfilecheck)             Checksum: 35EF0F352C400A5CD9FCEEC3FA07DAD2;45.
+(rerunfilecheck)             Checksum: 90B652F772BE682DBAB44094D561F6C1;146.
  ) 
 Here is how much of TeX's memory you used:
- 22935 strings out of 480608
- 429687 string characters out of 4657536
- 8883677 words of memory out of 13644073
- 38313 multiletter control sequences out of 15000+600000
- 543952 words of font info for 67 fonts, out of 8000000 for 9000
+ 26051 strings out of 480608
+ 493235 string characters out of 4657536
+ 8956688 words of memory out of 13717084
+ 41251 multiletter control sequences out of 15000+600000
+ 563472 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,24n,76p,848b,3537s stack positions out of 5000i,500n,10000p,500000b,80000s
-<e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on "Presentation 3.pdf" (6 pages, 245896 bytes).
+ 58i,24n,76p,876b,3539s stack positions out of 5000i,500n,10000p,500000b,80000s
+{e:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb><e:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfso1000.pfb>
+Output written on "Presentation 3.pdf" (29 pages, 943668 bytes).
 PDF statistics:
- 339 PDF objects out of 1000 (max. 8388607)
- 259 compressed objects within 3 object streams
- 14 named destinations out of 1000 (max. 500000)
- 79 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1079 PDF objects out of 1200 (max. 8388607)
+ 936 compressed objects within 10 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 172 words of extra memory for PDF output out of 10000 (max. 10000000)
 

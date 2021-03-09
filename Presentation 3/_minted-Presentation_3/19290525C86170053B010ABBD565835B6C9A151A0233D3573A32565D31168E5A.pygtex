@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{lambda\PYGZus{}D} \PYG{p}{=} \PYG{l+m+mf}{4.56}\PYG{o}{*}\PYG{l+m+mi}{10}\PYGZca{}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{9}\PYG{p}{);}
+\PYG{n}{sigma} \PYG{p}{=} \PYG{l+m+mf}{0.018}\PYG{p}{;}
+\PYG{n}{k} \PYG{p}{=} \PYG{l+m+mf}{6.12}\PYG{p}{;}
+\PYG{n}{v\PYGZus{}L0} \PYG{p}{=} \PYG{l+m+mf}{2.82}\PYG{o}{*}\PYG{l+m+mi}{10}\PYGZca{}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{9}\PYG{p}{);}
+\PYG{n}{x\PYGZus{}min} \PYG{p}{=} \PYG{l+m+mf}{1.6}\PYG{o}{*}\PYG{l+m+mi}{10}\PYGZca{}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{6}\PYG{p}{);}
+\PYG{n}{x\PYGZus{}max} \PYG{p}{=} \PYG{l+m+mi}{12}\PYG{o}{*}\PYG{l+m+mi}{10}\PYGZca{}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{6}\PYG{p}{);} \PYG{c}{\PYGZpc{} Psi\PYGZus{}0 = 0.1;}
+\PYG{n}{l} \PYG{p}{=} \PYG{l+m+mf}{0.235}\PYG{p}{;}
+\PYG{n}{c\PYGZus{}0} \PYG{p}{=} \PYG{l+m+mi}{299792458}\PYG{p}{;}
+\PYG{n}{mu\PYGZus{}0} \PYG{p}{=} \PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{l+m+mi}{10}\PYGZca{}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{7}\PYG{p}{);}
+\PYG{n}{epsilon\PYGZus{}0} \PYG{p}{=} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{p}{(}\PYG{n}{mu\PYGZus{}0}\PYG{o}{*}\PYG{n}{c\PYGZus{}0}\PYGZca{}\PYG{l+m+mi}{2}\PYG{p}{);}
+\PYG{n}{epsilon} \PYG{p}{=} \PYG{l+m+mi}{80} \PYG{o}{*} \PYG{n}{epsilon\PYGZus{}0}\PYG{p}{;}
+\PYG{n}{f} \PYG{p}{=} \PYG{n+nb}{logspace}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{);}
+\PYG{n}{omega} \PYG{p}{=} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{f}\PYG{p}{;}
+\PYG{n}{A} \PYG{p}{=} \PYG{p}{((}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{lambda\PYGZus{}D}\PYG{o}{*}\PYG{n}{sigma}\PYG{p}{)}\PYGZca{}\PYG{l+m+mi}{2}\PYG{o}{+}\PYG{p}{(}\PYG{n}{omega}\PYG{o}{*}\PYG{n}{epsilon}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{x\PYGZus{}max}\PYG{p}{)}\PYG{o}{.\PYGZca{}}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{o}{./}\PYG{p}{((}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{lambda\PYGZus{}D}\PYG{o}{*}\PYG{n}{sigma}\PYG{p}{)}\PYGZca{}\PYG{l+m+mi}{2}\PYG{o}{+}\PYG{p}{(}\PYG{n}{omega}\PYG{o}{*}\PYG{n}{epsilon}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{x\PYGZus{}min}\PYG{p}{)}\PYG{o}{.\PYGZca{}}\PYG{l+m+mi}{2}\PYG{p}{);}
+\PYG{c}{\PYGZpc{} A = sqrt(((2*lambda\PYGZus{}D*sigma)\PYGZca{}2+(omega*epsilon*pi).\PYGZca{}2+x\PYGZus{}min*x\PYGZus{}max).\PYGZca{}2+(2*lambda\PYGZus{}D*sigma*omega*epsilon*pi*(x\PYGZus{}max\PYGZhy{}x\PYGZus{}min)).\PYGZca{}2)./((2*lambda\PYGZus{}D*sigma)\PYGZca{}2+(omega*epsilon*pi*x\PYGZus{}min).\PYGZca{}2);}
+\PYG{n}{theta} \PYG{p}{=} \PYG{n+nb}{atan}\PYG{p}{((}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{lambda\PYGZus{}D}\PYG{o}{*}\PYG{n}{sigma}\PYG{o}{*}\PYG{n}{omega}\PYG{o}{*}\PYG{n}{epsilon}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{p}{(}\PYG{n}{x\PYGZus{}max}\PYG{o}{\PYGZhy{}}\PYG{n}{x\PYGZus{}min}\PYG{p}{))}\PYG{o}{./}\PYG{p}{((}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{lambda\PYGZus{}D}\PYG{o}{*}\PYG{n}{sigma}\PYG{p}{)}\PYGZca{}\PYG{l+m+mi}{2}\PYG{o}{+}\PYG{p}{(}\PYG{n}{omega}\PYG{o}{*}\PYG{n}{epsilon}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{p}{)}\PYG{o}{.\PYGZca{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{x\PYGZus{}min}\PYG{o}{*}\PYG{n}{x\PYGZus{}max}\PYG{p}{));}
+\PYG{n}{Z} \PYG{p}{=} \PYG{n+nb}{pi}\PYG{o}{*}\PYG{p}{(}\PYG{n+nb}{sqrt}\PYG{p}{(}\PYG{n}{k}\PYG{p}{)}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n+nb}{sqrt}\PYG{p}{(}\PYG{n}{k}\PYG{p}{))}\PYG{o}{./}\PYG{p}{(}\PYG{n}{l}\PYG{o}{*}\PYG{n}{sigma}\PYG{o}{*}\PYG{p}{(}\PYG{n+nb}{log}\PYG{p}{(}\PYG{n}{A}\PYG{p}{)}\PYG{o}{+}2\PYG{n+nb}{i}\PYG{o}{*}\PYG{n}{theta}\PYG{p}{));}
+\PYG{n}{figure}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{n}{loglog}\PYG{p}{(}\PYG{n}{f}\PYG{o}{/}\PYG{l+m+mi}{1000}\PYG{p}{,}\PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{Z}\PYG{p}{));} \PYG{c}{\PYGZpc{} ylim([100,10\PYGZca{}5]);}
+\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Frequency (kHz)\PYGZsq{}}\PYG{p}{);} \PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Impedance (\PYGZbs{}Omega)\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{figure}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{);}
+\PYG{n}{semilogx}\PYG{p}{(}\PYG{n}{f}\PYG{o}{/}\PYG{l+m+mi}{1000}\PYG{p}{,}\PYG{n+nb}{angle}\PYG{p}{(}\PYG{n}{Z}\PYG{p}{));}
+\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Frequency (kHz)\PYGZsq{}}\PYG{p}{);} \PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Phase (radians)\PYGZsq{}}\PYG{p}{);}
+\end{Verbatim}

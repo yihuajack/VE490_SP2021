@@ -1,8 +1,2 @@
-\frametitle{Antecedent}\framesubtitle {Total Impedance $Z$}
-    Remind the formula given in the article
-    \[Z=\frac{\pi\left(\sqrt{k}+\frac{1}{\sqrt{k}}\right)}{2l\sigma}\frac{\ln{A}-i\theta}{(\ln{A})^2+\theta^2}\]
-    where
-    \[A=\frac{\sqrt{\left[\left(2\lambda_D\sigma\right)^2+(\omega\varepsilon\pi)^2+x_{min}x_{max}\right]^2+\left[2\lambda_D\sigma\omega\varepsilon\pi\left(x_{max}-x_{min}\right)\right]^2}}{\left(2\lambda_D\sigma\right)^2+(\omega\varepsilon\pi x_{min})^2}\]
-    and\\
-    \[\theta=\arctan{\frac{2\lambda_D\sigma\omega\varepsilon\pi\left(x_{max}-x_{min}\right)}{\left(2\lambda_D\sigma\right)^2+(\omega\varepsilon\pi)^2x_{min}x_{max}}}\]
-    The author made a mistake of the parameter $A$. The correct formula is
+\frametitle{Total Impedance $Z$}\framesubtitle {MATLAB Code}
+    \inputminted[frame=single,bgcolor=bg,breaklines,breakanywhere,fontsize=\tiny]{matlab}{../Model/impedance.m}

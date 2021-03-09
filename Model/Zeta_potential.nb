@@ -1,0 +1,137 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3880,        129]
+NotebookOptionsPosition[      3337,        110]
+NotebookOutlinePosition[      3800,        128]
+CellTagsIndexPosition[      3757,        125]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Lambda]", "D"], "=", 
+   RowBox[{"4.56", "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "9"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Sigma]", "=", "0.018"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "6.12"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["c", "0"], "=", "299792458"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Mu]", "0"], "=", 
+   RowBox[{"4", "*", "Pi", "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "7"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Epsilon]", "0"], "=", 
+   FractionBox["1", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "0"], "*", 
+     SubsuperscriptBox["c", "0", "2"]}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Epsilon]", "=", 
+   RowBox[{"80.2", 
+    SubscriptBox["\[Epsilon]", "0"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["x", "min"], "=", 
+   RowBox[{"1.6", "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "6"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["x", "max"], "=", 
+   RowBox[{"12", "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "6"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Omega]", "=", 
+   RowBox[{"2", "*", "Pi", "*", "1000"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[CapitalPsi]", "0"], "=", 
+   SqrtBox["2"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[CapitalPsi]", "DL"], "=", 
+   RowBox[{
+    FractionBox[
+     SubscriptBox["\[CapitalPsi]", "0"], 
+     RowBox[{
+      SqrtBox["2"], 
+      RowBox[{"(", 
+       RowBox[{"1", "+", "k"}], ")"}]}]], "*", 
+    FractionBox["1", 
+     RowBox[{"1", "+", 
+      FractionBox[
+       RowBox[{"I", "*", "\[Omega]", "*", "\[Epsilon]", "*", "Pi", "*", "x"}], 
+       RowBox[{"2", 
+        SubscriptBox["\[Lambda]", "D"], "*", "\[Sigma]"}]]}]]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ FractionBox[
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    SubscriptBox["x", "min"], 
+    SubscriptBox["x", "max"]], 
+   RowBox[{
+    RowBox[{"Abs", "[", 
+     SubscriptBox["\[CapitalPsi]", "DL"], "]"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}], 
+  RowBox[{
+   SubscriptBox["x", "max"], "-", 
+   SubscriptBox["x", "min"]}]]}], "Input",
+ CellChangeTimes->{{3.8242163088176036`*^9, 3.824216391446726*^9}, {
+  3.824216432705324*^9, 3.824216580491993*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"c5ace4b0-1842-4083-85c7-a4c15c10ba37"],
+
+Cell[BoxData["0.12059612030843446`"], "Output",
+ CellChangeTimes->{3.8242165952833724`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"ecd24011-db8a-4d5e-bfaf-b00d5a59552f"]
+}, Open  ]]
+},
+WindowSize->{699., 418.79999999999995`},
+WindowMargins->{{Automatic, 135.60000000000002`}, {
+  55.80000000000007, Automatic}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (2020\:5e746\:67089\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d08a5829-2a37-4d7e-86c2-8940def8a60b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2568, 81, 386, "Input",ExpressionUUID->"c5ace4b0-1842-4083-85c7-a4c15c10ba37"],
+Cell[3151, 105, 170, 2, 55, "Output",ExpressionUUID->"ecd24011-db8a-4d5e-bfaf-b00d5a59552f"]
+}, Open  ]]
+}
+]
+*)
+
