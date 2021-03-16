@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{; Inspired by https://forums.autodesk.com/t5/visual\PYGZhy{}lisp\PYGZhy{}autolisp\PYGZhy{}and\PYGZhy{}general/get\PYGZhy{}x\PYGZhy{}y\PYGZhy{}z\PYGZhy{}coordinates\PYGZhy{}of\PYGZhy{}vertices\PYGZhy{}of\PYGZhy{}multiple\PYGZhy{}3dpolylines/m\PYGZhy{}p/2822802/highlight/true\PYGZsh{}M292893}
+\PYG{p}{(}\PYG{n+nv}{defun} \PYG{l+s+ss}{c}\PYG{o}{:}\PYG{l+s+ss}{test} \PYG{p}{(}\PYG{n+nv}{/} \PYG{l+s+ss}{ss} \PYG{l+s+ss}{cnt} \PYG{k}{fn} \PYG{l+s+ss}{obj} \PYG{l+s+ss}{lst1} \PYG{l+s+ss}{str}\PYG{p}{)}  \PYG{c+c1}{; Check parameters first, otherwise \PYGZdq{}错误: 参数类型错误: lselsetp nil\PYGZdq{} or \PYGZdq{}错误: 参数太多\PYGZdq{}}
+  \PYG{p}{(}\PYG{k}{setq} \PYG{l+s+ss}{ss} \PYG{p}{(}\PYG{n+nv}{ssget} \PYG{l+s}{\PYGZdq{}:E\PYGZdq{}} \PYG{o}{\PYGZsq{}}\PYG{p}{((}\PYG{n+nv}{0} \PYG{l+s+ss}{.} \PYG{l+s}{\PYGZdq{}LINE\PYGZdq{}}\PYG{p}{)))}  \PYG{c+c1}{; Exported electrodes are lines, not polylines; \PYGZdq{}:E\PYGZdq{} indicates selection set needed before running}
+    \PYG{l+s+ss}{cnt} \PYG{k}{\PYGZhy{}}\PYG{l+s+ss}{1}
+    \PYG{k}{fn} \PYG{p}{(}\PYG{k}{open} \PYG{l+s}{\PYGZdq{}D:\PYGZbs{}\PYGZbs{}Documents\PYGZbs{}\PYGZbs{}Programming\PYGZbs{}\PYGZbs{}AutoLISP\PYGZbs{}\PYGZbs{}coordlist.txt\PYGZdq{}} \PYG{l+s}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{)}  \PYG{c+c1}{; File operations are not necessary, just for checking}
+  \PYG{p}{)}
+  \PYG{p}{(}\PYG{n+nv}{repeat} \PYG{p}{(}\PYG{n+nv}{sslength} \PYG{l+s+ss}{ss}\PYG{p}{)}
+    \PYG{p}{(}\PYG{k}{setq} \PYG{l+s+ss}{obj} \PYG{p}{(}\PYG{n+nv}{vlax\PYGZhy{}ename\PYGZhy{}\PYGZgt{}vla\PYGZhy{}object} \PYG{p}{(}\PYG{n+nv}{ssname} \PYG{l+s+ss}{ss} \PYG{p}{(}\PYG{k}{setq} \PYG{l+s+ss}{cnt} \PYG{p}{(}\PYG{n+nv}{1+} \PYG{l+s+ss}{cnt}\PYG{p}{)))))}
+    \PYG{p}{(}\PYG{k}{if}
+      \PYG{p}{(}\PYG{n+nv}{=} \PYG{l+s}{\PYGZdq{}AcDbLine\PYGZdq{}} \PYG{p}{(}\PYG{n+nv}{vlax\PYGZhy{}get} \PYG{l+s+ss}{obj} \PYG{o}{\PYGZsq{}}\PYG{l+s+ss}{Objectname}\PYG{p}{))}  \PYG{c+c1}{; Alternatively ((eq (vla\PYGZhy{}get\PYGZhy{}ObjectName obj) \PYGZdq{}AcDbLine\PYGZdq{})}
+      \PYG{p}{(}\PYG{n+nv}{progn}
+        \PYG{p}{(}\PYG{k}{setq} \PYG{l+s+ss}{sp} \PYG{p}{(}\PYG{n+nv}{vlax\PYGZhy{}get} \PYG{l+s+ss}{obj} \PYG{o}{\PYGZsq{}}\PYG{l+s+ss}{StartPoint}\PYG{p}{)}  \PYG{c+c1}{; Alternatively (setq sp (vlax\PYGZhy{}curve\PYGZhy{}getstartpoint obj))}
+          \PYG{l+s+ss}{ep} \PYG{p}{(}\PYG{n+nv}{vlax\PYGZhy{}get} \PYG{l+s+ss}{obj} \PYG{o}{\PYGZsq{}}\PYG{l+s+ss}{EndPoint}\PYG{p}{)}  \PYG{c+c1}{; Alternatively (setq ep (vlax\PYGZhy{}curve\PYGZhy{}getendpoint obj))}
+          \PYG{c+c1}{; Note that different from \PYGZdq{}AcDbPolyline\PYGZdq{}, \PYGZdq{}AcDbLine\PYGZdq{} does not have \PYGZdq{}Coordinates\PYGZdq{}, otherwise \PYGZdq{}错误: ActiveX 服务器返回错误: 未知名称: \PYGZdq{}COORDINATES\PYGZdq{}\PYGZdq{}}
+          \PYG{l+s+ss}{str} \PYG{p}{(}\PYG{n+nv}{strcat} \PYG{p}{(}\PYG{n+nv}{rtos} \PYG{p}{(}\PYG{n+nv}{car} \PYG{l+s+ss}{sp}\PYG{p}{))} \PYG{l+s}{\PYGZdq{},\PYGZdq{}} \PYG{p}{(}\PYG{n+nv}{rtos} \PYG{p}{(}\PYG{n+nv}{cadr} \PYG{l+s+ss}{sp}\PYG{p}{))} \PYG{l+s}{\PYGZdq{};\PYGZdq{}} \PYG{p}{(}\PYG{n+nv}{rtos} \PYG{p}{(}\PYG{n+nv}{car} \PYG{l+s+ss}{ep}\PYG{p}{))} \PYG{l+s}{\PYGZdq{},\PYGZdq{}} \PYG{p}{(}\PYG{n+nv}{rtos} \PYG{p}{(}\PYG{n+nv}{cadr} \PYG{l+s+ss}{ep}\PYG{p}{))} \PYG{l+s}{\PYGZdq{};\PYGZdq{}}\PYG{p}{)}
+          \PYG{c+c1}{; Here must be \PYGZdq{}cadr\PYGZdq{} rather than \PYGZdq{}cdr\PYGZdq{}, otherwise \PYGZdq{}错误: 参数类型错误: numberp: (1300.0 0.0)\PYGZdq{}}
+          \PYG{c+c1}{; Remember don\PYGZsq{}t concatenate str without initializing it by (setq str \PYGZdq{}\PYGZdq{}), otherwise \PYGZdq{}错误: 参数类型错误: stringp nil\PYGZdq{}}
+          \PYG{l+s+ss}{mspace} \PYG{p}{(}\PYG{n+nv}{vla\PYGZhy{}get\PYGZhy{}modelspace}
+            \PYG{p}{(}\PYG{n+nv}{vla\PYGZhy{}get\PYGZhy{}activedocument}
+              \PYG{p}{(}\PYG{n+nv}{vlax\PYGZhy{}get\PYGZhy{}acad\PYGZhy{}object}\PYG{p}{)}
+            \PYG{p}{)}
+          \PYG{p}{)}
+        \PYG{p}{)}
+        \PYG{p}{(}\PYG{k}{write\PYGZhy{}line} \PYG{l+s+ss}{str} \PYG{k}{fn}\PYG{p}{)}
+        \PYG{p}{(}\PYG{n+nv}{vla\PYGZhy{}addpoint} \PYG{l+s+ss}{mspace} \PYG{p}{(}\PYG{n+nv}{vlax\PYGZhy{}3d\PYGZhy{}point} \PYG{l+s+ss}{sp}\PYG{p}{))}  \PYG{c+c1}{; (command \PYGZdq{}Point\PYGZdq{} sp ep)}
+        \PYG{p}{(}\PYG{n+nv}{vla\PYGZhy{}addpoint} \PYG{l+s+ss}{mspace} \PYG{p}{(}\PYG{n+nv}{vlax\PYGZhy{}3d\PYGZhy{}point} \PYG{l+s+ss}{ep}\PYG{p}{))}  \PYG{c+c1}{; (vla\PYGZhy{}put \PYGZhy{}INSERTIONPOINT Obj mypoint) (vlax\PYGZhy{}put Obj \PYGZsq{}INSERTIONPOINT mypoint)}
+        \PYG{p}{(}\PYG{n+nv}{vla\PYGZhy{}delete} \PYG{l+s+ss}{obj}\PYG{p}{)}  \PYG{c+c1}{; (command \PYGZdq{}Erase\PYGZdq{} obj)}
+      \PYG{p}{)}
+\end{Verbatim}

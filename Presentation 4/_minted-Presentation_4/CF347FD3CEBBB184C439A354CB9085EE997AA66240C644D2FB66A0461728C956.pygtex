@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{p}{(}\PYG{n+nv}{progn}  \PYG{c+c1}{; Exception}
+          \PYG{p}{(}\PYG{n+nv}{redraw}\PYG{p}{)}
+          \PYG{p}{(}\PYG{n+nv}{redraw} \PYG{p}{(}\PYG{n+nv}{vlax\PYGZhy{}vla\PYGZhy{}object\PYGZhy{}\PYGZgt{}ename} \PYG{l+s+ss}{obj}\PYG{p}{)} \PYG{l+s+ss}{3}\PYG{p}{)}
+          \PYG{p}{(}\PYG{n+nv}{alert} \PYG{p}{(}\PYG{n+nv}{strcat} \PYG{l+s}{\PYGZdq{}This entity (Handle ID \PYGZdq{}} \PYG{p}{(}\PYG{n+nv}{vlax\PYGZhy{}get} \PYG{l+s+ss}{obj} \PYG{o}{\PYGZsq{}}\PYG{l+s+ss}{Handle}\PYG{p}{)} \PYG{l+s}{\PYGZdq{}) is not a Line\PYGZdq{}}\PYG{p}{))}
+      \PYG{p}{)}
+    \PYG{p}{)}
+  \PYG{p}{)}
+  \PYG{p}{(}\PYG{k}{close} \PYG{k}{fn}\PYG{p}{)}
+  \PYG{p}{(}\PYG{n+nv}{princ}\PYG{p}{)}
+\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,13 @@
+\frametitle{AutoCAD Processing}\framesubtitle {AutoLISP/Visual Lisp Code}
+    \begin{minted}[breaklines,breakanywhere,fontsize=\tiny,frame=single]{newlisp}
+        (progn  ; Exception
+          (redraw)
+          (redraw (vlax-vla-object->ename obj) 3)
+          (alert (strcat "This entity (Handle ID " (vlax-get obj 'Handle) ") is not a Line"))
+      )
+    )
+  )
+  (close fn)
+  (princ)
+)
+    \end{minted}
