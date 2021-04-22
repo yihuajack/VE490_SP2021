@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    479347,       8868]
-NotebookOptionsPosition[    475869,       8803]
-NotebookOutlinePosition[    476433,       8823]
-CellTagsIndexPosition[    476390,       8820]
+NotebookDataLength[    463813,       8610]
+NotebookOptionsPosition[    461084,       8554]
+NotebookOutlinePosition[    461631,       8574]
+CellTagsIndexPosition[    461588,       8571]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -739,13 +739,13 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min]] > Re[
                   Subscript[$CellContext`x, $CellContext`max]], 
                 Or[Im[
-                   Subscript[$CellContext`x, $CellContext`min]] < Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], 
-                 Inequality[Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Inequality[(Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], Less, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`min]], LessEqual, Im[
@@ -774,13 +774,13 @@ Cell[BoxData[
                     Subscript[$CellContext`x, $CellContext`max]] Re[
                     Subscript[$CellContext`x, $CellContext`min]]), LessEqual, 
                   Im[
-                   Subscript[$CellContext`x, $CellContext`min]], Less, Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]], Less, (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]], Im[
-                   Subscript[$CellContext`x, $CellContext`min]] > Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]]]]], 
              And[Re[
                 Subscript[$CellContext`x, $CellContext`max]] > 0, 
@@ -815,13 +815,13 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`min]] > Re[
                 Subscript[$CellContext`x, $CellContext`max]], 
               Or[Im[
-                 Subscript[$CellContext`x, $CellContext`min]] < Im[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                   Subscript[$CellContext`x, $CellContext`max]]/Re[
+                  Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]], Im[
-                 Subscript[$CellContext`x, $CellContext`min]] > Im[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                   Subscript[$CellContext`x, $CellContext`max]]/Re[
+                  Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]]]], 
              And[Re[
                 Subscript[$CellContext`x, $CellContext`max]] > 0, 
@@ -831,13 +831,13 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min]] > Re[
                   Subscript[$CellContext`x, $CellContext`max]], 
                 Or[Im[
-                   Subscript[$CellContext`x, $CellContext`min]] < Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], 
-                 Inequality[Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Inequality[(Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], Less, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`min]], Less, Im[
@@ -866,13 +866,13 @@ Cell[BoxData[
                     Subscript[$CellContext`x, $CellContext`max]] Re[
                     Subscript[$CellContext`x, $CellContext`min]]), Less, 
                   Im[
-                   Subscript[$CellContext`x, $CellContext`min]], Less, Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]], Less, (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]], Im[
-                   Subscript[$CellContext`x, $CellContext`min]] > Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]]]]], 
              And[Re[
                 Subscript[$CellContext`x, $CellContext`max]] < 0, 
@@ -882,13 +882,13 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min]] < Re[
                   Subscript[$CellContext`x, $CellContext`max]], 
                 Or[Im[
-                   Subscript[$CellContext`x, $CellContext`min]] < Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], 
-                 Inequality[Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Inequality[(Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], Less, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`min]], LessEqual, Im[
@@ -917,13 +917,13 @@ Cell[BoxData[
                     Subscript[$CellContext`x, $CellContext`max]] Re[
                     Subscript[$CellContext`x, $CellContext`min]]), LessEqual, 
                   Im[
-                   Subscript[$CellContext`x, $CellContext`min]], Less, Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]], Less, (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]], Im[
-                   Subscript[$CellContext`x, $CellContext`min]] > Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]]]]], 
              And[Re[
                 Subscript[$CellContext`x, $CellContext`max]] < 0, 
@@ -958,13 +958,13 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`min]] < Re[
                 Subscript[$CellContext`x, $CellContext`max]], 
               Or[Im[
-                 Subscript[$CellContext`x, $CellContext`min]] < Im[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                   Subscript[$CellContext`x, $CellContext`max]]/Re[
+                  Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]], Im[
-                 Subscript[$CellContext`x, $CellContext`min]] > Im[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                   Subscript[$CellContext`x, $CellContext`max]]/Re[
+                  Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]]]], 
              And[Re[
                 Subscript[$CellContext`x, $CellContext`max]] < 0, 
@@ -974,13 +974,13 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min]] < Re[
                   Subscript[$CellContext`x, $CellContext`max]], 
                 Or[Im[
-                   Subscript[$CellContext`x, $CellContext`min]] < Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], 
-                 Inequality[Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Inequality[(Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], Less, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`min]], Less, Im[
@@ -1009,13 +1009,13 @@ Cell[BoxData[
                     Subscript[$CellContext`x, $CellContext`max]] Re[
                     Subscript[$CellContext`x, $CellContext`min]]), Less, 
                   Im[
-                   Subscript[$CellContext`x, $CellContext`min]], Less, Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]], Less, (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]], Im[
-                   Subscript[$CellContext`x, $CellContext`min]] > Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]]]]], 
              And[Re[
                 Subscript[$CellContext`x, $CellContext`max]] > 0, 
@@ -1083,13 +1083,13 @@ Cell[BoxData[
                Re[
                 Subscript[$CellContext`x, $CellContext`max]]], 
               Or[Im[
-                 Subscript[$CellContext`x, $CellContext`min]] < Im[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                   Subscript[$CellContext`x, $CellContext`max]]/Re[
+                  Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]], Im[
-                 Subscript[$CellContext`x, $CellContext`min]] > Im[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                   Subscript[$CellContext`x, $CellContext`max]]/Re[
+                  Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]]]], 
              And[Re[
                 Subscript[$CellContext`x, $CellContext`min]] > 0, 
@@ -1378,13 +1378,13 @@ Cell[BoxData[
                Re[
                 Subscript[$CellContext`x, $CellContext`min]], Less, 0], 
               Or[Im[
-                 Subscript[$CellContext`x, $CellContext`min]] < Im[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                   Subscript[$CellContext`x, $CellContext`max]]/Re[
+                  Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]], Im[
-                 Subscript[$CellContext`x, $CellContext`min]] > Im[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                 Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                   Subscript[$CellContext`x, $CellContext`max]]/Re[
+                  Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]]]], 
              And[Re[
                 Subscript[$CellContext`x, $CellContext`min]] < 0, 
@@ -1572,25 +1572,25 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`max]] < 0, Re[
                   Subscript[$CellContext`x, $CellContext`min]] <= 0, 
                 Or[Im[
-                   Subscript[$CellContext`x, $CellContext`min]] < Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], Im[
-                   Subscript[$CellContext`x, $CellContext`min]] > Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]]], 
                And[Im[
                   Subscript[$CellContext`x, $CellContext`max]] > 0, Re[
                   Subscript[$CellContext`x, $CellContext`min]] <= 0, 
                 Or[Im[
-                   Subscript[$CellContext`x, $CellContext`min]] < Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], Im[
-                   Subscript[$CellContext`x, $CellContext`min]] > Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]]]]], 
              And[Subscript[$CellContext`x, $CellContext`max] > 0, Re[
                 Subscript[$CellContext`x, $CellContext`min]] <= 0, 
@@ -1606,13 +1606,13 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min]], 
                 Or[Im[
                    Subscript[$CellContext`x, $CellContext`max]] < Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]], 
+                    Subscript[$CellContext`x, $CellContext`min]]), 
                  Inequality[Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]], Less, 
+                    Subscript[$CellContext`x, $CellContext`min]]), Less, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`max]], Less, Im[
                     Subscript[$CellContext`x, $CellContext`min]]^(-1) (Im[
@@ -1641,13 +1641,13 @@ Cell[BoxData[
                     Subscript[$CellContext`x, $CellContext`min]]^2), Less, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`max]], Less, Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]]], Im[
+                    Subscript[$CellContext`x, $CellContext`min]])], Im[
                    Subscript[$CellContext`x, $CellContext`max]] > Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]]]]]], 
+                    Subscript[$CellContext`x, $CellContext`min]])]]]], 
              And[Re[
                 Subscript[$CellContext`x, $CellContext`min]] > 0, 
               Or[
@@ -1657,13 +1657,13 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min]], 
                 Or[Im[
                    Subscript[$CellContext`x, $CellContext`max]] < Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]], 
+                    Subscript[$CellContext`x, $CellContext`min]]), 
                  Inequality[Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]], Less, 
+                    Subscript[$CellContext`x, $CellContext`min]]), Less, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`max]], LessEqual, Im[
                     Subscript[$CellContext`x, $CellContext`min]]^(-1) (Im[
@@ -1693,13 +1693,13 @@ Cell[BoxData[
                   LessEqual, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`max]], Less, Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]]], Im[
+                    Subscript[$CellContext`x, $CellContext`min]])], Im[
                    Subscript[$CellContext`x, $CellContext`max]] > Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]]]]]], 
+                    Subscript[$CellContext`x, $CellContext`min]])]]]], 
              And[Re[
                 Subscript[$CellContext`x, $CellContext`max]] > 0, 
               Or[
@@ -1979,25 +1979,25 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`max]] < 0, Re[
                   Subscript[$CellContext`x, $CellContext`min]] >= 0, 
                 Or[Im[
-                   Subscript[$CellContext`x, $CellContext`min]] < Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], Im[
-                   Subscript[$CellContext`x, $CellContext`min]] > Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]]], 
                And[Im[
                   Subscript[$CellContext`x, $CellContext`max]] > 0, Re[
                   Subscript[$CellContext`x, $CellContext`min]] >= 0, 
                 Or[Im[
-                   Subscript[$CellContext`x, $CellContext`min]] < Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] < (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]], Im[
-                   Subscript[$CellContext`x, $CellContext`min]] > Im[
-                    Subscript[$CellContext`x, $CellContext`max]] Re[
-                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`min]] > (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]/Re[
+                    Subscript[$CellContext`x, $CellContext`max]]) Re[
                     Subscript[$CellContext`x, $CellContext`min]]]]]], 
              And[Subscript[$CellContext`x, $CellContext`max] < 0, Re[
                 Subscript[$CellContext`x, $CellContext`min]] >= 0, 
@@ -2061,13 +2061,13 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min]], 
                 Or[Im[
                    Subscript[$CellContext`x, $CellContext`max]] < Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]], 
+                    Subscript[$CellContext`x, $CellContext`min]]), 
                  Inequality[Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]], Less, 
+                    Subscript[$CellContext`x, $CellContext`min]]), Less, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`max]], Less, Im[
                     Subscript[$CellContext`x, $CellContext`min]]^(-1) (Im[
@@ -2096,13 +2096,13 @@ Cell[BoxData[
                     Subscript[$CellContext`x, $CellContext`min]]^2), Less, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`max]], Less, Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]]], Im[
+                    Subscript[$CellContext`x, $CellContext`min]])], Im[
                    Subscript[$CellContext`x, $CellContext`max]] > Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]]]]]], 
+                    Subscript[$CellContext`x, $CellContext`min]])]]]], 
              And[Im[
                 Subscript[$CellContext`x, $CellContext`min]] < 0, 
               Inequality[
@@ -2199,13 +2199,13 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min]], 
                 Or[Im[
                    Subscript[$CellContext`x, $CellContext`max]] < Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]], 
+                    Subscript[$CellContext`x, $CellContext`min]]), 
                  Inequality[Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]], Less, 
+                    Subscript[$CellContext`x, $CellContext`min]]), Less, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`max]], LessEqual, Im[
                     Subscript[$CellContext`x, $CellContext`min]]^(-1) (Im[
@@ -2235,13 +2235,13 @@ Cell[BoxData[
                   LessEqual, 
                   Im[
                    Subscript[$CellContext`x, $CellContext`max]], Less, Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]]], Im[
+                    Subscript[$CellContext`x, $CellContext`min]])], Im[
                    Subscript[$CellContext`x, $CellContext`max]] > Im[
-                    Subscript[$CellContext`x, $CellContext`min]] Re[
+                    Subscript[$CellContext`x, $CellContext`min]] (Re[
                     Subscript[$CellContext`x, $CellContext`max]]/Re[
-                   Subscript[$CellContext`x, $CellContext`min]]]]]], 
+                    Subscript[$CellContext`x, $CellContext`min]])]]]], 
              And[Re[
                 Subscript[$CellContext`x, $CellContext`min]] < 0, 
               Or[
@@ -3433,9 +3433,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`min]] < -1, Im[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Re[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`min]] + Im[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
+                 Subscript[$CellContext`x, $CellContext`min]] + (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]] != Im[
                  Subscript[$CellContext`x, $CellContext`max]] + Im[
                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -3451,9 +3451,9 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
                 Subscript[$CellContext`x, $CellContext`min]] != 0, Re[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`min]] + Im[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
+                 Subscript[$CellContext`x, $CellContext`min]] + (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]] != Im[
                  Subscript[$CellContext`x, $CellContext`max]] + Im[
                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -3469,9 +3469,9 @@ Cell[BoxData[
                  Subscript[$CellContext`x, $CellContext`max] + 
                 Subscript[$CellContext`x, $CellContext`min])] != 0, Re[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`min]] + Im[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
+                 Subscript[$CellContext`x, $CellContext`min]] + (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]] != Im[
                  Subscript[$CellContext`x, $CellContext`max]] + Im[
                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -3487,9 +3487,9 @@ Cell[BoxData[
                  Subscript[$CellContext`x, $CellContext`max] + 
                 Subscript[$CellContext`x, $CellContext`min])] != 0, Re[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`min]] + Im[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
+                 Subscript[$CellContext`x, $CellContext`min]] + (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]] != Im[
                  Subscript[$CellContext`x, $CellContext`max]] + Im[
                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -3577,9 +3577,9 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
                 Subscript[$CellContext`x, $CellContext`min]] < -1, Re[
                 Subscript[$CellContext`x, $CellContext`min]] <= 0, Im[
-                Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[Re[
@@ -3591,9 +3591,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, 
               Im[(Subscript[$CellContext`x, $CellContext`max] - 
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
-                Subscript[$CellContext`x, $CellContext`min]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`min]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[Re[
@@ -3605,9 +3605,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, 
               Im[Subscript[$CellContext`x, $CellContext`max]/(-
                  Subscript[$CellContext`x, $CellContext`max] + 
-                Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[Re[
@@ -3619,9 +3619,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`min]] != 0, 
               Im[Subscript[$CellContext`x, $CellContext`max]/(-
                  Subscript[$CellContext`x, $CellContext`max] + 
-                Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[Re[
@@ -3677,9 +3677,9 @@ Cell[BoxData[
               Re[(Subscript[$CellContext`x, $CellContext`max] - 
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
                 Subscript[$CellContext`x, $CellContext`min]] < -1, Im[
-                Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[Re[
@@ -3691,9 +3691,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, 
               Im[(Subscript[$CellContext`x, $CellContext`max] - 
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
-                Subscript[$CellContext`x, $CellContext`min]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`min]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[Re[
@@ -3705,9 +3705,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, 
               Im[Subscript[$CellContext`x, $CellContext`max]/(-
                  Subscript[$CellContext`x, $CellContext`max] + 
-                Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[Re[
@@ -3717,11 +3717,12 @@ Cell[BoxData[
               Im[(Subscript[$CellContext`x, $CellContext`max] - 
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
                 Subscript[$CellContext`x, $CellContext`min]] != 0, 
-              Im[Subscript[$CellContext`x, $CellContext`max]/(-
+              Im[
+               Subscript[$CellContext`x, $CellContext`max]/(-
                  Subscript[$CellContext`x, $CellContext`max] + 
-                Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[
@@ -3929,7 +3930,8 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`max]]] + Im[
                  Subscript[$CellContext`x, $CellContext`max]] > 2 Im[
                  Subscript[$CellContext`x, $CellContext`min]], 
-              Re[Subscript[$CellContext`x, $CellContext`max]/(
+              Re[
+               Subscript[$CellContext`x, $CellContext`max]/(
                 Subscript[$CellContext`x, $CellContext`max] - 
                 Subscript[$CellContext`x, $CellContext`min])] > 1, 
               Re[Subscript[$CellContext`x, $CellContext`max]/(
@@ -4008,9 +4010,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`min]] < -1, Im[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Re[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`min]] + Im[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
+                 Subscript[$CellContext`x, $CellContext`min]] + (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]] != Im[
                  Subscript[$CellContext`x, $CellContext`max]] + Im[
                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -4029,9 +4031,9 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
                 Subscript[$CellContext`x, $CellContext`min]] != 0, Re[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`min]] + Im[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
+                 Subscript[$CellContext`x, $CellContext`min]] + (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]] != Im[
                  Subscript[$CellContext`x, $CellContext`max]] + Im[
                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -4047,9 +4049,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`min])] >= 0, Im[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Re[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`min]] + Im[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
+                 Subscript[$CellContext`x, $CellContext`min]] + (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]] != Im[
                  Subscript[$CellContext`x, $CellContext`max]] + Im[
                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -4064,13 +4066,14 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
                 Subscript[$CellContext`x, $CellContext`min]] >= 0, Im[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, 
-              Im[Subscript[$CellContext`x, $CellContext`max]/(-
+              Im[
+               Subscript[$CellContext`x, $CellContext`max]/(-
                  Subscript[$CellContext`x, $CellContext`max] + 
                 Subscript[$CellContext`x, $CellContext`min])] != 0, Re[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`min]] + Im[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
+                 Subscript[$CellContext`x, $CellContext`min]] + (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]] != Im[
                  Subscript[$CellContext`x, $CellContext`max]] + Im[
                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -4107,9 +4110,9 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
                 Subscript[$CellContext`x, $CellContext`min]] < -1, Re[
                 Subscript[$CellContext`x, $CellContext`min]] <= 0, Im[
-                Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[Re[
@@ -4124,9 +4127,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, 
               Im[(Subscript[$CellContext`x, $CellContext`max] - 
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
-                Subscript[$CellContext`x, $CellContext`min]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`min]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[Re[
@@ -4138,9 +4141,9 @@ Cell[BoxData[
                  Subscript[$CellContext`x, $CellContext`max] + 
                 Subscript[$CellContext`x, $CellContext`min])] >= 0, Re[
                 Subscript[$CellContext`x, $CellContext`min]] <= 0, Im[
-                Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 
                 Subscript[$CellContext`x, $CellContext`min]], (
@@ -4156,9 +4159,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, 
               Im[Subscript[$CellContext`x, $CellContext`max]/(-
                  Subscript[$CellContext`x, $CellContext`max] + 
-                Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 
                 Subscript[$CellContext`x, $CellContext`min]], (
@@ -4177,9 +4180,9 @@ Cell[BoxData[
               Re[(Subscript[$CellContext`x, $CellContext`max] - 
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
                 Subscript[$CellContext`x, $CellContext`min]] < -1, Im[
-                Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[
@@ -4194,9 +4197,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, 
               Im[(Subscript[$CellContext`x, $CellContext`max] - 
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
-                Subscript[$CellContext`x, $CellContext`min]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`min]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 Subscript[$CellContext`x, $CellContext`min]]], 
              And[
@@ -4225,9 +4228,9 @@ Cell[BoxData[
                  Subscript[$CellContext`x, $CellContext`max] + 
                 Subscript[$CellContext`x, $CellContext`min])] >= 0, Re[
                 Subscript[$CellContext`x, $CellContext`max]] < 0, Im[
-                Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 
                 Subscript[$CellContext`x, $CellContext`min]], (
@@ -4243,9 +4246,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, 
               Im[Subscript[$CellContext`x, $CellContext`max]/(-
                  Subscript[$CellContext`x, $CellContext`max] + 
-                Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 
                 Subscript[$CellContext`x, $CellContext`min]], (
@@ -4309,9 +4312,9 @@ Cell[BoxData[
                 Subscript[$CellContext`x, $CellContext`min]] >= 0, Im[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Re[
                 Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`min]] + Im[
-                   Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-                  Subscript[$CellContext`x, $CellContext`max]] Re[
+                 Subscript[$CellContext`x, $CellContext`min]] + (Im[
+                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                   Subscript[$CellContext`x, $CellContext`max]]) Re[
                   Subscript[$CellContext`x, $CellContext`min]] != Im[
                  Subscript[$CellContext`x, $CellContext`max]] + Im[
                    Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -4331,14 +4334,13 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
                 Subscript[$CellContext`x, $CellContext`min]] >= 0, Re[
                 Subscript[$CellContext`x, $CellContext`min]] <= 0, Im[
-                Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 
                 Subscript[$CellContext`x, $CellContext`min]], (
-                
-               Subscript[$CellContext`x, $CellContext`max] - 
+                 Subscript[$CellContext`x, $CellContext`max] - 
                  Subscript[$CellContext`x, $CellContext`min])^(-1) 
                Subscript[$CellContext`x, $CellContext`min] != 0], 
              And[
@@ -4353,9 +4355,9 @@ Cell[BoxData[
                   Subscript[$CellContext`x, $CellContext`min])^(-1) 
                 Subscript[$CellContext`x, $CellContext`min]] >= 0, Re[
                 Subscript[$CellContext`x, $CellContext`max]] < 0, Im[
-                Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-                 Subscript[$CellContext`x, $CellContext`max]] Re[
-                  Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+                Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+                  Subscript[$CellContext`x, $CellContext`max]]/Re[
+                 Subscript[$CellContext`x, $CellContext`max]]) Re[
                  Subscript[$CellContext`x, $CellContext`min]] != Im[
                 
                 Subscript[$CellContext`x, $CellContext`min]], (
@@ -4386,13 +4388,13 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min]] > Re[
            Subscript[$CellContext`x, $CellContext`max]], 
          Or[Im[
-            Subscript[$CellContext`x, $CellContext`min]] < Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] < (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], 
-          Inequality[Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Inequality[(Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], Less, 
            Im[
             Subscript[$CellContext`x, $CellContext`min]], LessEqual, Im[
@@ -4421,13 +4423,13 @@ Cell[BoxData[
               Subscript[$CellContext`x, $CellContext`max]] Re[
               Subscript[$CellContext`x, $CellContext`min]]), LessEqual, 
            Im[
-            Subscript[$CellContext`x, $CellContext`min]], Less, Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]], Less, (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]], Im[
-            Subscript[$CellContext`x, $CellContext`min]] > Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] > (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]]]]], 
       And[Re[
          Subscript[$CellContext`x, $CellContext`max]] > 0, 
@@ -4462,13 +4464,13 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`min]] > Re[
          Subscript[$CellContext`x, $CellContext`max]], 
        Or[Im[
-          Subscript[$CellContext`x, $CellContext`min]] < Im[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Subscript[$CellContext`x, $CellContext`min]] < (Im[
+            Subscript[$CellContext`x, $CellContext`max]]/Re[
+           Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]], Im[
-          Subscript[$CellContext`x, $CellContext`min]] > Im[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Subscript[$CellContext`x, $CellContext`min]] > (Im[
+            Subscript[$CellContext`x, $CellContext`max]]/Re[
+           Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]]]], 
       And[Re[
          Subscript[$CellContext`x, $CellContext`max]] > 0, 
@@ -4478,13 +4480,13 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min]] > Re[
            Subscript[$CellContext`x, $CellContext`max]], 
          Or[Im[
-            Subscript[$CellContext`x, $CellContext`min]] < Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] < (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], 
-          Inequality[Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Inequality[(Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], Less, 
            Im[
             Subscript[$CellContext`x, $CellContext`min]], Less, Im[
@@ -4513,13 +4515,13 @@ Cell[BoxData[
               Subscript[$CellContext`x, $CellContext`max]] Re[
               Subscript[$CellContext`x, $CellContext`min]]), Less, 
            Im[
-            Subscript[$CellContext`x, $CellContext`min]], Less, Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]], Less, (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]], Im[
-            Subscript[$CellContext`x, $CellContext`min]] > Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] > (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]]]]], 
       And[Re[
          Subscript[$CellContext`x, $CellContext`max]] < 0, 
@@ -4529,13 +4531,13 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min]] < Re[
            Subscript[$CellContext`x, $CellContext`max]], 
          Or[Im[
-            Subscript[$CellContext`x, $CellContext`min]] < Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] < (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], 
-          Inequality[Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Inequality[(Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], Less, 
            Im[
             Subscript[$CellContext`x, $CellContext`min]], LessEqual, Im[
@@ -4564,13 +4566,13 @@ Cell[BoxData[
               Subscript[$CellContext`x, $CellContext`max]] Re[
               Subscript[$CellContext`x, $CellContext`min]]), LessEqual, 
            Im[
-            Subscript[$CellContext`x, $CellContext`min]], Less, Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]], Less, (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]], Im[
-            Subscript[$CellContext`x, $CellContext`min]] > Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] > (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]]]]], 
       And[Re[
          Subscript[$CellContext`x, $CellContext`max]] < 0, 
@@ -4605,13 +4607,13 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`min]] < Re[
          Subscript[$CellContext`x, $CellContext`max]], 
        Or[Im[
-          Subscript[$CellContext`x, $CellContext`min]] < Im[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Subscript[$CellContext`x, $CellContext`min]] < (Im[
+            Subscript[$CellContext`x, $CellContext`max]]/Re[
+           Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]], Im[
-          Subscript[$CellContext`x, $CellContext`min]] > Im[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Subscript[$CellContext`x, $CellContext`min]] > (Im[
+            Subscript[$CellContext`x, $CellContext`max]]/Re[
+           Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]]]], 
       And[Re[
          Subscript[$CellContext`x, $CellContext`max]] < 0, 
@@ -4621,13 +4623,13 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min]] < Re[
            Subscript[$CellContext`x, $CellContext`max]], 
          Or[Im[
-            Subscript[$CellContext`x, $CellContext`min]] < Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] < (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], 
-          Inequality[Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Inequality[(Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], Less, 
            Im[
             Subscript[$CellContext`x, $CellContext`min]], Less, Im[
@@ -4656,13 +4658,13 @@ Cell[BoxData[
               Subscript[$CellContext`x, $CellContext`max]] Re[
               Subscript[$CellContext`x, $CellContext`min]]), Less, 
            Im[
-            Subscript[$CellContext`x, $CellContext`min]], Less, Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]], Less, (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]], Im[
-            Subscript[$CellContext`x, $CellContext`min]] > Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] > (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]]]]], 
       And[Re[
          Subscript[$CellContext`x, $CellContext`max]] > 0, 
@@ -4730,13 +4732,13 @@ Cell[BoxData[
         Re[
          Subscript[$CellContext`x, $CellContext`max]]], 
        Or[Im[
-          Subscript[$CellContext`x, $CellContext`min]] < Im[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Subscript[$CellContext`x, $CellContext`min]] < (Im[
+            Subscript[$CellContext`x, $CellContext`max]]/Re[
+           Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]], Im[
-          Subscript[$CellContext`x, $CellContext`min]] > Im[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Subscript[$CellContext`x, $CellContext`min]] > (Im[
+            Subscript[$CellContext`x, $CellContext`max]]/Re[
+           Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]]]], 
       And[Re[
          Subscript[$CellContext`x, $CellContext`min]] > 0, 
@@ -5025,13 +5027,13 @@ Cell[BoxData[
         Re[
          Subscript[$CellContext`x, $CellContext`min]], Less, 0], 
        Or[Im[
-          Subscript[$CellContext`x, $CellContext`min]] < Im[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Subscript[$CellContext`x, $CellContext`min]] < (Im[
+            Subscript[$CellContext`x, $CellContext`max]]/Re[
+           Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]], Im[
-          Subscript[$CellContext`x, $CellContext`min]] > Im[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+          Subscript[$CellContext`x, $CellContext`min]] > (Im[
+            Subscript[$CellContext`x, $CellContext`max]]/Re[
+           Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]]]], 
       And[Re[
          Subscript[$CellContext`x, $CellContext`min]] < 0, 
@@ -5219,25 +5221,25 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`max]] < 0, Re[
            Subscript[$CellContext`x, $CellContext`min]] <= 0, 
          Or[Im[
-            Subscript[$CellContext`x, $CellContext`min]] < Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] < (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], Im[
-            Subscript[$CellContext`x, $CellContext`min]] > Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] > (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]]], 
         And[Im[
            Subscript[$CellContext`x, $CellContext`max]] > 0, Re[
            Subscript[$CellContext`x, $CellContext`min]] <= 0, 
          Or[Im[
-            Subscript[$CellContext`x, $CellContext`min]] < Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] < (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], Im[
-            Subscript[$CellContext`x, $CellContext`min]] > Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] > (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]]]]], 
       And[Subscript[$CellContext`x, $CellContext`max] > 0, Re[
          Subscript[$CellContext`x, $CellContext`min]] <= 0, 
@@ -5253,13 +5255,13 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min]], 
          Or[Im[
             Subscript[$CellContext`x, $CellContext`max]] < Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]], 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]]), 
           Inequality[Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]], Less, 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]]), Less, 
            Im[
             Subscript[$CellContext`x, $CellContext`max]], Less, Im[
               Subscript[$CellContext`x, $CellContext`min]]^(-1) (Im[
@@ -5288,13 +5290,13 @@ Cell[BoxData[
                Subscript[$CellContext`x, $CellContext`min]]^2), Less, 
            Im[
             Subscript[$CellContext`x, $CellContext`max]], Less, Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]]], Im[
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]])], Im[
             Subscript[$CellContext`x, $CellContext`max]] > Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]]]]]], 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]])]]]], 
       And[Re[
          Subscript[$CellContext`x, $CellContext`min]] > 0, 
        Or[
@@ -5304,13 +5306,13 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min]], 
          Or[Im[
             Subscript[$CellContext`x, $CellContext`max]] < Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]], 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]]), 
           Inequality[Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]], Less, 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]]), Less, 
            Im[
             Subscript[$CellContext`x, $CellContext`max]], LessEqual, Im[
               Subscript[$CellContext`x, $CellContext`min]]^(-1) (Im[
@@ -5339,13 +5341,13 @@ Cell[BoxData[
                Subscript[$CellContext`x, $CellContext`min]]^2), LessEqual, 
            Im[
             Subscript[$CellContext`x, $CellContext`max]], Less, Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]]], Im[
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]])], Im[
             Subscript[$CellContext`x, $CellContext`max]] > Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]]]]]], 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]])]]]], 
       And[Re[
          Subscript[$CellContext`x, $CellContext`max]] > 0, 
        Or[
@@ -5625,25 +5627,25 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`max]] < 0, Re[
            Subscript[$CellContext`x, $CellContext`min]] >= 0, 
          Or[Im[
-            Subscript[$CellContext`x, $CellContext`min]] < Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] < (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], Im[
-            Subscript[$CellContext`x, $CellContext`min]] > Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] > (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]]], 
         And[Im[
            Subscript[$CellContext`x, $CellContext`max]] > 0, Re[
            Subscript[$CellContext`x, $CellContext`min]] >= 0, 
          Or[Im[
-            Subscript[$CellContext`x, $CellContext`min]] < Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] < (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]], Im[
-            Subscript[$CellContext`x, $CellContext`min]] > Im[
-             Subscript[$CellContext`x, $CellContext`max]] Re[
-              Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`min]] > (Im[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`max]]) Re[
              Subscript[$CellContext`x, $CellContext`min]]]]]], 
       And[Subscript[$CellContext`x, $CellContext`max] < 0, Re[
          Subscript[$CellContext`x, $CellContext`min]] >= 0, 
@@ -5707,13 +5709,13 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min]], 
          Or[Im[
             Subscript[$CellContext`x, $CellContext`max]] < Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]], 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]]), 
           Inequality[Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]], Less, 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]]), Less, 
            Im[
             Subscript[$CellContext`x, $CellContext`max]], Less, Im[
               Subscript[$CellContext`x, $CellContext`min]]^(-1) (Im[
@@ -5742,13 +5744,13 @@ Cell[BoxData[
                Subscript[$CellContext`x, $CellContext`min]]^2), Less, 
            Im[
             Subscript[$CellContext`x, $CellContext`max]], Less, Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]]], Im[
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]])], Im[
             Subscript[$CellContext`x, $CellContext`max]] > Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]]]]]], 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]])]]]], 
       And[Im[
          Subscript[$CellContext`x, $CellContext`min]] < 0, 
        Inequality[
@@ -5845,13 +5847,13 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min]], 
          Or[Im[
             Subscript[$CellContext`x, $CellContext`max]] < Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]], 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]]), 
           Inequality[Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]], Less, 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]]), Less, 
            Im[
             Subscript[$CellContext`x, $CellContext`max]], LessEqual, Im[
               Subscript[$CellContext`x, $CellContext`min]]^(-1) (Im[
@@ -5880,13 +5882,13 @@ Cell[BoxData[
                Subscript[$CellContext`x, $CellContext`min]]^2), LessEqual, 
            Im[
             Subscript[$CellContext`x, $CellContext`max]], Less, Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]]], Im[
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]])], Im[
             Subscript[$CellContext`x, $CellContext`max]] > Im[
-             Subscript[$CellContext`x, $CellContext`min]] Re[
-             Subscript[$CellContext`x, $CellContext`max]]/Re[
-            Subscript[$CellContext`x, $CellContext`min]]]]]], 
+             Subscript[$CellContext`x, $CellContext`min]] (Re[
+              Subscript[$CellContext`x, $CellContext`max]]/Re[
+             Subscript[$CellContext`x, $CellContext`min]])]]]], 
       And[Re[
          Subscript[$CellContext`x, $CellContext`min]] < 0, 
        Or[
@@ -6617,7 +6619,8 @@ Cell[BoxData[
        Re[Subscript[$CellContext`x, $CellContext`max]/(
          Subscript[$CellContext`x, $CellContext`max] - 
          Subscript[$CellContext`x, $CellContext`min])] > 1, 
-       Re[Subscript[$CellContext`x, $CellContext`max]/(
+       Re[
+        Subscript[$CellContext`x, $CellContext`max]/(
          Subscript[$CellContext`x, $CellContext`max] - 
          Subscript[$CellContext`x, $CellContext`min])] >= 1, Re[
          Subscript[$CellContext`x, $CellContext`max]] < 0, 
@@ -6805,7 +6808,8 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`max]]] + 2 Im[
            Subscript[$CellContext`x, $CellContext`min]] > Im[
          Subscript[$CellContext`x, $CellContext`max]], 
-       Re[Subscript[$CellContext`x, $CellContext`max]/(-
+       Re[
+        Subscript[$CellContext`x, $CellContext`max]/(-
           Subscript[$CellContext`x, $CellContext`max] + 
          Subscript[$CellContext`x, $CellContext`min])] >= 0, 
        Im[(Subscript[$CellContext`x, $CellContext`max] - 
@@ -7031,8 +7035,7 @@ Cell[BoxData[
        Re[Subscript[$CellContext`x, $CellContext`max]/(
          Subscript[$CellContext`x, $CellContext`max] - 
          Subscript[$CellContext`x, $CellContext`min])] > 1, 
-       Re[
-        Subscript[$CellContext`x, $CellContext`max]/(
+       Re[Subscript[$CellContext`x, $CellContext`max]/(
          Subscript[$CellContext`x, $CellContext`max] - 
          Subscript[$CellContext`x, $CellContext`min])] >= 1, Im[
          Subscript[$CellContext`x, $CellContext`max]] != 0, 
@@ -7069,8 +7072,7 @@ Cell[BoxData[
       And[Re[
          Subscript[$CellContext`x, $CellContext`min]] == Re[
          Subscript[$CellContext`x, $CellContext`max]], 
-       Re[
-        Subscript[$CellContext`x, $CellContext`max]/(-
+       Re[Subscript[$CellContext`x, $CellContext`max]/(-
           Subscript[$CellContext`x, $CellContext`max] + 
          Subscript[$CellContext`x, $CellContext`min])] >= 0, 
        Re[(Subscript[$CellContext`x, $CellContext`max] - 
@@ -7078,9 +7080,9 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`min]] < -1, Im[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Re[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`min]] + Im[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
+          Subscript[$CellContext`x, $CellContext`min]] + (Im[
+             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]] != Im[
           Subscript[$CellContext`x, $CellContext`max]] + Im[
             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -7096,9 +7098,9 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
          Subscript[$CellContext`x, $CellContext`min]] != 0, Re[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`min]] + Im[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
+          Subscript[$CellContext`x, $CellContext`min]] + (Im[
+             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]] != Im[
           Subscript[$CellContext`x, $CellContext`max]] + Im[
             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -7114,9 +7116,9 @@ Cell[BoxData[
           Subscript[$CellContext`x, $CellContext`max] + 
          Subscript[$CellContext`x, $CellContext`min])] != 0, Re[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`min]] + Im[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
+          Subscript[$CellContext`x, $CellContext`min]] + (Im[
+             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]] != Im[
           Subscript[$CellContext`x, $CellContext`max]] + Im[
             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -7132,9 +7134,9 @@ Cell[BoxData[
           Subscript[$CellContext`x, $CellContext`max] + 
          Subscript[$CellContext`x, $CellContext`min])] != 0, Re[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`min]] + Im[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
+          Subscript[$CellContext`x, $CellContext`min]] + (Im[
+             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]] != Im[
           Subscript[$CellContext`x, $CellContext`max]] + Im[
             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -7220,9 +7222,9 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
          Subscript[$CellContext`x, $CellContext`min]] < -1, Re[
          Subscript[$CellContext`x, $CellContext`min]] <= 0, Im[
-         Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[Re[
@@ -7234,9 +7236,9 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`max]] != 0, 
        Im[(Subscript[$CellContext`x, $CellContext`max] - 
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
-         Subscript[$CellContext`x, $CellContext`min]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`min]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[Re[
@@ -7246,12 +7248,11 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`min]] < -1, Re[
          Subscript[$CellContext`x, $CellContext`min]] <= 0, Im[
          Subscript[$CellContext`x, $CellContext`max]] != 0, 
-       Im[
-        Subscript[$CellContext`x, $CellContext`max]/(-
+       Im[Subscript[$CellContext`x, $CellContext`max]/(-
           Subscript[$CellContext`x, $CellContext`max] + 
-         Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[Re[
@@ -7263,9 +7264,9 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`min]] != 0, 
        Im[Subscript[$CellContext`x, $CellContext`max]/(-
           Subscript[$CellContext`x, $CellContext`max] + 
-         Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[Re[
@@ -7321,9 +7322,9 @@ Cell[BoxData[
        Re[(Subscript[$CellContext`x, $CellContext`max] - 
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
          Subscript[$CellContext`x, $CellContext`min]] < -1, Im[
-         Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[Re[
@@ -7335,9 +7336,9 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`max]] != 0, 
        Im[(Subscript[$CellContext`x, $CellContext`max] - 
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
-         Subscript[$CellContext`x, $CellContext`min]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`min]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[Re[
@@ -7349,9 +7350,9 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`max]] != 0, 
        Im[Subscript[$CellContext`x, $CellContext`max]/(-
           Subscript[$CellContext`x, $CellContext`max] + 
-         Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[Re[
@@ -7363,9 +7364,9 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`min]] != 0, 
        Im[Subscript[$CellContext`x, $CellContext`max]/(-
           Subscript[$CellContext`x, $CellContext`max] + 
-         Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[
@@ -7650,9 +7651,9 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`min]] < -1, Im[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Re[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`min]] + Im[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
+          Subscript[$CellContext`x, $CellContext`min]] + (Im[
+             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]] != Im[
           Subscript[$CellContext`x, $CellContext`max]] + Im[
             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -7671,9 +7672,9 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
          Subscript[$CellContext`x, $CellContext`min]] != 0, Re[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`min]] + Im[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
+          Subscript[$CellContext`x, $CellContext`min]] + (Im[
+             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]] != Im[
           Subscript[$CellContext`x, $CellContext`max]] + Im[
             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -7684,14 +7685,15 @@ Cell[BoxData[
        Re[(Subscript[$CellContext`x, $CellContext`max] - 
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
          Subscript[$CellContext`x, $CellContext`min]] >= 0, 
-       Re[Subscript[$CellContext`x, $CellContext`max]/(-
+       Re[
+        Subscript[$CellContext`x, $CellContext`max]/(-
           Subscript[$CellContext`x, $CellContext`max] + 
          Subscript[$CellContext`x, $CellContext`min])] >= 0, Im[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Re[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`min]] + Im[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
+          Subscript[$CellContext`x, $CellContext`min]] + (Im[
+             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]] != Im[
           Subscript[$CellContext`x, $CellContext`max]] + Im[
             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -7710,9 +7712,9 @@ Cell[BoxData[
           Subscript[$CellContext`x, $CellContext`max] + 
          Subscript[$CellContext`x, $CellContext`min])] != 0, Re[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`min]] + Im[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
+          Subscript[$CellContext`x, $CellContext`min]] + (Im[
+             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]] != Im[
           Subscript[$CellContext`x, $CellContext`max]] + Im[
             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -7749,9 +7751,9 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
          Subscript[$CellContext`x, $CellContext`min]] < -1, Re[
          Subscript[$CellContext`x, $CellContext`min]] <= 0, Im[
-         Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[Re[
@@ -7759,17 +7761,16 @@ Cell[BoxData[
        Re[Subscript[$CellContext`x, $CellContext`max]/(
          Subscript[$CellContext`x, $CellContext`max] - 
          Subscript[$CellContext`x, $CellContext`min])] > 1, 
-       Re[
-        Subscript[$CellContext`x, $CellContext`max]/(
+       Re[Subscript[$CellContext`x, $CellContext`max]/(
          Subscript[$CellContext`x, $CellContext`max] - 
          Subscript[$CellContext`x, $CellContext`min])] >= 1, Re[
          Subscript[$CellContext`x, $CellContext`min]] <= 0, Im[
          Subscript[$CellContext`x, $CellContext`max]] != 0, 
        Im[(Subscript[$CellContext`x, $CellContext`max] - 
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
-         Subscript[$CellContext`x, $CellContext`min]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`min]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[Re[
@@ -7781,9 +7782,9 @@ Cell[BoxData[
           Subscript[$CellContext`x, $CellContext`max] + 
          Subscript[$CellContext`x, $CellContext`min])] >= 0, Re[
          Subscript[$CellContext`x, $CellContext`min]] <= 0, Im[
-         Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]], (
           Subscript[$CellContext`x, $CellContext`max] - 
@@ -7798,9 +7799,9 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`max]] != 0, 
        Im[Subscript[$CellContext`x, $CellContext`max]/(-
           Subscript[$CellContext`x, $CellContext`max] + 
-         Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]], (
           Subscript[$CellContext`x, $CellContext`max] - 
@@ -7818,16 +7819,17 @@ Cell[BoxData[
        Re[(Subscript[$CellContext`x, $CellContext`max] - 
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
          Subscript[$CellContext`x, $CellContext`min]] < -1, Im[
-         Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[
       Re[Subscript[$CellContext`x, $CellContext`max]/(
          Subscript[$CellContext`x, $CellContext`max] - 
          Subscript[$CellContext`x, $CellContext`min])] > 1, 
-       Re[Subscript[$CellContext`x, $CellContext`max]/(
+       Re[
+        Subscript[$CellContext`x, $CellContext`max]/(
          Subscript[$CellContext`x, $CellContext`max] - 
          Subscript[$CellContext`x, $CellContext`min])] >= 1, Re[
          Subscript[$CellContext`x, $CellContext`min]] >= 0, Re[
@@ -7835,9 +7837,9 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`max]] != 0, 
        Im[(Subscript[$CellContext`x, $CellContext`max] - 
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
-         Subscript[$CellContext`x, $CellContext`min]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`min]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]]], 
       And[
@@ -7866,9 +7868,9 @@ Cell[BoxData[
           Subscript[$CellContext`x, $CellContext`max] + 
          Subscript[$CellContext`x, $CellContext`min])] >= 0, Re[
          Subscript[$CellContext`x, $CellContext`max]] < 0, Im[
-         Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]], (
           Subscript[$CellContext`x, $CellContext`max] - 
@@ -7883,9 +7885,9 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`max]] != 0, 
        Im[Subscript[$CellContext`x, $CellContext`max]/(-
           Subscript[$CellContext`x, $CellContext`max] + 
-         Subscript[$CellContext`x, $CellContext`min])] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`min])] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]], (
           Subscript[$CellContext`x, $CellContext`max] - 
@@ -7903,8 +7905,7 @@ Cell[BoxData[
        Re[Subscript[$CellContext`x, $CellContext`max]/(
          Subscript[$CellContext`x, $CellContext`max] - 
          Subscript[$CellContext`x, $CellContext`min])] > 1, 
-       Re[
-        Subscript[$CellContext`x, $CellContext`max]/(
+       Re[Subscript[$CellContext`x, $CellContext`max]/(
          Subscript[$CellContext`x, $CellContext`max] - 
          Subscript[$CellContext`x, $CellContext`min])] >= 1, 
        Re[(Subscript[$CellContext`x, $CellContext`max] - 
@@ -7937,7 +7938,8 @@ Cell[BoxData[
       And[Re[
          Subscript[$CellContext`x, $CellContext`min]] == Re[
          Subscript[$CellContext`x, $CellContext`max]], 
-       Re[Subscript[$CellContext`x, $CellContext`max]/(
+       Re[
+        Subscript[$CellContext`x, $CellContext`max]/(
          Subscript[$CellContext`x, $CellContext`max] - 
          Subscript[$CellContext`x, $CellContext`min])] > 1, 
        Re[Subscript[$CellContext`x, $CellContext`max]/(
@@ -7948,9 +7950,9 @@ Cell[BoxData[
          Subscript[$CellContext`x, $CellContext`min]] >= 0, Im[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Re[
          Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`min]] + Im[
-            Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
-           Subscript[$CellContext`x, $CellContext`max]] Re[
+          Subscript[$CellContext`x, $CellContext`min]] + (Im[
+             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+            Subscript[$CellContext`x, $CellContext`max]]) Re[
            Subscript[$CellContext`x, $CellContext`min]] != Im[
           Subscript[$CellContext`x, $CellContext`max]] + Im[
             Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
@@ -7970,9 +7972,9 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
          Subscript[$CellContext`x, $CellContext`min]] >= 0, Re[
          Subscript[$CellContext`x, $CellContext`min]] <= 0, Im[
-         Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]], (
           Subscript[$CellContext`x, $CellContext`max] - 
@@ -7990,9 +7992,9 @@ Cell[BoxData[
            Subscript[$CellContext`x, $CellContext`min])^(-1) 
          Subscript[$CellContext`x, $CellContext`min]] >= 0, Re[
          Subscript[$CellContext`x, $CellContext`max]] < 0, Im[
-         Subscript[$CellContext`x, $CellContext`max]] != 0, Im[
-          Subscript[$CellContext`x, $CellContext`max]] Re[
-           Subscript[$CellContext`x, $CellContext`max]]^(-1) Re[
+         Subscript[$CellContext`x, $CellContext`max]] != 0, (Im[
+           Subscript[$CellContext`x, $CellContext`max]]/Re[
+          Subscript[$CellContext`x, $CellContext`max]]) Re[
           Subscript[$CellContext`x, $CellContext`min]] != Im[
          Subscript[$CellContext`x, $CellContext`min]], (
           Subscript[$CellContext`x, $CellContext`max] - 
@@ -8514,8 +8516,6 @@ CellsToTeX-0.2.2"]],
  CellLabel->"Out[1]=",ExpressionUUID->"949d5fa4-f166-49a9-893d-23e05511a604"]
 }, Open  ]],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
@@ -8550,259 +8550,10 @@ master/NoInstall.m\>\""}], "\[IndentingNewLine]",
     "]"}]}]}]], "Input",
  CellChangeTimes->{{3.823837086161154*^9, 3.823837102605234*^9}, {
   3.823837210889005*^9, 3.8238372257671757`*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"db16c8bf-4ed3-40ea-8a67-759d4386b9f2"],
-
-Cell[BoxData[
- TemplateBox[{
-  "CellToTeX", "shdw", 
-   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"CellToTeX\\\\\\\"\\\"}]\\) appears \
-in multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
-RowBox[{\\\"\\\\\\\"CellsToTeX`\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Global`\\\
-\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \
-\\!\\(\\*RowBox[{\\\"\\\\\\\"CellsToTeX`\\\\\\\"\\\"}]\\) may shadow or be \
-shadowed by other definitions.\"", 2, 4, 4, 22255424217581978418, "Local", 
-   "CellsToTeX`CellToTeX"},
-  "MessageTemplate2"]], "Message", "MSG",
- CellChangeTimes->{3.823837113657715*^9, 3.823837173577222*^9, 
-  3.8238372347068586`*^9},
- CellLabel->
-  "\:6b63\:5728\:8ba1\:7b97In[4]:=",ExpressionUUID->"bc6fac99-c9be-4037-a292-\
-f25c6165edad"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Rule", "argr", 
-   "\"\\!\\(\\*RowBox[{\\\"Rule\\\"}]\\) called with 1 argument; \
-\\!\\(\\*RowBox[{\\\"2\\\"}]\\) arguments are expected.\"", 2, 6, 5, 
-   22255424217581978418, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.823837113657715*^9, 3.823837173577222*^9, 
-  3.823837235341162*^9},
- CellLabel->
-  "\:6b63\:5728\:8ba1\:7b97In[4]:=",ExpressionUUID->"e0ac3805-725b-4e90-a06a-\
-aae398275fb2"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Rule", "argr", 
-   "\"\\!\\(\\*RowBox[{\\\"Rule\\\"}]\\) called with 1 argument; \
-\\!\\(\\*RowBox[{\\\"2\\\"}]\\) arguments are expected.\"", 2, 6, 6, 
-   22255424217581978418, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.823837113657715*^9, 3.823837173577222*^9, 
-  3.823837235355125*^9},
- CellLabel->
-  "\:6b63\:5728\:8ba1\:7b97In[4]:=",ExpressionUUID->"9481c601-d34f-4aee-bf29-\
-c913602869fb"],
-
-Cell[BoxData[
- TemplateBox[{
-  "CellsToTeXException", "unsupported", 
-   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"Box\\\\\\\"\\\"}]\\): \
-\\!\\(\\*RowBox[{\\\"FrameBox\\\", \\\"[\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\
-\\\"}]\\) is not one of supported: \\!\\(\\*RowBox[{\\\"{\\\", \
-RowBox[{RowBox[{\\\"RowBox\\\", \\\"[\\\", \\\"_List\\\", \\\"]\\\"}], \
-\\\",\\\", RowBox[{RowBox[{\\\"(\\\", RowBox[{\\\"StyleBox\\\", \\\"|\\\", \\\
-\"ButtonBox\\\", \\\"|\\\", \\\"InterpretationBox\\\", \\\"|\\\", \\\"FormBox\
-\\\", \\\"|\\\", \\\"TagBox\\\", \\\"|\\\", \\\"TooltipBox\\\"}], \
-\\\")\\\"}], \\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", \\\"___\\\"}], \
-\\\"]\\\"}], \\\",\\\", RowBox[{\\\"TemplateBox\\\", \\\"[\\\", RowBox[{\\\"_\
-\\\", \\\",\\\", \\\"_\\\", \\\",\\\", \\\"___\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"GridBox\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
-\\\"___List\\\", \\\"}\\\"}], \\\",\\\", \\\"___\\\"}], \\\"]\\\"}], \
-\\\",\\\", RowBox[{\\\"PaneSelectorBox\\\", \\\"[\\\", \
-RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"(\\\", RowBox[{\\\"_Rule\\\", \
-\\\"|\\\", \\\"_RuleDelayed\\\"}], \\\")\\\"}], \\\"...\\\"}], \\\"}\\\"}], \
-\\\",\\\", RowBox[{RowBox[{RowBox[{\\\"HoldPattern\\\", \\\"[\\\", \
-\\\"Dynamic\\\", \\\"]\\\"}], \\\"[\\\", RowBox[{RowBox[{\\\"Pattern\\\", \
-\\\"[\\\", RowBox[{\\\"\\\\\\\"v\\\\\\\"\\\", \\\",\\\", \\\"_\\\"}], \\\"]\\\
-\"}], \\\",\\\", \\\"___\\\"}], \\\"]\\\"}], \\\"|\\\", RowBox[{\\\"Pattern\\\
-\", \\\"[\\\", RowBox[{\\\"\\\\\\\"v\\\\\\\"\\\", \\\",\\\", \\\"_\\\"}], \
-\\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"Shortest\\\", \\\"[\\\", \
-RowBox[{\\\"_\\\", \\\":\\\", \\\"\\\\\\\" \\\\\\\"\\\"}], \\\"]\\\"}], \\\",\
-\\\", RowBox[{\\\"OptionsPattern\\\", \\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \
-\\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"9\\\", \\\"\[RightSkeleton]\\\
-\"}], \\\",\\\", RowBox[{\\\"HoldPattern\\\", \\\"[\\\", \
-RowBox[{\\\"FractionBox\\\", \\\"[\\\", RowBox[{RowBox[{\\\"Repeated\\\", \
-\\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", RowBox[{\\\"{\\\", \\\"2\\\", \
-\\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"OptionsPattern\\\", \
-\\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"HoldPattern\\\", \\\"[\\\", RowBox[{\\\"SqrtBox\\\", \\\"[\\\", \
-RowBox[{RowBox[{\\\"Repeated\\\", \\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", \
-RowBox[{\\\"{\\\", \\\"1\\\", \\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\
-\\\"OptionsPattern\\\", \\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \\\"]\\\"}], \
-\\\",\\\", RowBox[{\\\"HoldPattern\\\", \\\"[\\\", \
-RowBox[{\\\"RadicalBox\\\", \\\"[\\\", RowBox[{RowBox[{\\\"Repeated\\\", \
-\\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", RowBox[{\\\"{\\\", \\\"2\\\", \
-\\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"OptionsPattern\\\", \
-\\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
-\\\"_String\\\"}], \\\"}\\\"}]\\). Exception occurred in \
-\\!\\(\\*RowBox[{\\\"CellsToTeX`Configuration`boxesToTeXProcessor\\\", \
-\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\
-\"}], \\\"]\\\"}]\\).\"", 2, 6, 7, 22255424217581978418, "Local", 
-   "CellsToTeX`CellsToTeXException"},
-  "MessageTemplate2"]], "Message", "MSG",
- CellChangeTimes->{3.823837113657715*^9, 3.823837173577222*^9, 
-  3.8238372354448853`*^9},
- CellLabel->
-  "\:6b63\:5728\:8ba1\:7b97In[4]:=",ExpressionUUID->"dcbd95d5-2567-4d21-ab1e-\
-15fe17fe0a4e"],
-
-Cell[BoxData[
- TemplateBox[{
-  "CellsToTeXException", "unsupported", 
-   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"Box\\\\\\\"\\\"}]\\): \
-\\!\\(\\*RowBox[{\\\"FrameBox\\\", \\\"[\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\
-\\\"}]\\) is not one of supported: \\!\\(\\*RowBox[{\\\"{\\\", \
-RowBox[{RowBox[{\\\"RowBox\\\", \\\"[\\\", \\\"_List\\\", \\\"]\\\"}], \
-\\\",\\\", RowBox[{RowBox[{\\\"(\\\", RowBox[{\\\"StyleBox\\\", \\\"|\\\", \\\
-\"ButtonBox\\\", \\\"|\\\", \\\"InterpretationBox\\\", \\\"|\\\", \\\"FormBox\
-\\\", \\\"|\\\", \\\"TagBox\\\", \\\"|\\\", \\\"TooltipBox\\\"}], \
-\\\")\\\"}], \\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", \\\"___\\\"}], \
-\\\"]\\\"}], \\\",\\\", RowBox[{\\\"TemplateBox\\\", \\\"[\\\", RowBox[{\\\"_\
-\\\", \\\",\\\", \\\"_\\\", \\\",\\\", \\\"___\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"GridBox\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
-\\\"___List\\\", \\\"}\\\"}], \\\",\\\", \\\"___\\\"}], \\\"]\\\"}], \
-\\\",\\\", RowBox[{\\\"PaneSelectorBox\\\", \\\"[\\\", \
-RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"(\\\", RowBox[{\\\"_Rule\\\", \
-\\\"|\\\", \\\"_RuleDelayed\\\"}], \\\")\\\"}], \\\"...\\\"}], \\\"}\\\"}], \
-\\\",\\\", RowBox[{RowBox[{RowBox[{\\\"HoldPattern\\\", \\\"[\\\", \
-\\\"Dynamic\\\", \\\"]\\\"}], \\\"[\\\", RowBox[{RowBox[{\\\"Pattern\\\", \
-\\\"[\\\", RowBox[{\\\"\\\\\\\"v\\\\\\\"\\\", \\\",\\\", \\\"_\\\"}], \\\"]\\\
-\"}], \\\",\\\", \\\"___\\\"}], \\\"]\\\"}], \\\"|\\\", RowBox[{\\\"Pattern\\\
-\", \\\"[\\\", RowBox[{\\\"\\\\\\\"v\\\\\\\"\\\", \\\",\\\", \\\"_\\\"}], \
-\\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"Shortest\\\", \\\"[\\\", \
-RowBox[{\\\"_\\\", \\\":\\\", \\\"\\\\\\\" \\\\\\\"\\\"}], \\\"]\\\"}], \\\",\
-\\\", RowBox[{\\\"OptionsPattern\\\", \\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \
-\\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"9\\\", \\\"\[RightSkeleton]\\\
-\"}], \\\",\\\", RowBox[{\\\"HoldPattern\\\", \\\"[\\\", \
-RowBox[{\\\"FractionBox\\\", \\\"[\\\", RowBox[{RowBox[{\\\"Repeated\\\", \
-\\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", RowBox[{\\\"{\\\", \\\"2\\\", \
-\\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"OptionsPattern\\\", \
-\\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"HoldPattern\\\", \\\"[\\\", RowBox[{\\\"SqrtBox\\\", \\\"[\\\", \
-RowBox[{RowBox[{\\\"Repeated\\\", \\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", \
-RowBox[{\\\"{\\\", \\\"1\\\", \\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\
-\\\"OptionsPattern\\\", \\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \\\"]\\\"}], \
-\\\",\\\", RowBox[{\\\"HoldPattern\\\", \\\"[\\\", \
-RowBox[{\\\"RadicalBox\\\", \\\"[\\\", RowBox[{RowBox[{\\\"Repeated\\\", \
-\\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", RowBox[{\\\"{\\\", \\\"2\\\", \
-\\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"OptionsPattern\\\", \
-\\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
-\\\"_String\\\"}], \\\"}\\\"}]\\). Exception occurred in \
-\\!\\(\\*RowBox[{\\\"CellsToTeX`Configuration`boxesToTeXProcessor\\\", \
-\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\
-\"}], \\\"]\\\"}]\\).\"", 2, 6, 8, 22255424217581978418, "Local", 
-   "CellsToTeX`CellsToTeXException"},
-  "MessageTemplate2"]], "Message", "MSG",
- CellChangeTimes->{3.823837113657715*^9, 3.823837173577222*^9, 
-  3.823837235528661*^9},
- CellLabel->
-  "\:6b63\:5728\:8ba1\:7b97In[4]:=",ExpressionUUID->"53bb42c6-061c-438a-ab7e-\
-40364709a528"],
-
-Cell[BoxData[
- TemplateBox[{
-  "CellsToTeXException", "unsupported", 
-   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"Box\\\\\\\"\\\"}]\\): \
-\\!\\(\\*RowBox[{\\\"DynamicModuleBox\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\
-\", RowBox[{RowBox[{\\\"Typeset`open$$\\\", \\\"=\\\", \\\"True\\\"}], \
-\\\",\\\", RowBox[{\\\"Typeset`embedState$$\\\", \\\"=\\\", \\\"\\\\\\\"Ready\
-\\\\\\\"\\\"}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"TemplateBox\\\", \
-\\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"PaneSelectorBox\\\", \
-\\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"False\\\", \\\"\
-\[Rule]\\\", RowBox[{\\\"GridBox\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\
-\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
-\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
-\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
-\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
-\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
-\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
-\"}], \\\"]\\\"}]}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"True\\\", \\\"\
-\[Rule]\\\", RowBox[{\\\"GridBox\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\
-\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
-\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
-\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
-\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
-\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
-\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
-\"}], \\\"]\\\"}]}], \\\"]\\\"}]}]}], \\\"}\\\"}], \\\",\\\", \
-RowBox[{\\\"Dynamic\\\", \\\"[\\\", \\\"Typeset`open$$\\\", \\\"]\\\"}], \
-\\\",\\\", RowBox[{\\\"ImageSize\\\", \\\"\[Rule]\\\", \\\"Automatic\\\"}]}], \
-\\\"]\\\"}], \\\"}\\\"}], \\\",\\\", \\\"\\\\\\\"SummaryPanel\\\\\\\"\\\"}], \
-\\\"]\\\"}], \\\",\\\", RowBox[{\\\"DynamicModuleValues\\\", \\\"\
-\[RuleDelayed]\\\", RowBox[{\\\"{\\\", \\\"}\\\"}]}]}], \\\"]\\\"}]\\) is not \
-one of supported: \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"RowBox\\\", \
-\\\"[\\\", \\\"_List\\\", \\\"]\\\"}], \\\",\\\", RowBox[{RowBox[{\\\"(\\\", \
-RowBox[{\\\"StyleBox\\\", \\\"|\\\", \\\"ButtonBox\\\", \\\"|\\\", \
-\\\"InterpretationBox\\\", \\\"|\\\", \\\"FormBox\\\", \\\"|\\\", \
-\\\"TagBox\\\", \\\"|\\\", \\\"TooltipBox\\\"}], \\\")\\\"}], \\\"[\\\", \
-RowBox[{\\\"_\\\", \\\",\\\", \\\"___\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\
-\\\"TemplateBox\\\", \\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", \\\"_\\\", \
-\\\",\\\", \\\"___\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"GridBox\\\", \\\
-\"[\\\", RowBox[{RowBox[{\\\"{\\\", \\\"___List\\\", \\\"}\\\"}], \\\",\\\", \
-\\\"___\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"PaneSelectorBox\\\", \\\"[\
-\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"(\\\", RowBox[{\\\"_Rule\
-\\\", \\\"|\\\", \\\"_RuleDelayed\\\"}], \\\")\\\"}], \\\"...\\\"}], \
-\\\"}\\\"}], \\\",\\\", RowBox[{RowBox[{RowBox[{\\\"HoldPattern\\\", \
-\\\"[\\\", \\\"Dynamic\\\", \\\"]\\\"}], \\\"[\\\", \
-RowBox[{RowBox[{\\\"Pattern\\\", \\\"[\\\", \
-RowBox[{\\\"\\\\\\\"v\\\\\\\"\\\", \\\",\\\", \\\"_\\\"}], \\\"]\\\"}], \\\",\
-\\\", \\\"___\\\"}], \\\"]\\\"}], \\\"|\\\", RowBox[{\\\"Pattern\\\", \\\"[\\\
-\", RowBox[{\\\"\\\\\\\"v\\\\\\\"\\\", \\\",\\\", \\\"_\\\"}], \\\"]\\\"}]}], \
-\\\",\\\", RowBox[{\\\"Shortest\\\", \\\"[\\\", RowBox[{\\\"_\\\", \\\":\\\", \
-\\\"\\\\\\\" \\\\\\\"\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"OptionsPattern\\\", \\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \
-\\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"9\\\", \\\"\[RightSkeleton]\\\
-\"}], \\\",\\\", RowBox[{\\\"HoldPattern\\\", \\\"[\\\", \
-RowBox[{\\\"FractionBox\\\", \\\"[\\\", RowBox[{RowBox[{\\\"Repeated\\\", \
-\\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", RowBox[{\\\"{\\\", \\\"2\\\", \
-\\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"OptionsPattern\\\", \
-\\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"HoldPattern\\\", \\\"[\\\", RowBox[{\\\"SqrtBox\\\", \\\"[\\\", \
-RowBox[{RowBox[{\\\"Repeated\\\", \\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", \
-RowBox[{\\\"{\\\", \\\"1\\\", \\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\
-\\\"OptionsPattern\\\", \\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \\\"]\\\"}], \
-\\\",\\\", RowBox[{\\\"HoldPattern\\\", \\\"[\\\", \
-RowBox[{\\\"RadicalBox\\\", \\\"[\\\", RowBox[{RowBox[{\\\"Repeated\\\", \
-\\\"[\\\", RowBox[{\\\"_\\\", \\\",\\\", RowBox[{\\\"{\\\", \\\"2\\\", \
-\\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"OptionsPattern\\\", \
-\\\"[\\\", \\\"]\\\"}]}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
-\\\"_String\\\"}], \\\"}\\\"}]\\). Exception occurred in \
-\\!\\(\\*RowBox[{\\\"CellsToTeX`Configuration`boxesToTeXProcessor\\\", \
-\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\
-\"}], \\\"]\\\"}]\\).\"", 2, 6, 9, 22255424217581978418, "Local", 
-   "CellsToTeX`CellsToTeXException"},
-  "MessageTemplate2"]], "Message", "MSG",
- CellChangeTimes->{3.823837113657715*^9, 3.823837173577222*^9, 
-  3.8238372355655985`*^9},
- CellLabel->
-  "\:6b63\:5728\:8ba1\:7b97In[4]:=",ExpressionUUID->"52a0ced7-ed8d-4a88-9a52-\
-a8e2d4296831"],
-
-Cell[BoxData[
- TemplateBox[{
-  "General", "stop", 
-   "\"Further output of \
-\\!\\(\\*StyleBox[RowBox[{\\\"CellsToTeXException\\\", \\\"::\\\", \
-\\\"unsupported\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
-calculation.\"", 2, 6, 10, 22255424217581978418, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.823837113657715*^9, 3.823837173577222*^9, 
-  3.823837235587504*^9},
- CellLabel->
-  "\:6b63\:5728\:8ba1\:7b97In[4]:=",ExpressionUUID->"b0a410d8-aa94-43f6-ba4a-\
-4f726601e252"]
-}, Open  ]]
+ CellLabel->"In[4]:=",ExpressionUUID->"db16c8bf-4ed3-40ea-8a67-759d4386b9f2"]
 },
-WindowSize->{841.1999999999999, 448.79999999999995`},
-WindowMargins->{{9, Automatic}, {Automatic, 36}},
+WindowSize->{840., 447.75},
+WindowMargins->{{Automatic, -871.5}, {-39.75, Automatic}},
 TaggingRules->{
  "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
 Magnification:>0.9 Inherited,
@@ -8823,53 +8574,44 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 1212, 37, 181, "Input",ExpressionUUID->"c8c1423d-f571-4cbf-ab55-fc1d6d60c02b"],
-Cell[1795, 61, 791, 23, 60, "Output",ExpressionUUID->"7e3ebc60-ed43-4ba7-a6e3-bcdd5e71712b"]
+Cell[580, 22, 1212, 37, 172, "Input",ExpressionUUID->"c8c1423d-f571-4cbf-ab55-fc1d6d60c02b"],
+Cell[1795, 61, 791, 23, 58, "Output",ExpressionUUID->"7e3ebc60-ed43-4ba7-a6e3-bcdd5e71712b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2623, 89, 206, 4, 39, "Input",ExpressionUUID->"d94e8f69-4f53-4f86-a472-131357dc2680"],
-Cell[2832, 95, 592, 14, 50, "Output",ExpressionUUID->"9f31f0aa-b23c-478d-97f8-bd117637df79"]
+Cell[2623, 89, 206, 4, 40, "Input",ExpressionUUID->"d94e8f69-4f53-4f86-a472-131357dc2680"],
+Cell[2832, 95, 592, 14, 49, "Output",ExpressionUUID->"9f31f0aa-b23c-478d-97f8-bd117637df79"]
 }, Open  ]],
-Cell[3439, 112, 886, 22, 48, "Input",ExpressionUUID->"f69dc07c-af6e-4f65-b417-c414cbe8bae7"],
+Cell[3439, 112, 886, 22, 47, "Input",ExpressionUUID->"f69dc07c-af6e-4f65-b417-c414cbe8bae7"],
 Cell[CellGroupData[{
-Cell[4350, 138, 1222, 35, 112, "Input",ExpressionUUID->"7141ccc1-be34-4580-8173-11fff826140d"],
-Cell[5575, 175, 9895, 221, 60, "Output",ExpressionUUID->"dc8f01e4-28bf-4777-a810-7ced36a97267"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[15507, 401, 1159, 33, 67, "Input",ExpressionUUID->"1f9820dc-c6ae-42ab-81b4-a9142af5278d"],
-Cell[16669, 436, 906, 29, 69, "Output",ExpressionUUID->"ca5ee5ff-6df1-4650-9933-474e32435033"]
+Cell[4350, 138, 1222, 35, 111, "Input",ExpressionUUID->"7141ccc1-be34-4580-8173-11fff826140d"],
+Cell[5575, 175, 9895, 221, 58, "Output",ExpressionUUID->"dc8f01e4-28bf-4777-a810-7ced36a97267"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17612, 470, 3958, 109, 200, "Input",ExpressionUUID->"23d3a577-ac36-4c6f-9a4c-3f84a45a4884"],
+Cell[15507, 401, 1159, 33, 65, "Input",ExpressionUUID->"1f9820dc-c6ae-42ab-81b4-a9142af5278d"],
+Cell[16669, 436, 906, 29, 68, "Output",ExpressionUUID->"ca5ee5ff-6df1-4650-9933-474e32435033"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17612, 470, 3958, 109, 191, "Input",ExpressionUUID->"23d3a577-ac36-4c6f-9a4c-3f84a45a4884"],
 Cell[21573, 581, 2281, 59, 75, "Output",ExpressionUUID->"f5983376-5951-485e-8cee-40dbb47cb692"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23891, 645, 828, 21, 57, "Input",ExpressionUUID->"8a4cdcd0-b614-4821-8d20-3d2176b5d7b8"],
-Cell[24722, 668, 408795, 7337, 96, "Output",ExpressionUUID->"7121b248-de70-43ea-98b3-7fdc1cda580f"]
+Cell[23891, 645, 828, 21, 55, "Input",ExpressionUUID->"8a4cdcd0-b614-4821-8d20-3d2176b5d7b8"],
+Cell[24722, 668, 408712, 7339, 94, "Output",ExpressionUUID->"7121b248-de70-43ea-98b3-7fdc1cda580f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[433554, 8010, 2381, 66, 346, "Input",ExpressionUUID->"aad47428-fa95-4766-bb54-d35df9a4a174"],
-Cell[435938, 8078, 310, 5, 29, "Output",ExpressionUUID->"586066dd-933c-4629-8900-ae5633b20ebe"],
-Cell[436251, 8085, 311, 5, 29, "Output",ExpressionUUID->"80aeca56-7b9d-4141-8ecf-d6af2ffa9311"]
+Cell[433471, 8012, 2381, 66, 345, "Input",ExpressionUUID->"aad47428-fa95-4766-bb54-d35df9a4a174"],
+Cell[435855, 8080, 310, 5, 29, "Output",ExpressionUUID->"586066dd-933c-4629-8900-ae5633b20ebe"],
+Cell[436168, 8087, 311, 5, 29, "Output",ExpressionUUID->"80aeca56-7b9d-4141-8ecf-d6af2ffa9311"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[436599, 8095, 269, 5, 39, "Input",ExpressionUUID->"88c90de1-4862-442d-bab8-d9a212ca8afa"],
-Cell[436871, 8102, 169, 2, 29, "Output",ExpressionUUID->"0cf690a7-77b4-4202-8d0c-75eebd1d7029"]
+Cell[436516, 8097, 269, 5, 40, "Input",ExpressionUUID->"88c90de1-4862-442d-bab8-d9a212ca8afa"],
+Cell[436788, 8104, 169, 2, 29, "Output",ExpressionUUID->"0cf690a7-77b4-4202-8d0c-75eebd1d7029"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[437077, 8109, 314, 5, 58, "Input",ExpressionUUID->"c0c73984-14ef-4f48-8229-2c2d32333f6c"],
-Cell[437394, 8116, 22454, 397, 74, "Output",ExpressionUUID->"949d5fa4-f166-49a9-893d-23e05511a604"]
+Cell[436994, 8111, 314, 5, 60, "Input",ExpressionUUID->"c0c73984-14ef-4f48-8229-2c2d32333f6c"],
+Cell[437311, 8118, 22454, 397, 80, "Output",ExpressionUUID->"949d5fa4-f166-49a9-893d-23e05511a604"]
 }, Open  ]],
-Cell[CellGroupData[{
-Cell[459885, 8518, 1300, 34, 153, "Input",ExpressionUUID->"db16c8bf-4ed3-40ea-8a67-759d4386b9f2"],
-Cell[461188, 8554, 737, 15, 39, "Message",ExpressionUUID->"bc6fac99-c9be-4037-a292-f25c6165edad"],
-Cell[461928, 8571, 456, 11, 24, "Message",ExpressionUUID->"e0ac3805-725b-4e90-a06a-aae398275fb2"],
-Cell[462387, 8584, 456, 11, 24, "Message",ExpressionUUID->"9481c601-d34f-4aee-bf29-c913602869fb"],
-Cell[462846, 8597, 3433, 52, 126, "Message",ExpressionUUID->"dcbd95d5-2567-4d21-ab1e-15fe17fe0a4e"],
-Cell[466282, 8651, 3431, 52, 129, "Message",ExpressionUUID->"53bb42c6-061c-438a-ab7e-40364709a528"],
-Cell[469716, 8705, 5613, 81, 181, "Message",ExpressionUUID->"52a0ced7-ed8d-4a88-9a52-a8e2d4296831"],
-Cell[475332, 8788, 521, 12, 24, "Message",ExpressionUUID->"b0a410d8-aa94-43f6-ba4a-4f726601e252"]
-}, Open  ]]
+Cell[459780, 8518, 1300, 34, 158, "Input",ExpressionUUID->"db16c8bf-4ed3-40ea-8a67-759d4386b9f2"]
 }
 ]
 *)

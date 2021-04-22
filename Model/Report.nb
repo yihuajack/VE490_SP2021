@@ -1,0 +1,521 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     22584,        513]
+NotebookOptionsPosition[     21842,        491]
+NotebookOutlinePosition[     22276,        508]
+CellTagsIndexPosition[     22233,        505]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["v", "L0"], "=", 
+   FractionBox["\[Epsilon]", 
+    RowBox[{"2", "\[Eta]", 
+     SqrtBox["k"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "+", "k"}], ")"}], "2"]}]]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Omega]", "0"], "=", 
+   FractionBox[
+    RowBox[{"2", 
+     SubscriptBox["\[Lambda]", "D"], "*", "\[Sigma]"}], 
+    RowBox[{"\[Epsilon]", "*", "Pi"}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["v", "DL"], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox[
+     SubscriptBox["v", "L0"], "x"]}], "*", 
+   SubsuperscriptBox["\[CapitalPsi]", "0", "2"], "*", 
+   FractionBox[
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{"\[Omega]", "*", "x"}], 
+       SubscriptBox["\[Omega]", "0"]], ")"}], "2"], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{"\[Omega]", "*", "x"}], 
+          SubscriptBox["\[Omega]", "0"]], ")"}], "2"]}], ")"}], 
+     "2"]]}]}]}], "Input",
+ CellChangeTimes->{{3.823247248796114*^9, 3.8232472506215997`*^9}, {
+   3.8232473131996565`*^9, 3.8232473783613796`*^9}, {3.8232475884466133`*^9, 
+   3.823247610116333*^9}, {3.8232476572276974`*^9, 3.8232476762140107`*^9}, {
+   3.8232477615427284`*^9, 3.8232478039309726`*^9}, {3.8232538956847095`*^9, 
+   3.8232540338575897`*^9}, 3.82325569023306*^9, {3.8232561279850655`*^9, 
+   3.8232561290806627`*^9}, 3.823256331490779*^9, 3.823257714568472*^9, {
+   3.8232910221479545`*^9, 3.8232910243687096`*^9}, {3.827713019089909*^9, 
+   3.8277130225927167`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"097c20e6-16d7-4090-b144-76e14e3fc40d"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["\[Pi]", "2"], " ", "x", " ", 
+    SuperscriptBox["\[Epsilon]", "3"], " ", 
+    SuperscriptBox["\[Omega]", "2"], " ", 
+    SubsuperscriptBox["\[CapitalPsi]", "0", "2"]}], 
+   RowBox[{"8", " ", 
+    SqrtBox["k"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", "k"}], ")"}], "2"], " ", "\[Eta]", " ", 
+    SuperscriptBox["\[Sigma]", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[Pi]", "2"], " ", 
+         SuperscriptBox["x", "2"], " ", 
+         SuperscriptBox["\[Epsilon]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], 
+        RowBox[{"4", " ", 
+         SuperscriptBox["\[Sigma]", "2"], " ", 
+         SubsuperscriptBox["\[Lambda]", "D", "2"]}]]}], ")"}], "2"], " ", 
+    SubsuperscriptBox["\[Lambda]", "D", "2"]}]]}]], "Output",
+ CellChangeTimes->{3.827713025376876*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"ebe86c8d-48d9-4e0d-a2b5-095ac0607285"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Refine", "[", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["v", "ave"], "=", 
+    FractionBox[
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", 
+       SubscriptBox["x", "1"], 
+       SubscriptBox["x", "2"]], 
+      RowBox[{
+       SubscriptBox["v", "DL"], 
+       RowBox[{"\[DifferentialD]", "x"}]}]}], 
+     RowBox[{
+      SubscriptBox["x", "2"], "-", 
+      SubscriptBox["x", "1"]}]]}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Element", "[", 
+      RowBox[{"k", ",", "Reals"}], "]"}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{"\[Omega]", ",", "Reals"}], "]"}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{
+       SubscriptBox["x", "2"], ",", "Reals"}], "]"}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{
+       SubscriptBox["x", "1"], ",", "Reals"}], "]"}], ",", 
+     RowBox[{
+      SubscriptBox["x", "2"], ">", 
+      SubscriptBox["x", "1"]}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{"x", ",", "Reals"}], "]"}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{
+       SubscriptBox["\[CapitalPsi]", "0"], ",", "Reals"}], "]"}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{"\[Epsilon]", ",", "Reals"}], "]"}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{"\[Eta]", ",", "Reals"}], "]"}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{"\[Sigma]", ",", "Reals"}], "]"}], ",", 
+     RowBox[{"Element", "[", 
+      RowBox[{
+       SubscriptBox["\[Lambda]", "D"], ",", "Reals"}], "]"}], ",", 
+     RowBox[{"\[Omega]", ">", "0"}], ",", 
+     RowBox[{
+      SubscriptBox["\[Lambda]", "D"], ">", "0"}], ",", 
+     RowBox[{"\[Eta]", ">", "0"}], ",", 
+     RowBox[{"\[Sigma]", ">", "0"}], ",", 
+     RowBox[{"k", ">", "0"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8232940737968698`*^9, 3.823294204036098*^9}, {
+  3.823294264128321*^9, 3.823294266275903*^9}, {3.8232943153546925`*^9, 
+  3.823294340356354*^9}, {3.827714487983903*^9, 3.827714491530264*^9}, {
+  3.8277145343255177`*^9, 3.8277147394437647`*^9}, {3.827730849527082*^9, 
+  3.8277308884062243`*^9}, {3.827730954524081*^9, 3.8277309557685533`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"c89a6423-9549-473d-8bfa-01251d3ad405"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"-", 
+     FractionBox[
+      RowBox[{
+        SuperscriptBox["\[Pi]", "2"], " ", 
+        SuperscriptBox["\[Epsilon]", "3"], " ", 
+        SuperscriptBox["\[Sigma]", "2"], " ", 
+        SuperscriptBox["\[Omega]", "2"], " ", 
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{"-", 
+              SubsuperscriptBox["x", "1", "2"]}], "+", 
+            SubsuperscriptBox["x", "2", "2"]}], ")"}], " ", 
+        SubsuperscriptBox["\[Lambda]", "D", "2"], " ", 
+        SubsuperscriptBox["\[CapitalPsi]", "0", "2"]}], 
+      RowBox[{
+        SqrtBox["k"], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+           RowBox[{"1", "+", "k"}], ")"}], "2"], " ", "\[Eta]", " ", 
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{"-", 
+              SubscriptBox["x", "1"]}], "+", 
+            SubscriptBox["x", "2"]}], ")"}], " ", 
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{
+              SuperscriptBox["\[Pi]", "2"], " ", 
+              SuperscriptBox["\[Epsilon]", "2"], " ", 
+              SuperscriptBox["\[Omega]", "2"], " ", 
+              SubsuperscriptBox["x", "1", "2"]}], "+", 
+            RowBox[{"4", " ", 
+              SuperscriptBox["\[Sigma]", "2"], " ", 
+              SubsuperscriptBox["\[Lambda]", "D", "2"]}]}], ")"}], " ", 
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{
+              SuperscriptBox["\[Pi]", "2"], " ", 
+              SuperscriptBox["\[Epsilon]", "2"], " ", 
+              SuperscriptBox["\[Omega]", "2"], " ", 
+              SubsuperscriptBox["x", "2", "2"]}], "+", 
+            RowBox[{"4", " ", 
+              SuperscriptBox["\[Sigma]", "2"], " ", 
+              SubsuperscriptBox["\[Lambda]", "D", "2"]}]}], ")"}]}]]}], 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       StyleBox[
+        TagBox[
+         TooltipBox["\"condition\"", 
+          TagBox[
+           RowBox[{
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{"0", "\[NotEqual]", 
+                   RowBox[{"2", " ", "\[Sigma]", " ", 
+                    RowBox[{"Re", "[", 
+                    FractionBox["1", 
+                    RowBox[{
+                    RowBox[{"\[Epsilon]", " ", "\[Omega]", " ", 
+                    SubscriptBox["x", "1"]}], "-", 
+                    RowBox[{"\[Epsilon]", " ", "\[Omega]", " ", 
+                    SubscriptBox["x", "2"]}]}]], "]"}], " ", 
+                    SubscriptBox["\[Lambda]", "D"]}]}], "||", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"\[Pi]", " ", 
+                    SubscriptBox["x", "1"]}], 
+                    RowBox[{
+                    SubscriptBox["x", "1"], "-", 
+                    SubscriptBox["x", "2"]}]], "+", 
+                    RowBox[{"2", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", 
+                    FractionBox["1", 
+                    RowBox[{
+                    RowBox[{"\[Epsilon]", " ", "\[Omega]", " ", 
+                    SubscriptBox["x", "1"]}], "-", 
+                    RowBox[{"\[Epsilon]", " ", "\[Omega]", " ", 
+                    SubscriptBox["x", "2"]}]}]], "]"}], " ", 
+                    SubscriptBox["\[Lambda]", "D"]}]}], "<", "0"}], "&&", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"\[Pi]", " ", 
+                    SubscriptBox["x", "1"]}], 
+                    RowBox[{
+                    RowBox[{"-", 
+                    SubscriptBox["x", "1"]}], "+", 
+                    SubscriptBox["x", "2"]}]], "\[GreaterEqual]", 
+                    RowBox[{"2", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", 
+                    FractionBox["1", 
+                    RowBox[{
+                    RowBox[{"\[Epsilon]", " ", "\[Omega]", " ", 
+                    SubscriptBox["x", "1"]}], "-", 
+                    RowBox[{"\[Epsilon]", " ", "\[Omega]", " ", 
+                    SubscriptBox["x", "2"]}]}]], "]"}], " ", 
+                    SubscriptBox["\[Lambda]", "D"]}]}]}], ")"}], "||", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"\[Pi]", " ", 
+                    SubscriptBox["x", "1"]}], 
+                    RowBox[{
+                    SubscriptBox["x", "1"], "-", 
+                    SubscriptBox["x", "2"]}]], "+", 
+                    RowBox[{"2", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", 
+                    FractionBox["1", 
+                    RowBox[{
+                    RowBox[{"\[Epsilon]", " ", "\[Omega]", " ", 
+                    SubscriptBox["x", "1"]}], "-", 
+                    RowBox[{"\[Epsilon]", " ", "\[Omega]", " ", 
+                    SubscriptBox["x", "2"]}]}]], "]"}], " ", 
+                    SubscriptBox["\[Lambda]", "D"]}]}], "\[GreaterEqual]", 
+                    "\[Pi]"}], "&&", 
+                    RowBox[{
+                    RowBox[{"\[Pi]", "+", 
+                    FractionBox[
+                    RowBox[{"\[Pi]", " ", 
+                    SubscriptBox["x", "1"]}], 
+                    RowBox[{
+                    RowBox[{"-", 
+                    SubscriptBox["x", "1"]}], "+", 
+                    SubscriptBox["x", "2"]}]]}], "<", 
+                    RowBox[{"2", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", 
+                    FractionBox["1", 
+                    RowBox[{
+                    RowBox[{"\[Epsilon]", " ", "\[Omega]", " ", 
+                    SubscriptBox["x", "1"]}], "-", 
+                    RowBox[{"\[Epsilon]", " ", "\[Omega]", " ", 
+                    SubscriptBox["x", "2"]}]}]], "]"}], " ", 
+                    SubscriptBox["\[Lambda]", "D"]}]}]}], ")"}]}], ")"}], 
+             "&&", 
+             RowBox[{"(", 
+               RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], ")"}]}], 
+           Short[#, 7]& ]], Annotation[#, 
+          Short[
+           And[
+            Or[
+            0 != ((2 $CellContext`\[Sigma]) 
+               Re[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                   Subscript[$CellContext`x, 
+                    1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                  Subscript[$CellContext`x, 2])^(-1)]) 
+              Subscript[$CellContext`\[Lambda], D], 
+             And[
+             Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+                 Subscript[$CellContext`x, 2])) + ((2 $CellContext`\[Sigma]) 
+                 Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 
+                    1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 2])^(-1)]) 
+                Subscript[$CellContext`\[Lambda], D] < 0, 
+              Pi (Subscript[$CellContext`x, 1]/(-Subscript[$CellContext`x, 1] + 
+                Subscript[$CellContext`x, 2])) >= ((2 $CellContext`\[Sigma]) 
+                Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 
+                    1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                   Subscript[$CellContext`x, 2])^(-1)]) 
+               Subscript[$CellContext`\[Lambda], D]], 
+             And[
+             Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+                 Subscript[$CellContext`x, 2])) + ((2 $CellContext`\[Sigma]) 
+                 Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 
+                    1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 2])^(-1)]) 
+                Subscript[$CellContext`\[Lambda], D] >= Pi, 
+              Pi + Pi (
+                 Subscript[$CellContext`x, 1]/(-Subscript[$CellContext`x, 1] + 
+                 Subscript[$CellContext`x, 2])) < ((2 $CellContext`\[Sigma]) 
+                Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 
+                    1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                   Subscript[$CellContext`x, 2])^(-1)]) 
+               Subscript[$CellContext`\[Lambda], D]]], 
+            Or[
+            Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+               Subscript[$CellContext`x, 2])) > 
+             Pi + ((2 $CellContext`\[Sigma]) 
+                Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 
+                    1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                   Subscript[$CellContext`x, 2])^(-1)]) 
+               Subscript[$CellContext`\[Lambda], D], 
+             Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+               Subscript[$CellContext`x, 2])) < ((2 $CellContext`\[Sigma]) 
+               Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                   Subscript[$CellContext`x, 
+                    1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                  Subscript[$CellContext`x, 2])^(-1)]) 
+              Subscript[$CellContext`\[Lambda], D], ((2 $CellContext`\[Sigma])
+                 Re[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                   Subscript[$CellContext`x, 
+                    1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                  Subscript[$CellContext`x, 2])^(-1)]) 
+              Subscript[$CellContext`\[Lambda], D] != 0, 
+             And[
+             0 != ((2 $CellContext`\[Sigma]) 
+                Re[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 
+                    1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                   Subscript[$CellContext`x, 2])^(-1)]) 
+               Subscript[$CellContext`\[Lambda], D], 
+              Or[
+              Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+                 Subscript[$CellContext`x, 2])) >= 
+               Pi + ((2 $CellContext`\[Sigma]) 
+                  Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 
+                    1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 2])^(-1)]) 
+                 Subscript[$CellContext`\[Lambda], D], 
+               Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+                 Subscript[$CellContext`x, 2])) <= ((2 $CellContext`\[Sigma]) 
+                 Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 
+                    1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+                    Subscript[$CellContext`x, 2])^(-1)]) 
+                Subscript[$CellContext`\[Lambda], D]]]]], 7], "Tooltip"]& ], 
+        "IconizedCustomName", StripOnInput -> False], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["And", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["11992", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]}, "IconizedObject"]], 
+    And[
+     Or[0 != ((2 $CellContext`\[Sigma]) 
+        Re[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+            Subscript[$CellContext`x, 
+              1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+           Subscript[$CellContext`x, 2])^(-1)]) 
+       Subscript[$CellContext`\[Lambda], D], 
+      And[
+      Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+          Subscript[$CellContext`x, 2])) + ((2 $CellContext`\[Sigma]) 
+          Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+              Subscript[$CellContext`x, 
+                1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+             Subscript[$CellContext`x, 2])^(-1)]) 
+         Subscript[$CellContext`\[Lambda], D] < 0, 
+       Pi (Subscript[$CellContext`x, 1]/(-Subscript[$CellContext`x, 1] + 
+         Subscript[$CellContext`x, 2])) >= ((2 $CellContext`\[Sigma]) 
+         Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+             Subscript[$CellContext`x, 
+               1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+            Subscript[$CellContext`x, 2])^(-1)]) 
+        Subscript[$CellContext`\[Lambda], D]], 
+      And[
+      Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+          Subscript[$CellContext`x, 2])) + ((2 $CellContext`\[Sigma]) 
+          Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+              Subscript[$CellContext`x, 
+                1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+             Subscript[$CellContext`x, 2])^(-1)]) 
+         Subscript[$CellContext`\[Lambda], D] >= Pi, 
+       Pi + Pi (Subscript[$CellContext`x, 1]/(-Subscript[$CellContext`x, 1] + 
+          Subscript[$CellContext`x, 2])) < ((2 $CellContext`\[Sigma]) 
+         Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+             Subscript[$CellContext`x, 
+               1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+            Subscript[$CellContext`x, 2])^(-1)]) 
+        Subscript[$CellContext`\[Lambda], D]]], 
+     Or[Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+        Subscript[$CellContext`x, 2])) > 
+      Pi + ((2 $CellContext`\[Sigma]) 
+         Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+             Subscript[$CellContext`x, 
+               1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+            Subscript[$CellContext`x, 2])^(-1)]) 
+        Subscript[$CellContext`\[Lambda], D], 
+      Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+        Subscript[$CellContext`x, 2])) < ((2 $CellContext`\[Sigma]) 
+        Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+            Subscript[$CellContext`x, 
+              1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+           Subscript[$CellContext`x, 2])^(-1)]) 
+       Subscript[$CellContext`\[Lambda], D], ((2 $CellContext`\[Sigma]) 
+        Re[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+            Subscript[$CellContext`x, 
+              1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+           Subscript[$CellContext`x, 2])^(-1)]) 
+       Subscript[$CellContext`\[Lambda], D] != 0, 
+      And[
+      0 != ((2 $CellContext`\[Sigma]) 
+         Re[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+             Subscript[$CellContext`x, 
+               1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+            Subscript[$CellContext`x, 2])^(-1)]) 
+        Subscript[$CellContext`\[Lambda], D], 
+       Or[
+       Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+          Subscript[$CellContext`x, 2])) >= 
+        Pi + ((2 $CellContext`\[Sigma]) 
+           Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+               Subscript[$CellContext`x, 
+                 1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+              Subscript[$CellContext`x, 2])^(-1)]) 
+          Subscript[$CellContext`\[Lambda], D], 
+        Pi (Subscript[$CellContext`x, 1]/(Subscript[$CellContext`x, 1] - 
+          Subscript[$CellContext`x, 2])) <= ((2 $CellContext`\[Sigma]) 
+          Im[(($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+              Subscript[$CellContext`x, 
+                1] - ($CellContext`\[Epsilon] $CellContext`\[Omega]) 
+             Subscript[$CellContext`x, 2])^(-1)]) 
+         Subscript[$CellContext`\[Lambda], D]]]]], SelectWithContents -> True,
+     Selectable -> False]},
+  "ConditionalExpression"]], "Output",
+ CellChangeTimes->{3.8277147824775867`*^9, 3.8277309224093995`*^9, 
+  3.8277309896675854`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"9b8225ee-c6db-4567-a204-ec594f7e2f0c"]
+}, Open  ]]
+},
+WindowSize->{572.4, 524.4},
+WindowMargins->{{171, Automatic}, {-4.7999999999999545`, Automatic}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (2020\:5e746\:67089\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9fa02a32-a159-4d51-a52c-500570a191b7"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1752, 48, 160, "Input",ExpressionUUID->"097c20e6-16d7-4090-b144-76e14e3fc40d"],
+Cell[2335, 72, 1053, 28, 69, "Output",ExpressionUUID->"ebe86c8d-48d9-4e0d-a2b5-095ac0607285"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3425, 105, 2172, 56, 247, "Input",ExpressionUUID->"c89a6423-9549-473d-8bfa-01251d3ad405"],
+Cell[5600, 163, 16226, 325, 72, "Output",ExpressionUUID->"9b8225ee-c6db-4567-a204-ec594f7e2f0c"]
+}, Open  ]]
+}
+]
+*)
+
