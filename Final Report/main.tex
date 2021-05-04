@@ -1,0 +1,801 @@
+\documentclass[journal,svgnames,twocolumn,x11names]{IEEEtran}
+
+%------------------------------------------------------------------------%
+% Packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage[small,bf]{caption}  % Package caption Warning: Unknown document class (or package), standard defaults will be used. See the caption package documentation for explanation.
+\usepackage{cite}
+\usepackage{cuted}  % provide `strip` environment
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{epsfig,color,parskip}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{float}  % \usepackage{dblfloatfix}
+% \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+\usepackage{stfloats}
+\usepackage{float}
+\usepackage{overpic}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{grffile}
+
+\ifCLASSOPTIONcompsoc 
+  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+  \usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+%------------------------------------------------------------------------%
+% Settings
+\definecolor{commentgreen}{RGB}{14,120,0}
+\definecolor{Cr}{RGB}{198,200,201}
+\definecolor{Au}{RGB}{212,175,55}
+\definecolor{Glass}{RGB}{160,233,238}
+\definecolor{Water}{RGB}{179,209,211}
+\definecolor{root}{RGB}{0, 138, 230}
+\definecolor{level1}{RGB}{179, 217, 255}
+\definecolor{child}{RGB}{240, 247, 255}
+
+%% the following commands are needed for some matlab2tikz features
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {circuits.ee.IEC}
+\usetikzlibrary{plotmarks}
+\usepgfplotslibrary{patchplots}
+
+\tikzset{
+    basic/.style = {draw, text width=3cm, drop shadow, rounded corners=2pt},
+    root/.style = {basic, rounded corners=2pt, thick, align=center, fill={level1}},
+    level-2/.style = {basic, rounded corners=6pt, thick,align=center, fill={level1}, text width=3cm},
+    level-3/.style = {basic, thick, align=center, fill={child}, text width=1.8cm},
+    positivecharge/.pic={
+        \node[circle,ball color=Thistle,inner sep=0pt,minimum width=2.5ex] {+};
+        % This value 2.5ex is magically intentionally chosen, changing it will cause problems
+        % https://tex.stackexchange.com/questions/198869/tikz-set-of-1-d-point-charges
+    },
+    negativecharge/.pic={
+        \node[circle,ball color=AliceBlue,inner sep=0pt,minimum width=2.5ex] {-};
+    }
+}
+
+\lstset{
+    numbers=left, 
+    basicstyle=\scriptsize, 
+    commentstyle=\color{commentgreen},
+    keywordstyle=\bf\color{blue},
+    language=matlab, 
+    frame=shadowbox,
+    rulesepcolor=\color{gray},
+    flexiblecolumns=true
+}
+
+%------------------------------------------------------------------------%
+% Headers and Footers
+\markboth{Final Report of VE490, Spring~2021}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+%------------------------------------------------------------------------%
+% Settings
+% \everymath{\displaystyle}
+% \newcounter{MYtempeqncnt}
+%------------------------------------------------------------------------%
+% Start of the document
+\begin{document}
+
+\title{Microfluidic robot with AC osmosis-based asymmetric electrode pair array fabricated by integrated circuit technologies}
+\author{Kexin Li, Yihua Liu}
+
+
+\maketitle
+\begin{abstract}
+Underwater microrobot, as one of the most currently remarkable robotics fields, has achieved great success in many applications such as invasive surgery, drug delivery\cite{nelson2010}, ocean pollution detection, etc. Most microrobots focus on complex structures or flexible materials to attain multi-function, flexibility, and a high forward speed. However, some major obstacles exist: there is rarely a micrometer-scale actuator system that seamlessly integrates with semiconductor processing\cite{Miskin2020} and an on-chip wireless power transmission system which can work in a complex chemical environment. In this article, we present a asymmetric electrode pairs pumping system that can pump salty solution based on the theory of AC electro-osmosis\cite{Brown2000}\cite{Garcia2006}\cite{ramos2003} at low voltages (\textless 10 volts), and can be completely compatible with silicon processing. To predict the appearance of the system, we set up a mathematical model mainly based on the resistor-capacitor model that describes the electrical double layer and the Helmholtz-Smoluchowski formula that gives the electro-osmotic velocity above the electrodes\cite{Castellanos2003}. We used MATLAB and COMSOL Multiphysics to theoretically predict the fluid motion in a microfluidic channel and the possibility of driving the microrobot with the ACEO pump. Then we fabricated our electrodes by photoetching and experimentally observed the fluid flow in the channel under the microscope. In the future, we will focus on developing the wireless power transmission system and electronic control system of a swarm of the microrobots.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Microrobot, Microfluidics, AC Electroosmotic pump, Co-planar asymmetric electrode pair.
+\end{IEEEkeywords}
+
+%===============================================================================
+\section{Introduction}
+\IEEEPARstart{W}{ith}~%
+the deterioration of the worldwide marine environment, more and more attentions are drawn to this matter. There are increasing demands for monitoring plastic particles, poisons, nuclear waste, and other pollutants in the ocean. One approach to solve this problem involves the use of microrobots. Instead of the conventional robotic systems, microrobots cost less energy and consumables, require an easier production process, and can work in an exceedingly small space. So, the microrobots could be better adapted to the working environment in the marine. For instance, they can bear long working hours with low power consumption, can be put out in large quantities into a specific area among the ocean, go deep into crevices of rocks, deal with poisons, etc.
+
+For the microrobot functioning in the ocean, actuators are essential to the generation of a high propulsion. One type of the actuator introduces special materials subjected to several physical properties. Miskin recently reported a voltage-controllable electronically integrated microrobot with the surface electrochemical actuators or platinum-based SEAs\cite{Miskin2020}. The actuators can bend and unbend when driven by laser shining on the photovoltaic patches wired to them. With the lithographic fabrication, the research team produced over one million robots per four-inch substrate at a time (See Fig.\ref{laser}). It provides a possibility of producing semiconductor-based robot with CMOS circuit. And one microrobot can reach the peek speed of 30 \textmu m/s, although it is unstable. In addition, magnetic material is popular in the field. By using patterned magnetization, a flexible magnetic microrobot, consisting of patterning hard magnetic microparticles in an elastomer matrix, can achieve fast transformation into complex three-dimensional shapes and locomotion capabilities and functions\cite{Xu2019} (See Fig.\ref{magnetic}). In this method, the premagnetized permanent magnetic particles was precisely reoriented and then cured UV resin to pattern the local magnetization. However, the microrobots fabricated by these two approaches cannot move at a high and stable speed over a long period of time.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.48\textwidth]{laser.PNG}
+    \caption{Electronically integrated microscopic robots fabricated in parallel\cite{Miskin2020}.}
+    \label{laser}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.48\textwidth]{magnetic.PNG}
+    \caption{Top view images of the tri-arm structures that bear different magnetization profiles. They were actuated under a 20-mT magnetic field out of the plane. Scale bars, 2 mm.\cite{Xu2019}.}
+    \label{magnetic}
+    \vspace{-0.8cm}
+\end{figure}
+
+Another approach for actuating is pumping. Many techniques have been developed to pump liquids in microfluidic devices, including micromechanical methods\cite{Stone2004}, electro-osmosis\cite{Manz1994}, ac thermocapillary pumping\cite{Kataoka1999}, electro-wetting\cite{Beni1981}, electrohydrodynamic pumping\cite{fuhr1992}, ac electro-osmosis\cite{Brown2000}, etc. In recent years, AC electro-osmosis (ACEO) has been considered a promising microfluidic mechanism that attracted increasing attention from researchers. ACEO is compatible with IC technology\cite{islam2006} and CMOS circuits. It can be fabricated with the CMOS process just as the other two approaches mentioned above. However, it can provide a long-lasting pumping speed with only a few volts (lower than 10V). In Studer’s experiment, the pumping speed reaches up to 500 \textmu m/s in a microfluidic channels with a driving signal in the 1–10 kHz range and an amplitude of only a few volts \cite{Studer2004}, which is more than 10 times larger than the speed generated by the SEAs microrobot. This experiment was based on a co-planar asymmetric electrode pair’s structure put forward by Brown in 2001\cite{Brown2000}. In Fig.\ref{Comparison}, it shows the comparison of the expected performances between different actuator approaches. However, in most instance, according to the existing researches, pumping is usually applied to transport liquid or particles but not driving the microrobot itself. The reason that we choose to ACEO technique is that it reaches most of the expected requirement of the microrobot functioning in the ocean (See Fig.\ref{Comparison}). Moreover, ACEO can deal with dangerous chemical environment and transport particles when pumping. It can be mass-produced, too.
+
+\begin{figure*}[htpb]
+    \centering
+    \begin{tikzpicture}[
+    level 1/.style={sibling distance = 40mm, level distance=23mm},
+    edge from parent/.style = {black,thick, draw},
+    edge from parent path = {(\tikzparentnode.south) -- (\tikzchildnode.north)} >=latex,node distance = 1.2cm, edge from parent fork down
+    ]
+% root of the the initial tree, level 1
+    \node[root] {Required properties of Microrobots in the ocean}
+% The first level, as children of the initial tree
+    child {node[level-2] (c1) {Low working voltages and low power consumption}}
+    child {node[level-2] (c2) {Ability to integrated with CMOS circuits}}
+    child {node[level-2] (c3) {Ability to provide a high and stable speed}}
+    child {node[level-2] (c4) {Wireless power transmission}};
+
+% The second level, relatively positioned nodes
+    \begin{scope}[every node/.style={level-3}, node distance = 15mm]
+    \node [below of = c1] (c11) {ACEO Pump};
+    \node [below of = c11] (c12) {SEAs microrobot};
+    \node [below of = c12] (c13) {Magnetic controlled microrobot};
+
+    \node [below of = c2] (c21) {ACEO Pump};
+    \node [below of = c21] (c22) {SEAs microrobot};
+
+    \node [below of = c3] (c31) {ACEO Pump};
+    \node [below of = c31] (c32) {Other pumping approaches};
+
+    \node [below of = c4] (c41) {ACEO Pump};
+    \node [below of = c41] (c42) {SEAs microrobot};
+    \node [below of = c42,text width=9.5em] (c43) {Laser/solar/magnetic driven microrobot};
+    
+    \end{scope}
+
+% lines from each level 1 node to every one of its "children"
+    \draw[very thick] (c1.south) -- (c11.north);
+    \draw[very thick] (c11.south) -- (c12.north);
+    \draw[very thick] (c12.south) -- (c13.north);
+    
+    \draw[very thick] (c2.south) -- (c21.north);
+    \draw[very thick] (c21.south) -- (c22.north);
+  
+    \draw[very thick] (c3.south) -- (c31.north);
+    \draw[very thick] (c31.south) -- (c32.north);
+        
+    \draw[very thick] (c4.south) -- (c41.north);
+    \draw[very thick] (c41.south) -- (c42.north);
+    \draw[very thick] (c42.south) -- (c43.north);
+        
+    \end{tikzpicture}
+    \vspace*{3mm}
+    \caption{Tree structure of the expected properties for microrobots in the ocean. Level 1 contains several basic properties, and the children refer to corresponding techniques that reach the expectations.}
+    \label{Comparison}
+\end{figure*}
+
+Our group has been investigating the possibility of realizing a silicon-based life form based on this special asymmetric pumping system. In this article, we report a tunable and effective ACEO micropump which was fabricated with traditional lithography techniques on a glass substrate. We studied the performances of the pump by finding the dependencies of its pumping velocity with the applied voltage amplitude, frequencies, and electrolyte solution theoretically. Also, we predicted the motion of the microrobot on the surface of a 0.01M KCl solution (Potassium Chloride solution) by simulation with COMSOL Multiphysics$\rm^{TM}$. Finally, we experimentally observed that the microrobot could be pushed by the ACEO pump in the KCl solution. In the future, we look forward to measuring the pumping speed and integrating a wireless power transmission system on it to make it work independently.
+
+
+%===============================================================================
+\section{Theory}
+Consider an array of asymmetric electrode pairs etched on the quartz substrate immersed in the KCl aqueous solution with conductivity $\sigma$. On the surface between the fluid and the electrode, there will be an electrical double layer that consists of two parallel layers of charge surrounding the electrodes. The double layer is composed of the inner Stern layer and the outer Gouy diffuse layer, shown as Fig.\ref{fig:edl}. It can be modeled by parallel capacitors with each capacitor a parallel-plate capacitor. On the other hand, we assume that the bulk water acts as parallel resistors. Consider a single pair of electrodes, when an AC voltage $V_+=+\frac{1}{2}V_0e^{i\omega t}$ applied on the larger electrode and $V_-=-\frac{1}{2}V_0e^{i\omega t}$ applied on the smaller electrode, the electric field lines can be approximate to semicircles ignoring horizontal component of the electric field on the surface of electrodes.
+
+Denote the ratio of the larger electrode to the smaller ratio as $k$. Choose $x_1$ and $x_2$ so that the x coordinates of two endpoints of the larger electrode are $x_1\sqrt{k}$ and $x_2\sqrt{k}$ and those of the the smaller electrode are $x_1/\sqrt{k}$ and $x_2/\sqrt{k}$ respectively. Take an infinitesimal tube of the bulk water with one end's width of $\Delta x\sqrt{k}$ and the other end's width of $\Delta x/\sqrt{k}$. The theoretical model is shown in Fig.\ref{fig:math_model}.
+\begin{figure}[H]
+    \centering
+    \input{edl.tex}
+    \caption{The model of electric double layer (EDL).}
+    \label{fig:edl}
+\end{figure}
+\vspace{-0.6cm}
+\begin{figure}[H]
+    \centering
+    \input{math_model.tex}
+    \caption{An asymmetric electrode pair immersed in water \cite{physrevep}. The Au-Ge electrode consists of a layer of gold on the top and a layer of chromium on the bottom with thickness of 40\,nm and 5\,nm respectively.}
+    \label{fig:math_model}
+\end{figure}
+\vspace{-0.3cm}
+Using Debye-Huckel approximation, the characteristic thickness of the diffuse layer can be determined. The Debye length $\lambda_D$ is introduced as a scale for the decay of charge density. The two-dimensional capacitance at the larger electrode and the smaller electrode per unit length are respectively
+\begin{equation}
+    C_{DL}=\frac{\varepsilon\sqrt{k}\Delta x}{\lambda_D},
+\end{equation}
+\begin{equation}
+    C_{DS}=\frac{\varepsilon\Delta x}{\sqrt{k}\lambda_D},
+\end{equation}
+where $\varepsilon=\varepsilon_r\varepsilon_0$ is the permittivity of the liquid \cite{physrevep}. For two dimensional model, the resistance $R(x)$ of the infinitesimal tube as a function of $x$ is given by
+\begin{equation}
+    R(x)=\frac{\pi(1+k)x}{2\sigma\sqrt{k}\Delta x}.
+\end{equation}
+
+where $\sigma$ is the conductivity of the fluid. The whole circuit equation is
+\begin{equation}
+    V_+-V_-=IR(x)+\Phi_L(x)+\Phi_S(x),
+\end{equation}
+where $I$ is the electric current flowing through the infinitesimal tube, and the potential drop on the double layer outside the larger electrode and that outside the smaller electrode are respectively
+\begin{equation}
+    \Phi_L(x)=\frac{I}{i\omega C_{LD}}
+\end{equation}
+\begin{equation}
+    \Phi_S(x)=\frac{I}{i\omega C_{SD}}
+\end{equation}
+
+Solving the equations,
+\begin{equation}
+    \Phi_L(x)=\frac{V_0e^{i\omega t}}{(1+k)\left(1+\dfrac{i\omega\pi\varepsilon x}{2\sigma\lambda_D}\right)}.
+\end{equation}
+
+The component of the electric field in the $x$ direction on the larger electrode is then given by the derivative of the potential drop with respect to $x$,
+\begin{equation}
+    E_{xL}=\frac{\mathrm{d}\Phi_L(x)}{\mathrm{d}\left(x\sqrt{k}\right)}=-\frac{\dfrac{i\omega\pi\varepsilon V_0e^{i\omega t}}{2\sigma\lambda_D}}{\sqrt{k}(1+k)\left(1+\dfrac{i\omega\pi\varepsilon}{\sigma\lambda_D}\right)^2}.
+\end{equation}
+
+The liquid motion can be described by the Navier-Stokes equations for incompressible fluids
+\begin{equation}
+    \rho_m\frac{\mathrm{D}\mathbf{u}}{\mathrm{D}t}=-\nabla p+\rho_m\mathbf{g}+\mu\nabla^2\mathbf{u},
+    \label{NS-Eq}
+\end{equation}
+\begin{equation}
+    \nabla\cdot\mathbf{u}=0.
+\end{equation}
+Here $\rho_m$ denotes the mass density of the fluid, $\mathbf{u}$ is the fluid velocity, $p$ refers to the pressure, $g$ is body accelerations acting on the fluid, and $\mu$ represents the dynamic velocity of the fluid.
+
+For AC electro-osmosis flow, the Reynolds number is sufficiently small so that a laminar flow assumption holds, and the inertia term can be neglected. The body force is provided by the electric field, so $\rho_m\mathbf{g}=\rho_e\mathbf{E}$, where $\rho_e$ is the volume charge density. The time average tangential velocity over the larger electrode is denoted as $u_{tL}$. Consider the time average form of Eq. \ref{NS-Eq} in the $x$ direction
+\begin{equation}
+    \mu\left(\frac{\partial^2u_{tL}}{\partial x^2}+\frac{\partial^2u_{tL}}{\partial y^2}\right)=\left<\rho_eE_{xL}\right>+\frac{\partial p}{\partial x},
+\end{equation}
+where $\left<\cdot\right>$ indicates the time average \cite{physreveii}. Since the derivative of $p$ with respect to $x$ is negligible and $u_{tL}$ does not have $y$ component, the equation becomes
+\begin{equation}
+    \mu\frac{\partial^2u_{tL}}{\partial y^2}=\left<\rho_eE_{xL}\right>
+\end{equation}
+
+\begin{figure}[htp]
+    \centering
+    \input{equal_circuit.tex}
+    \caption{The equivalent-circuit diagram of the theoretical model. Every row is a tube infinitesimal with the $x$ coordinate varies from $x_1$ to $x_2$.}
+    \label{fig:2}
+    \vspace{-0.63cm}
+\end{figure}
+Degrade to two-dimensional physics, integrate $u_{tL}$ from $y=0$ to $y=\lambda_D$, using $u_{tL}(y=0)=0$, the time average tangential velocity of the flow across the double layer on the larger electrode can be determined by
+\begin{equation}
+    u_{tL}=\frac{\lambda_D}{\mu}\left<\sigma_{eL}E_{xL}\right>,
+\end{equation}
+where the surface charge density determined by Gauss's law is
+\begin{equation}
+    \sigma_{eL}=\frac{\varepsilon\Phi_L}{\lambda_D}.
+\end{equation}
+
+For two harmonic functions $\sigma_{eL}$ and $E_{xL}$, the time average of their product is
+\begin{equation}
+    \begin{aligned}
+        \left<\sigma_{eL}E_{xL}\right>&=\frac{1}{T}\int_0^T{\sigma_{e0}E_{xL0}\cos{(\omega t+\varphi_1)}\cos{(\omega t+\varphi_2)}\mathrm{d}t}\\
+        &=\frac{1}{2}\sigma_{eL0}E_{xL0}\cos{(\varphi_1-\varphi_2)}\\
+        &=\frac{1}{2}\mathrm{Re}\left(\sigma_{eL0}E_{xL0}e^{i\varphi_1}e^{-i\varphi_2}\right)\\
+        &=\frac{1}{2}\mathrm{Re}\left(\sigma_{eL}E_{xL}^*\right)
+    \end{aligned}
+\end{equation}
+Solving the equations,
+\begin{equation}
+    u_{tL}(x)=-\frac{\pi^2\varepsilon^3\omega^2V_0^2x}{8\sqrt{k}(1+k)\mu\sigma^2\left(1+\dfrac{\pi^2\varepsilon^2\omega^2x^2}{4\sigma^2\lambda_D^2}\right)^2\lambda_D^2}.
+\end{equation}
+
+The average velocity above the larger electrode is then
+\newpage
+
+\begin{strip}
+    % The IEEE uses as a separator
+    \rule{0.5\textwidth}{.4pt}
+    \begin{equation}
+        u_L=\frac{\int_{x_1\sqrt{k}}^{x_2\sqrt{k}}{u_{tL}(x)\mathrm{d}x}}{(x_2-x_1)\sqrt{k}}=-\frac{\pi^2\varepsilon^3\sigma^2\omega^2\lambda_D^2\left(x_2^2-x_1^2\right)V_0^2}{\sqrt{k}(1+k)^2\mu(x_2-x_1)\left(\pi^2\varepsilon^2\omega^2x_1^2+4\sigma^2\lambda_D^2\right)\left(\pi^2\varepsilon^2\omega^2x_2^2+4\sigma^2\lambda_D^2\right)},
+    \end{equation}
+    \hspace{0.5\textwidth}\rule{0.5\textwidth}{.4pt}
+\end{strip}
+
+and the average velocity above the smaller electrode $u_S$ is $-k^3$ times of $u_L$:
+\begin{equation}
+    u_S=-k^3u_L.
+\end{equation}
+
+The equivalent-circuit diagram of the theoretical model is shown in Fig. \ref{fig:2}.
+Based on the diagram, the impedance of a tube infinitesimal can be calculated by
+\begin{equation}
+    Z(x)=R+\frac{1}{i\omega C_{DL}}+\frac{1}{i\omega C_{DS}}=\frac{(1+k)(\pi\varepsilon\omega x-2i\sigma\lambda_D)}{2\sqrt{k}\varepsilon\sigma\omega\Delta x}.
+\end{equation}
+
+Substitute $\mathrm{d}x$ for $\Delta x$, the total impedance is therefore
+
+\begin{strip}
+    \rule{0.5\textwidth}{.4pt}
+    \begin{equation}
+        Z_\text{total}=\frac{1}{\int_{x_1}^{x_2}{\dfrac{2\sqrt{k}\varepsilon\sigma\omega\mathrm{d}x}{(1+k)(\pi\varepsilon\omega x-2i\sigma\lambda_D)}}}=\frac{(1+k)\pi}{\sqrt{k}\sigma\left(2i\arctan{\left(\dfrac{2\pi\varepsilon\sigma\omega (x_2-x_1)\lambda_D}{\pi^2\varepsilon^2\omega^2x_1x_2+4\sigma^2\lambda_D^2}\right)}+\ln{\left(\dfrac{\pi^2\varepsilon^2\omega^2x_2^2+4\sigma^2\lambda_D^2}{\pi^2\varepsilon^2\omega^2x_1^2+4\sigma^2\lambda_D^2}\right)}\right)}
+    \end{equation}
+    \hspace{0.5\textwidth}\rule{0.5\textwidth}{.4pt}
+\end{strip}
+
+
+%===============================================================================
+\section{Simulation}
+\subsection{MATLAB}
+\input{coordinate.tex}
+\vspace{-0.63cm}
+According to Brown \textit{et al.}\cite{Brown2000}, given the geometry of the system shown as Fig.\ref{fig:math_model}. Here we give a simplified representation of each component in this system shown as Fig.\ref{simplified}, where for given width-ratio $k = L/S$ of the electrodes. By substituting $\omega_{0}$ and $v_{0}$ into Equation 17, we can get a simplified equation for the average velocity.
+\begin{equation}
+    u_{\textit{L}}=\frac{1}{x_{\max }-x_{\min }} \int_{x_{\min }}^{x_{\max }} \frac{v_{0}}{x} V_{0}^{2} \frac{\left(\omega x / \omega_{0}\right)^{2}}{\left(1+\left(\omega x / \omega_{0}\right)^{2}\right)^{2}} \mathrm{~d} x,
+\end{equation}
+where $v_{0}$ is
+\begin{equation}
+    v_{0}=\frac{\epsilon}{2 \eta \sqrt{k}(1+k)^{2}}
+\end{equation}
+and $\omega_{0}$ is
+\begin{equation}
+    \omega_{0}=\frac{2 \sigma_{0} \lambda_{D}}{\pi \epsilon}
+\end{equation}
+
+\begin{figure*}[ht]
+	\centering
+	\subfloat[Different ratios of electrodes.]{\input{v_f_dimension1.tex}}
+	\hspace{0.3in}
+	\subfloat[Different ratios of electrodes, but with the same small electrode size]{\input{v_f_dimension2.tex}}
+	\caption{Simulated velocity generated by ACEO,using Equation 21. The graphs are shown for different sizes and ratios of the electrodes (indicated as $large$ $electrode-gap-small$ $electrode$).}
+	\label{fig:size}
+	\vspace{-0.3cm}
+\end{figure*}
+
+The average velocity generation described by Equation 17 can be simulated in MATLAB, in order to evaluate the influence of the system scale, including electrode size and distances, and the solution concentration on the velocity generation. The script used for the simulation is given in Appendix A.
+
+Fig.\ref{fig:size} shows the simulated average velocity for electrodes that have the same $k = L/S$ ratio, but different sizes. The simulation results show that with the decreasing of the smaller electrode size, the generated average velocity increases, and the optimal frequency is expected to shift towards higher values. When the size of the small electrode is fixed, as the ratio $k$ increases, the optimal generated velocity with the same frequency decreases.
+\begin{figure}[htbp]
+    \centering
+    \include{v_f_concentration}
+    \setlength{\abovecaptionskip}{-0.2cm} %decrease the distance between caption and fig.
+    \caption{Simulated velocity generated by ACEO, using Equation 17, The graphs are shown for electrolyte concentrations between 0.01 $m$M and 10 $m$M.}
+    \label{fig:concentration}
+    \vspace{-0.5cm}
+\end{figure}
+
+On the other hand, with the same electrode configuration, when the electrolyte concentrations going from 0.01 $m$M to 10 $m$M, shown as Fig.\ref{fig:concentration}, the optimal frequency is expected to shift towards lower values when the concentration increases. Since we assume that the concentration would not change in our model, the simulation  which is based on our assumption fails to predict the relationship between electrolyte concentration and electrode sizes.
+
+Finally, we predict the dependency of the generated velocity on the applied voltage, shown as Fig.\ref{fig:potential}. The generated velocity is expected to be proportional to the square of the applied voltage. Referring to the legend on the the graph, when the frequencies are 500Hz and 1kHz, the generated velocities are very close, so as the condition at 100Hz and 5kHz. 
+
+\begin{figure}[htbp]
+    \centering
+    \include{v_potential}
+    \caption{Dependence of the generated velocity on the magnitude of the applied voltage amplitude with KCl at 0.01 $m$M.}
+    \label{fig:potential}
+\end{figure}
+
+%-----------------------------------------------------------
+\subsection{COMSOL Multiphysics}
+As is mentioned before, the microfluidics flows at a low Reynolds number and is non-inertial, it is assumed to be laminar flow. Actually, since its Reynolds number is so low and its geometrical length scale is so small, it can be furthermore assumed to be creeping flow, where the viscous forces of the fluid dominate the inertial forces. Using COMSOL Multiphysics, we set up multi-physics field to simulate the AC electro-osmosis flow properties. The physics interfaces include three coupling parts: Creeping flow (\textit{spf}), Electric currents (\textit{ec}), and Transport of Diluted Species (\textit{tds}).
+
+For most of the wall of the microfluidic channel, we assumed that there is no slip velocity. At the bottom of the channel where the electrodes are placed, an \emph{electro-osmotic velocity} with tangential electric field is defined. The zeta potential, which describes the voltage drop across the double layer, we defined $\zeta$ as
+\begin{equation}
+    \zeta=\mathrm{\lambda*(-V0)-ec.V0}
+\end{equation}
+on the small electrodes, and
+\begin{equation}
+    \zeta=\mathrm{\lambda*V0-ec.V0}
+\end{equation}
+on the large electrodes\cite{ramos2003}. Here
+\begin{equation}
+    \lambda=1 /(1+\delta)
+\end{equation}
+is the ratio factor of the diffuse layer impedance to the total double layer impedance, which means that only fraction of total voltage is dropped across the diffuse layer.
+
+At the inlet and outlet of the pipe, the pressure $p_0$ was defined as 0 to ensure that the flow is completely generated by the electrodes.
+
+To describe the boundary condition of the electric potential on small electrodes, we defined it as
+\begin{equation}
+    V_0=\mathrm{-V0-ec.nJ*Z_c},
+\end{equation}
+where $\mathrm{V0=10\,V}$ is the amplitude of the AC electric potential of the electrodes. However, in reality, when the amplitude of the applied voltage reach to this value, the fluid flow will reverse\cite{Studer2004} and this model is no long appropriate. In the simulation, we picked this value for giving a observable data. ec.nJ is the normal electric current across the double layer, and $\mathrm{Z_c}$ is the equivalent impedance of the electrical double layer
+\begin{equation}
+    \mathrm{Z_c}=\frac{1}{i\omega C_{DL}}=-0.011212i\,\mathrm{\Omega\cdot m^2}.
+\end{equation}
+Similarly, the electric potential on the wall interfacing large electrodes was defined as
+\begin{equation}
+    V_0=\mathrm{V0-ec.nJ*Z_c}.
+\end{equation}
+
+To verify our model, we first plotted the streamline when there was a pair of symmetric electrode by doing a stationary study with all the three physics selected, shown in Fig.\ref{fig:streamline_equal}. The the simulated pattern of the streamline agrees with others' prediction\cite{islam2006}\cite{Pham2007}. On the other hand, when there were two asymmetric electrode pairs, the simulated pattern of the streamline, shown as Fig.\ref{fig:streamline_two}, was also consistent to other researches\cite{physreveii}\cite{Gao2019}\cite{Garcia2006}.
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[scale=0.6]{streamline_equal.PNG}
+    \caption{Streamline of the fluid velocity field generated by one symmetric electrode pair for the case $L = S$, $\mathrm{V0=10\,V}$}
+    \label{fig:streamline_equal}
+\end{figure*}
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[scale=0.65]{streamline_two_pairs.PNG}
+    \caption{Streamline of the fluid velocity field generated by two asymmetric electrode pairs for the case $L = 20\mu\,m, S = 5\mu m, G = 5\mu m, G_{1} = 15\mu m$, $\mathrm{V0=10\,V},c_{0} = 0.01 \textit{m}\,M$.}
+    \label{fig:streamline_two}
+\end{figure*}
+Moreover, when the electrode pairs were added up to ten pairs, we got the maximum velocity shown as the legend in Fig.\ref{fig:streamline_ten} at the speed of 104 $\mu$m/s. However, the result is five times smaller than the experimental result\cite{Studer2004}.
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[scale=0.6]{streamline_ten_pairs.PNG}
+    \caption{Streamline of the fluid velocity field generated by ten asymmetric electrode pairs for the case $L = 20\mu m, S = 5\mu m, G = 5\mu m, G_{1} = 15\mu m$, $\mathrm{V0=10\,V}, c_{0} = 0.01 \textit{m}M$}
+    \label{fig:streamline_ten}
+\end{figure*}
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[scale=0.5]{loads.png}
+    \caption{The boundary loads on the chip when the normal inflow velocity $U_0=5.6\,\mathrm{\mu m/s}$, the height of the tank $H=500\,\mathrm{\mu m}$, and the height of the chip $h=100\,\mathrm{\mu m}$.}
+    \label{fig:loads}
+\end{figure*}
+
+Then, we moved on to predict the propulsion force and the forward speed of the devices when pumping. However, the considerable energy dissipation was difficult to predict quantitative. Hence, we considered the momentum provided by the electrodes instead. By Newton's second law, the impulse in the $x$ direction provided by the electrodes in a time interval $\Delta t$ is
+\begin{equation}
+    F\Delta t=(m_\text{f}+\Delta m_\text{f})(v_\text{f}+\Delta v_\text{f})-m_\text{f}v_\text{f},
+\end{equation}
+and by conservation of momentum in the $x$ direction,
+\begin{equation}
+    m_\text{f}v_\text{f}+m_\text{c}v_\text{c}=0,
+\end{equation}
+where $m_\text{f}$ is the mass of the fluid, $v_\text{f}$ is the average horizontal velocity of the fluid, $m_\text{c}$ is the mass of the chip, $v_\text{c}$ is the horizontal velocity of the chip. When $t=0.05\,\text{s}$, the increase in velocity $\Delta v_\text{f}=1.3323\times10^{-20}$, which can be neglected. Here, the height of the pipe $h=20\,\mathrm{\mu m}$, the width of the pipe $d=100\,\mathrm{\mu m}$, and the length of the pipe as $l=1030\,\mathrm{\mu m}$. Excluding the effect of dynamic viscosity, the total force applied on the fluid in the $x$ direction is provided by the electrodes. By simulation, when $t=0.05\,\text{s}$, $v_\text{f}=4.644\times10^{-6}\,\mathrm{m/s}$, then the force to the fluid per width unit $f$ is
+\begin{equation}
+    f=\frac{F}{d}=\rho_mhv_\text{f}=9.286\times10^{-8}\,\mathrm{N/m}.
+\end{equation}
+
+To estimate the resistance of the fluid to the device in open water area, a fluid-structure interaction (FSI) simulation was performed based on a larger scale. Due to the limitation of the simulation, instead of defining free surface at the top of the pipe as the interface between the air and the fluid, we placed the chip in the middle of the fluid and define sufficiently high pipe with a height of $500\,\mu\text{m}$ to ensure the velocity around it is approximately constant. By setting the outlet pressure as static $p_0=0\,\text{Pa}$ and substituting different value of normal inflow velocity $U_0$ at the inlet or doing the parameter sweep study, we found the the line integral of $x$ component of the normal applied boundary loads fsi1.F\_Anx or solid.F\_Ax on the front and the end side of the chip when $t=4.0000\,\text{s}$ denoted as $\mathbf{F}_\text{Lf}$ and $\mathbf{F}_\text{Le}$ together with their difference $\Delta\mathbf{F}_\text{L}$, which is shown in Table \ref{tab:v-loads}.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        $U_0$ ($\mu$m/s)&$\mathbf{F}_\text{Lf}$ (N/m)&$\mathbf{F}_\text{Le}$ (N/m)&$\Delta\mathbf{F}_\text{L}$ (N/m)\\
+        \hline
+        1&$1.9525\times10^{-8}$&$2.9242\times10^{-9}$&$1.6601\times10^{-8}$\\
+        \hline
+        5&$9.7627\times10^{-8}$&$1.4620\times10^{-8}$&$8.3007\times10^{-8}$\\
+        \hline
+        5.5&$1.0739\times10^{-7}$&$1.6082\times10^{-8}$&$9.131\times10^{-8}$\\
+        \hline
+        5.6&$1.0934\times10^{-7}$&$1.6374\times10^{-8}$&$9.297\times10^{-8}$\\
+        \hline
+        6&$1.1715\times10^{-7}$&$1.7544\times10^{-8}$&$9.961\times10^{-8}$\\
+        \hline
+        10&$1.9526\times10^{-7}$&$2.9238\times10^{-8}$&$1.6602\times10^{-7}$\\
+        \hline
+    \end{tabular}
+    \caption{The relationship between the normal inflow velocity $U_0$ and the integral of $x$ component of the normal applied boundary loads on the front and the end side of the chip.}
+    \label{tab:v-loads}
+    \vspace{-0.5cm}
+\end{table}
+From the table, we found that the velocity was approximately in direct proportion to the difference of the normal applied boundary loads on the front and the end side $\Delta\mathbf{F}_\text{L}$. Here, the object boundaries experience a load from the fluid, which is
+\begin{equation}
+    \mathbf{F}_\mathrm{T}=-\mathbf{n}\cdot(-p\mathbf{I}+\eta(\nabla\mathbf{u}+(\nabla\mathbf{u})^T)),
+\end{equation}
+where $\mathbf{n}$ is the normal vector to the boundary. This load represents a sum of pressure and viscous forces \cite{wang2007benchmarking}. Therefore, the velocity at which $\Delta\mathbf{F}_\text{L}$ is approximately equal to the force to the fluid per unit width $f$, i.e. the relative velocity of the chip to the fluid, is nearly $5.6\,\mathrm{\mu m/s}$.
+
+When $U_0=5.6\,\mathrm{\mu m/s}$, the boundary loads on the chip are shown in Figure \ref{fig:loads}. From the graph, we find that for the same $y$ coordinate, the normal loads on the front and the end side of the chip are nearly the same, so our assumption is valid.
+%===============================================================================
+\section{Experiment}
+\subsection{Materials and reagents}
+NR-9 photoresist, propylene-glycol-monomethyl-ether-acetate (PGMEA) developer, Sylgard 184 PDMS (Polydimethylsiloxane) prepolymer base and curing agent were used. Acetone was purchased from Hushi (Shanghai, China). 2-Propanol ($\geq99.7\%$) was purchased from Shanghai Titan Scientific (Shanghai, China), 0.01 $m$M KCl Electrode protection solution, 10 mL 500 nm micro-sphere. 
+\subsection{Electrode plate fabrication}
+The fabrication of the electrode plate followed the procedure of common photolithography and lift-off. The masks (for the electrodes pairs and microfluidic channel) for photoetching are both of dimensions $3\times3\,\mathrm{inches}$ designed by KLayout (See Fig.\ref{f:klayout}). The glass substrate is of dimensions $25\times25\times0.5\,\mathrm{mm}$. The NR-9 photoresist layer spun on the glass substrate was around $100\,\mathrm{\mu m}$ determined by the spin coating at the speed of 4000 rpm for 40 s. After spinning, the substrate was soft-baked on the hot plate for 1 min at $140^{\circ}$C to dry the photoresist. When the substrate was cooled, it was exposed to the ultraviolet light for 14 s. Then, the post-bake of the substrate was performed at $110^{\circ}$C for 1 min. After the substrate was cooled, the photoresist was developed for 8s and then, it was immediately cleaned by the deionized water for 20s. When the electrode pairs observed by the microscope were straight and not short, this process was done.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{good pattern.pdf}
+	\caption{The electrode pairs on the glass substrate observed by the microscope.}
+	\label{fig:electrode_pairs}
+	\vspace{-0.8cm}
+\end{figure}
+Then we needed to make the glass substrate deposited with a layer of chromium with thickness of 5 nm followed by a layer of gold with thickness of 70 nm. The chromium layer can provide a stronger adhesion between the metal electrodes and the substrate. The photoresist pattern was transferred by life-off \cite{Studer2004}. The processed electrodes are shown in Fig.\ref{fig:electrode}.
+
+\begin{figure*}[htbp]
+    	\centering
+    	\subfloat[A screen shot of fine electrodes pairs without short cut under the microscope.]{\includegraphics[width=0.36\textwidth]{fine_electrode.jpg}} \hspace{0.4in}%% \hspace{0.8in}  insert 0.4in space between two figures
+    	\subfloat[A screen shot of a short cut electrodes pair without short cut under the  microscope.]{\includegraphics[width=0.36\textwidth]{short_cut.jpg}}
+    	\caption{Screen shot of the asymmetric electrode pairs under the microscope.}
+    	\label{fig:electrode}
+\end{figure*} %% one column-figure；multi column- figure*
+\subsection{Microfluidic channel fabrication and bonding}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale = 0.18]{su8.jpg}
+    \caption{Nine SU-8 moulds on a $3\times3\,\mathrm{inches}$ silicon wafer.}
+    \label{fig:su8}
+\end{figure}
+We made nine SU-8 channel mould on a $3\times3\,\mathrm{inches}$ silicon wafer shown in Fig.\ref{fig:su8}.
+We mixed $6 \mathrm{g}$ PDMS base and $0.6 \mathrm{g}$ curing agent by the ratio of 10:1 \cite{ou2009fabrication}. The mixing process could be accelerated by stirring or mechanical mixer at 2000 rpm for 1 min. The bubbles in the mixture were eliminated by the ultrasonic cleaner and vacuum drying oven for at least 30 minutes but not too long, since the PDMS might be more viscous. The PDMS prepolymer could be directly poured on the substrate, forming a 1.5 mm layer. It was better to pour it out near the substrate surface to avoid bubbles. Nevertheless, if there were bubbles, the substrate with PDMS should be degassed in the vacuum drying oven again. Baking could accelerate the solidification of the PDMS, so the substrate was baked on the hot plate at $85^{\circ}$C for 2 hours. However, to avoid bonding between the PDMS and the silicon substrate, we placed it for 24 hours exposed in the air to dry naturally. When the PDMS prepolymer was solidified significantly, it could be easily peeled off by tweezers or knives\cite{freeman2007manufacturing}. The microfluidic channel would be finished by punching small holes at the inlet and the outlet. Then, we needed to bond the substrate and the microfluidic channel. The substrate and the channel were cleaned by the oxygen plasma cleaner for 60 s with power of 29.6 W. Then the microfluidic channel was quickly placed on the substrate under microscope after alignment. There were 9 channels on the substrate in total if the PDMS fully covered the substrate. The channel used in experiment had the length of $1895\,\mathrm{\mu m}$, the width of $100\,\mathrm{\mu m}$, and the height of $20\,\mathrm{\mu m}$.
+\subsection{Devices set up}
+The substrate was pasted on a printed circuit board (PCB) of dimensions $36\times36\,\mathrm{mm}$. Using West Bond wire bonder, a set of the electrodes was connected to the pins of the PCB. A multimeter was connected to the two pins on the each part of the patterns to examine whether there were short circuits. We used a signal generator to apply a Sine signal for the devices. To clearly observe the microfluidic channel, a camera was placed on the eyepiece and the picture could be projected to a screen. The whole set up is shown in Fig.\ref{fig:set_up} and Fig.\ref{fig:pcb}.
+\begin{figure*}[htbp]
+    \centering
+    \begin{overpic}
+        [scale=0.21]{set_up.jpg}
+        \put(10,46){\colorbox {white}{A.Viewing Screen}}
+        \put(42,36){\colorbox {white}{B.Signal generator}}
+        \put(45,7){\colorbox {white}{C.Microscope with the camera}}
+        \put(75,26){\colorbox {white}{D.Viewing lamp}}
+        \put(77,4){\colorbox {white}{E.Multimeter}}
+    \end{overpic}
+    \caption{The whole experimental set up.}
+    \label{fig:set_up}
+\end{figure*}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{overpic}
+        [scale=0.26]{pcb.jpg}
+        \put(6,55){\colorbox {white}{PCB board}}
+        \put(15,75){\colorbox {white}{Object glass}}
+        \put(44,39){\colorbox {white}{Microfluidic device}}
+        \put(38,22){\colorbox {white}{Pin 1 wired to the positive pole}}
+        \put(38,63){\colorbox {white}{Pin 2 wired to the negative pole}}
+    \end{overpic}
+    \caption{The microfluidic device on a PCB board.}
+    \label{fig:pcb}
+\end{figure}
+
+\subsection{Fluid flow observation}
+We filled the channel with 0.01 $\mathrm{m}M$ KCl solution mixed with 500 nm white micro-spheres by injection from the inlet of the channel. Then a Sine signal with the amplitude of 3 volts and frequency of 1.5 kHz generated by a signal generator was applied to the electrodes. From the viewing screen, we could observe the fluid flow in the microfluidic channel.
+
+%===============================================================================
+\section{Result}
+To validate the developed mathematical result, we substituted three patterns used by Mpholo et al.\cite{Mpholo2003} to our simulation model to predict the maximum time average velocity and the optimal frequency of them.
+\begin{figure}[htbp]
+    \centering
+    \setlength{\abovecaptionskip}{-0.3cm}
+    \include{compare_matlab}
+    \caption{Plots of dependencies of the generated time average velocity on the frequencies, and the corresponding maximum average velocities got in the experiment.\cite{Mpholo2003}. The legend indicates the size of $large$ $electrode-gap-small$ $electrode$}
+    \label{fig:compare_matlab}
+    \vspace{-0.5cm}
+\end{figure}
+The simulation results, as shown in Fig.\ref{fig:compare_matlab}, indicate that as the ratio of the large electrode size and the small electrode size decreases, the optimal frequencies trend to shift toward larger value. What stands out in the plot is that the experimental results shown as the hollow dots on the plot give the same tendency, although the simulation results are nearly half times smaller than the experimental one.
+If we now turn to the dependencies of the generated velocities on the applied voltage amplitude, shown in Fig.\ref{fig:potential}, we found that only the data subjected to the potential smaller than 4 volts that meets the experimental results in Stone's research\cite{Stone2004}. When the applied voltage amplitudes are beyond a boundary value, Stone observed a reversed fluid flow in the microfluidic channel, which is not shown in our prediction.
+
+Then, to more intuitively observe the fluid flow in the channel with respect to the number of the electrode pairs, we demonstrated a multi-physics field in COMSOL Multiphysics mentioned in the Simulation section. As shown in Fig.\ref{fig:COMSOL_simu}, the more electrode pairs, the larger maximum velocity on the electrode surface. Nevertheless, when the number of the electrode pairs and the channel length continuously increases up to a hundred pairs, the model was unable to calculate the correct streamline. Compared with the experimental results\cite{Stone2004}\cite{Ribetto2012}, where the number of the electrode pairs reaches to a hundred, the simulation result is several times smaller than them.
+\begin{figure}[htp]
+    \centering
+    \setlength{\abovecaptionskip}{-0.2cm}
+    \include{COMSOL_simu}
+    \caption{Simulated maximum velocity on the electrode surface with respect to the number of electrode pairs by COMSOL Multiphysics at 1.0 $\mathrm{V}$ in 0.01 $m$M KCl solution.}
+    \label{fig:COMSOL_simu}
+    \vspace{-0.2cm}
+\end{figure}
+Finally, we experimentally observed the fluid flow inside the microfluidic channel shown as Fig.\ref{fig:flow}. Although the channel was not fully filled with the solution, we could recognize the flow by the large amount of bubbles due to fluid flow when the signal was applied to the device. The direction of the flow was from the small electrode toward the large electrode, which is satisfied with others' prediction \cite{ramos2003}.
+
+Overall, these results suggest that our mathematical model implemented by MATLAB and COMSOL Multiphysics qualitatively predicted the dependencies of the generated velocities on the applied amplitudes and frequencies and the fluid flow above the electrodes. The prediction was later verified by the experimental observations.
+
+\begin{figure}[H]
+    	\centering
+    	\subfloat[The fluid in the channel is still when there was no input signal.]{\includegraphics[width=0.4\textwidth]{fluid.jpg}} %% \hspace{0.8in}  insert 0.4in space between two figures
+    	\\
+    	\subfloat[The fluid flowed quickly with an applied Sine signal with the amplitude of 3 volts and frequency of 1.5 kHz.]{\includegraphics[width=0.4\textwidth]{fluid_flow.jpg}}
+    	\\
+    	\subfloat[The fluid flowed quickly with an applied Sine signal with the amplitude of 3.9 volts and frequency of 1.5 kHz. The small electrodes were burned under this working condition with very little liquid inside the channel.]{\includegraphics[width=0.4\textwidth]{burned_electrode.jpg}}
+    	\caption{Screen shot of the asymmetric electrode pairs and the microfluidic channel half-filled with 0.01 $\mathrm{m}M$ KCl solution.}
+    	\label{fig:flow}
+\end{figure} %% one column-figure；multi column- figure*
+\newpage
+%===============================================================================
+\section{Discussion}
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[scale=0.7]{100pairs.png}
+    \caption{Streamline for the situation where a hundred electrode pairs are set up.}
+    \label{fig:100pairs}
+\end{figure*}
+In our theoretical model, the geometric and kinematic equations were two-dimensional, neglecting the thickness of the electrodes. In reality, the double-layer approximation could be quite complex instead of being simply linear, for it cannot be estimated as a fixed capacitor when there is a larger applied voltage (\textgreater 1 V \cite{Brown2000}). It may be compressed significantly. However, for simplification, we took a certain Debye length to describe the double layer in the COMSOL simulation. Moreover, in our model, we assumed that the concentration of the solution in the microfluidic channel was unchanged without additional input ions from the electrodes due to electrolysis or other reactions. 
+
+To be specific, the reduced analysis is easier, but the capacitance model is farther from its real electric properties. Besides, the real electric field lines are not semicircular, and we have to take their $y$ component into consideration. The precise model could be three-dimensional, directly derived from a set of basic fluid mechanics and electric equations with essential simplification:
+\begin{equation}
+    \left\{
+        \begin{aligned}%{l} array environment dfrac two lines will overlap; left & is for aligned
+            &\nabla^2\mathbf{\varphi}=-\dfrac{\rho_e}{\varepsilon},\\%\qquad\text{Poisson's equation for electrostatics}\\
+            &\nabla\cdot\mathbf{J}=-\dfrac{\partial\rho_e}{\partial t},\\%\qquad\text{Continuity equation for current density}\\
+            &\mathbf{J}=-\rho_n\mu\nabla\varphi-D\nabla\rho_e,\\
+            %\qquad\text{Total current density for carrier diffusion}
+            &\nabla\cdot\mathbf{u}=0,\\
+            &-\nabla p+\rho_e\nabla\varphi+\mu\nabla^2\mathbf{u}=0,\\
+            &\dfrac{\partial c}{\partial t}=\nabla\cdot(D\nabla c).
+        \end{aligned}
+    \right.
+\end{equation}
+
+The equations are Poisson's equation for electrostatics, continuity equation for current density, total current density for carrier diffusion, Navier-Stokes equations in non-inertial form for incompressible flow, and the convection-diffusion equation without sources or sinks of the variable of interest like chemical reactions and the coupled term $-\nabla\cdot(\mathbf{u}c)$, where $\rho_e=\rho_+-\rho_-$ and $\rho_n=\frac{\rho_++\rho_-}{2}$. Here, $\rho_+$ is the volume positive charge density and $\rho_-$ is the volume negative charge density. The boundary conditions are:
+\begin{equation}
+    \left\{
+        \begin{aligned}
+            &\varphi(y=0)=\frac{1}{2}V_0e^{i\omega t}\qquad\text{for }x\geq0,\\
+            &\varphi(y=0)=-\frac{1}{2}V_0e^{i\omega t}\qquad\text{for }x<0,\\
+            &\varphi(y\rightarrow\infty)\rightarrow0,\\
+            &\rho_e(y\rightarrow\infty)\rightarrow0,\\
+            &\rho_n(y\rightarrow\infty)\rightarrow\rho_{n0},\\
+            &c(y\rightarrow\infty)\rightarrow0,\\
+            &\dfrac{\partial c}{\partial y}\bigg|_{y=0}=0.
+        \end{aligned}
+    \right.
+\end{equation}
+Solving the simplified partial differential equations with more complex mathematical methods, a more precise result will be derived.
+
+Due to several approximate treatment, the prediction generated velocities done by MATLAB are a few times smaller than the experiment result obtained in others' researches. And the fluid flow with larger applied voltage amplitude (see Fig.\ref{fig:potential}) poorly predict the reversed situation. 
+
+Similarly, since the setting of the interfaces between the multi-physics fields was based on the mathematical model applied in MATLAB simulation, we found that when the applied voltage amplitude continuously increased, the corresponding velocity would rise to limitless value. Besides, for the Creeping flow field, we chose the $electroosmosis$ $velocity$ to describe the boundary condition between the electrode surface and the solution, but the given velocities were several times smaller than the real situations and this boundary condition would fail to predict the fluid flow when there were multiple electrode pairs (See Fig.\ref{fig:100pairs}). It means that we need to find a better finite element analysis method and the more precise boundary conditions.
+
+On the other hand, to predict the velocity of the chip swimming in the open water area, we did not do direct simulation on it but tried to moreover do an equivalent simulation. In FSI simulation, the loads on the front and the end of the chip was not purely uniform. In reality, the chip will float on the water, so the loads on the upper part of the chip immersed in water would be less than the loads on the lower part, while the thrust in relation to the magnitude of velocity on the upper part would be much greater than that on the lower part. An improvement could be made by doing direct simulation using moving meshes and defining free surface between the water and the air.
+
+For the experiment, we were in trouble when demoulding the PDMS from the SU-8 mould. At the first time, we made the SU-8 patterns on a glass wafer. After baking, the patterns were fully bonded to the PDMS. It should be noted that the SU-8 may have better adhesion to the silicon wafer than the glass wafer. Besides, it would be better if we divided the area first instead of tearing them at one time, since the adhesive force would pull the SU-8 up. The commonly-used solution is to do preliminary passivation treatment on the wafer using Chlorotrimethylsilane (TMCS) \cite{sun2016low}, but this reagent is highly toxic. We solved the problem of demoulding by ultrasonic cleaning of the wafer with the cleanser essence and deionized water 2-3 times before pouring the PDMS on it. Then let the PDMS dry at the room temperature for a day.
+
+Also, we were in jam when we tried to bond the microfluidic channel to the substrate. Due to the limitation of the space under the microscope, it was hard to align the channel with the electrodes array on the substrate, which resulted in a weak bond. Unfortunately, in the experiment, due to the weak bonding, the channel was pulled apart from the substrate by the inflow. In Fig.\ref{fig:flow}, we observed that the fluid was spread all over the surface between the PDMS and the substrate. Therefore, we needed a better operation table so as to bond two parts more quickly to avoid the lose efficacy of the plasma surface. Then, we could continue the measurement of pumping performance in a tightly closed channel. Moreover, from the experiment result, the electro-osmosis flow under high voltages and frequencies was too fast to capture its dynamic. In order to measure the speed of the fluid flow, it would be better to use a high-speed camera to capture the micro-sphere in the fluid flow. Also, we expected to observe a plug flow profile in the channel to verify our theory.
+
+At this stage, we are using wires and the huge signal generator to provide power to the microrobot. A preliminary point for further discussion is the integrated wireless power transfer (WPT) system. In our future plan, the device will be put in the open water area without wired outer power supply so that it can "swim" freely in the water. It will be integrated with a wireless power supply and corresponding control circuits. One solution is to integrate coils beside or under the electrodes shielded by a layer.
+
+%===============================================================================
+\section{Conclusion}
+The KCl solution has been pumped at a high speed across two arrays of electrodes successfully by applying the ACEO theory.
+
+A simple model has been presented and compared to the existed experimental results in other researches. This model was in qualitative agreement with the experimental observations. Also, we predicted the possibility of whether the pumping force generated by the ACEO pump can drive the microrobot forward, and expected that the microrobot might swim at a speed of 5.6 $\mu$m/s on the water. However, there are a number of approximations in the modeling process, which significantly effect the predictions of the model. In order to improve it, these approximations would need to be addressed. It would be necessary to include a non-linear description of the electrical double layer under a higher applied voltage, so as to better predict the compression of it, allowing its capacitance to vary with the instantaneous potential across it\cite{Brown2000}. Besides, the variation in the solution concentration would need to be modeled as well as the descriptions of the electric field lines, the current flow and the power consumption in the system. Finally, a better hydrodynamic model of the creeping flow in COMSOL simulation would have to be generated with more precise boundary conditions. It should be noted that, in the experiment, we observed the electrolysis of the electrodes, so that we would need to consider the charge injection at the electrodes in our model. 
+
+In this research, we see a great potential of the ACEO pump, since it needs a relatively simple fabrication techniques, less post-processing, and requires only sever electrical connections to drive it. It can work under a low AC voltage which can be easily generated and work in a complex chemical environment. What's more, it was capable to integrated with other CMOS circuits. From the simulation model and other researches, there exists a set of optimal size of the electrodes to give a relatively high propulsion speed which is subjected to the applied voltages and frequencies. Hence this pumping technique is applicable to fluid control on semiconductor devices. The next stage of the research is to find the best settings and realize the wireless power transmission integration.
+
+Eventually, our goal is to create IC chips or the silicon-based life-form that we can toss directly into the ocean or water areas and program their motion collectively to executes tasks assigned by users. 
+%===============================================================================
+\bibliographystyle{IEEEtran}
+\bibliography{reference} 
+\onecolumn
+%===============================================================================
+\appendices
+\section{MATLAB scripts}
+We simulated the dependencies of the generated velocity on the applied AC frequency, the voltage amplitude and the concentration of the electrolyte. The present scripts follow Ribetto's work\cite{Ribetto2012}, which computes the average velocity generated on the electrode surface according to the theory presented by Brown\textit{et~al.} \cite{Brown2000}.
+
+%===============================================================================
+\subsection{Velocities vs. Frequencies and Dimensions}
+\lstinputlisting[
+label=1:test1,
+caption=v\_f\_dimension\_test1.m.
+]{v_f_dimension_test1.m}
+
+\lstinputlisting[
+label=2:test2,
+caption=v\_f\_dimension\_test2.m.
+]{v_f_dimension_test2.m}
+
+\subsection{Velocities vs. Frequencies and Concentration}
+\lstinputlisting[
+label=3:concentration,
+caption=v\_f\_concentration.m
+]{v_f_concentration.m}
+
+\subsection{Velocities vs. Frequencies and Potential}
+\lstinputlisting[
+label=4:potential,
+caption=v\_potential\_f.m
+]{v_potential_f.m}
+
+%===============================================================================
+\section{Experimental Procedure}
+%-------------------------------------------------------------------------------
+\subsection{Electrodes Loop Design}
+The asymmetric electrodes arrays loop for pumping is shown in Figure~\ref{f:klayout}.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{klayout_design.pdf}
+\caption{\label{f:klayout}A overview of the asymmetric electrodes arrays loop. The blue pattern represent the microfludic channel and the purple patterns represent the electrodes. The total length is 1.895 cm, and the total width is 0.64 cm.}
+\end{center}
+\end{figure}
+\par The microfluidic channel is 20 \textmu m depth and 100 \textmu m width in our design. The loop is composed of four groups of the electrodes array each of which has 100 pairs of asymmetric electrodes, and a microfluidic channel. Each pair of asymmetric electrodes is subjected to an ac potential difference. The four patterns of electrode are shown in Table~\ref{t:pattern}.
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llllll} 
+\toprule
+\textbf{Pattern} & \textbf{\textit{L}(\textmu m)} & \textbf{\textit{S}(\textmu m)} & \textbf{\textit{G}(\textmu m)} & \textbf{\textit{G1}(\textmu m)} & \textbf{Number of Pairs}  \\ 
+\hline
+Design 1         & 25                  & 5                   & 5                   & 15                   & 100                       \\
+Design 2         & 20                  & 5                   & 5                   & 15                   & 100                       \\
+Design 3         & 15                  & 5                   & 5                   & 15                   & 100                       \\
+Design 4         & 10                  & 6                   & 4                   & 10                   & 100                       \\ 
+\hline
+Electrode length \textbf{(\textmu m)} & 320                 &                     &                     &                      &                           \\
+\bottomrule
+\end{tabular}
+\caption{\label{t:pattern}Four patterns of electrodes size used in the loop.}
+\end{table}
+\subsection{Electrodes fabrication}
+Electrode arrays were fabricated on a high-temperature-resistance-glass substrate of dimensions 30 x 30 mm. The electrodes patterns were transferred from the mask to the substrate by standard photo-lithography. A 5 nm thick layer of chrome followed by a 40 nm thick layer of gold (Au) were deposited by deposition on the top of the photo-resist patterns. The photo-resist pattern was then transferred in metal by lift-off.
+\begin{enumerate}
+    \item Pretreatment of the substrate\\
+    The four glass substrates were cleaned with acetone,  isopropanol alcohol (IPA), and deionized water for 10 minutes respectively in the ultrasonic cleaning machine. Then they were dried by the air gun.
+    \begin{figure}[H]
+    	\centering
+    	\subfloat[The power panel.]{\includegraphics[width=0.3\textwidth]{EM_power_panel.jpg}}\hspace{0.4in}
+    	\subfloat[The control panel.]{\includegraphics[width=0.365\textwidth]{EM_control_panel.jpg}}
+    	\caption{The etching machine's power panel of after starting up and its control panel fixing the mask.}
+    	\label{fig:etching_machine}
+    \end{figure}
+    \item Lithography\\
+    We used the negative photoresist, NR9, for the photoetching.
+        \begin{enumerate}
+            \item Spinning coating\\
+                The substrate was sucked in the middle of the spin coater and the speed was set to 1000 rpm for 3 s, 2000 rpm for 5 s, and 4000 rpm for 40 s. After being evenly covered by the photoresist, the spin coater would spin for 40s to make the resist uniformly attached to the substrate.
+            \item Soft-bake\\
+                Before photoetching, in order to remove the water in the resist and strengthen adhesion of the resist, we baked the substrate at 140$^{\circ}$C for 1 min. Then, let the substrate cool to the room temperature on the operation table.
+            \item Photoetching\\
+                Boot the lithography machine until the current reaches 10 A or higher. During the process, the current decays to around 4 A. To ensure the resolution of the pattern and avoid scattering of the UV light, the substrate and the mask were aligned and attached tightly together. If not, the patterns would be totally blurry (see Figure~\ref{blurry}). The exposure lasted 14s.
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.5\linewidth]{EM_camera.jpg}
+                \caption{Aligning the mask and the substrate using the camera of the etching machine.}
+                \label{fig:EM_camera}
+            \end{figure}
+            \item Post-bake\\
+                After exposure, the substrate was put on the hot plate to be baked at 110$^{\circ}$C for 1 min, so as to reduce the standing wave effect and make the chemical reaction more sufficient. Then, let the substrate cool to the room temperature on the operation table.
+            \item Develop\\
+                When the substrate was cool to the room temperature, carefully picked it up and made it immersed into the developer. Gently shook the tweezers in the developer for 8 to 10s, put it immediately into a beaker with deionized water and cleaned it for about 20s. Use the air gun to make it dry.  
+            \item Observe\\
+                We checked whether the electrodes patterns on the substrate had short circuit under a microscope. If it reached our expectation, it was prepared for the next step of deposition.
+                In Figure~\ref{good figure}, Fig.(a) is short-circuited due to the bias of the UV light, while Fig.(b) is the expected pattern.
+        \end{enumerate}
+        
+    \begin{figure}[H]
+    	\centering
+    	\subfloat[]{\includegraphics[width=0.3\textwidth]{blurry pattern1.pdf}}\hspace{0.4in} %% \hspace{0.8in}  insert 0.4in space between two figures
+    	\subfloat[]{\includegraphics[width=0.3\textwidth]{blurry pattern2.pdf}}
+    	\caption{Blurry photoetching patterns of the asymmetric electrodes pairs under the microscope.}
+    	\label{blurry}
+    \end{figure} %% one column-figure；multi column- figure*
+    \begin{figure}[H]
+    	\centering
+    	\subfloat[Short circuit pattern.]{\includegraphics[width=0.3\textwidth]{short cut.pdf}}\hspace{0.4in} %% \hspace{0.8in}  insert 0.4in space between two figures
+    	\subfloat[Perfect pattern.]{\includegraphics[width=0.3\textwidth]{good pattern.pdf}}
+    	\caption{Different results of the photoetching.}
+    	\label{good figure}
+    \end{figure} %% one column-figure；multi column- figure*
+    
+    \item Deposition and Lift-off
+    \\
+        \begin{enumerate}
+            \item Check and open the nitrogen container.
+            \item Open the cold water circulator and wait for 180 s.
+            \item Switch the mode to "front". Pull the “EMERGENCY STOP” button out. The red pilot lamp is then off. Turn on the pump for 5 s and turn off.
+            \item Slightly open the buckle of the door of the cabin and wait for vacuum relieving, because the high speed gas stream at the moment the door opens is dangerous. After the inner pressure is high enough, the door will automatically open.
+            \item After the door of the cabin opens, take out the sample plate and put it on the a clean paper on the desk. Then, label the sample. Use air blower to clean the inner cavity of the cabin.
+            \item Fix the metal boats on their corresponding locations. Conventionally, the pocket 1 is for the gold boat and the pocket 3 is for the aluminium boat. Add appropriate amount of plating material. Do not change the convention, otherwise the metal will not be pure.
+            \item Put the sample in the cabin.
+            \item Use a multimeter to examine whether there is a short circuit between the electrode and the inner metal shell of the cabin for each of the pockets at the corresponding places.
+            \item If there are not any short circuits, close the door of the cabin and quickly press the buckle from top to bottom.
+            
+            \begin{figure}[H]
+            	\centering
+            	\subfloat[Control panel.]{\includegraphics[width=0.44\textwidth]{control_panel.jpg}}\hspace{0.4in}
+            	\subfloat[Deposition.]{\includegraphics[width=0.25\textwidth]{deposit.jpg}}
+            	\caption{The control panel of the deposition machine when depositing chromium. The deposit rate is $0.09\,\mathrm{\AA/s}$ and the thickness of the chromium is $0.020\,\mathrm{k\AA}$.}
+                \label{fig:control_panel}
+            \end{figure}
+            
+            \item Switch the mode to "remote". Turn on the pump. Wait until the frequency of the molecular pump reaches "normal" as shown in the control panel.
+            \item When the vacuum degree inside the cabin reaches $5\times10^{-6}$ Torr (the vacuumization requires approximately 2 hours), select and start the program for plating aluminium or chromium. For plating gold, for the sake of conservation, the pressure should be less than $5\times10^{-6}$ Torr. Switch the mode to "manual", slowly rotate the knob to adjust frequency so that the deposit rate stabilize at around $0.10\,\mathrm{\AA/s}$.
+            \item After the deposit process finishes, wait for 15 minutes and close the pump. Still, slightly open the buckle of the door of the cabin and wait for vacuum relieving.
+            \item Take off the sample board, take off the sample and put back the sample board. Clean the inner cavity of the cabin.
+            \item Close the door of the cabin, switch the mode back to "front", and close the pump when the inner pressure drops to $10^{-2}$ Torr.
+            \item Close the cold water circulator. Close the high-purity nitrogen gas (99.9999\%) and ordinary nitrogen gas (99.99\%).
+            \item Lift-off\\
+                Use clean adequate acetone to soak the substrate for 12 hours and then wash off the metal with a dropper carefully.
+        \end{enumerate}
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \subfloat[After deposition.]{\includegraphics[width=0.245\textwidth]{gold_board_1.jpg}}
+    \hspace{0.2in}
+	\subfloat[Lift-off.]{\includegraphics[width=0.25\textwidth]{gold_board_2.jpg}}
+	\hspace{0.2in}
+	%\\
+	\subfloat[After lift-off.]{\includegraphics[width=0.25\textwidth]{lift_off.jpg}}
+    \caption{The electrode plate after deposition.}
+    \label{fig:gold_board}
+\end{figure}
+\end{document}
+

@@ -1,0 +1,78 @@
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+      % Define coordinates
+      % \def\Radius{2}
+      \path
+        (0, 0) coordinate (S0)
+        (6, 0) coordinate (L0)
+        % -- coordinate (M)
+        % (M) +(60:\Radius) coordinate (C)
+        % +(120:\Radius) coordinate (D)
+        (0.1, 0) coordinate (S1)
+        (5, 0) coordinate (L1)
+        (0.2, 0) coordinate (S2)
+        (4, 0) coordinate (L2)
+        (0.3, 0) coordinate (S3)
+        (3, 0) coordinate (L3)
+        (0.4, 0) coordinate (S4)
+        (2, 0) coordinate (L4)
+        (0.5, 0) coordinate (S5)
+        (1, 0) coordinate (L5)
+        % (0.75, 0) coordinate (SC)
+      ;
+      % Draw electric field lines
+      \draw
+        (L0) arc(0:180:3)
+        (L1) arc(0:180:2.45)
+        (L2) arc(0:180:1.9)
+        (L3) arc(0:180:1.35)
+        (L4) arc(0:180:0.8)
+        (L5) arc(0:180:0.25)
+      ;
+      % Draw axes
+      \draw [-Stealth] (-1, -0.1) -- (7, -0.1);
+      \draw [-Stealth] (0.5+1/22, -0.1) -- (0.5+1/22,4);
+      % Draw reference lines
+      \draw [dashed] (0, 0) -- (0, -0.5);
+      \draw [dashed] (0.5, 0) -- (0.5, -0.5);
+      \draw [dashed] (1, 0) -- (1, -1);
+      \draw [dashed] (6, 0) -- (6, -1);
+      \draw [-Latex] (-0.5, -0.5) -- (0.25, -0.1);
+      \draw [-Latex] (-0.5, 0.15) -- (0, -0.05);
+      \draw [-Latex] (-0.5, 0.5) -- (0, 0.05);
+      \draw [-Latex] (5.12132, 2.12132) -- (5.5, 2.5);
+      % Draw electrodes
+      \fill[color=Au] (S0) rectangle (0.5, -0.08);
+      \fill[color=Cr] (0, -0.08) rectangle (0.5, -0.1);
+      \fill[color=Au] (L5) rectangle (6, -0.08);
+      \fill[color=Cr] (1, -0.08) rectangle (6, -0.1);
+      % Draw double layers
+      \fill[color=Snow4] (0, 0) rectangle (0.5, 0.1);
+      \fill[color=Snow4] (1, 0) rectangle (6, 0.1);
+      % Draw bulk water
+      \fill[color=Aquamarine3, semitransparent] (-0.5, 0.1) rectangle (6.5, 3.5);
+      \fill[color=Aquamarine3, semitransparent] (-0.5, 0.1) rectangle (0, -0.1);
+      \fill[color=Aquamarine3, semitransparent] (0.5, 0.1) rectangle (1, -0.1);
+      \fill[color=Aquamarine3, semitransparent] (6, 0.1) rectangle (6.5, -0.1);
+      % Draw glass substrate
+      \fill[color=Glass, semitransparent] (-0.5, -0.1) rectangle (6.5, -1.5);
+      % Annotations of coordinates
+      \path[inner sep=0pt]
+        (S0) node[below=1.5em] {\tiny{$\frac{x_2}{\sqrt{k}}$}}
+        (L0) node[below=2.5em] {\tiny{$x_2\sqrt{k}$}}
+        (S5) node[below=1.5em] {\tiny{$\frac{x_1}{\sqrt{k}}$}}
+        (L5) node[below=2.5em] {\tiny{$x_1\sqrt{k}$}}
+        % (C) node[above right=.2em] {$C$}
+        % (D) node[above left=.2em] {$D$}
+        (-0.5, -0.5) node[left] {\tiny{$-\frac{1}{2}V_0e^{i\omega t}$}}
+        (3.5, 0) node[below=0.5em] {\tiny{$+\frac{1}{2}V_0e^{i\omega t}$}}
+        (7, 0) node[above=0.5em] {$x$}
+        (0.5+1/22,4) node[right=0.5em] {$y$}
+        (0.5, 3.25) node[right=0.5em] {Bulk water}
+        (3.5, 0) node[below=2.5em] {Glass substrate}
+        (-0.5, 0.15) node[left] {\tiny{Au-Ge electrode}}
+        (-0.5, 0.5) node[left] {\tiny{Double layer}}
+        (5.5, 2.7) node[above right] {\tiny{Electric}}
+        (5.5, 2.5) node[above right] {\tiny{field line}}
+        (0.6, 0) node[below=0.5em] {\footnotesize{0}}
+      ;
+    \end{tikzpicture}

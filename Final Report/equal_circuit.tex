@@ -1,0 +1,19 @@
+\begin{tikzpicture}[circuit ee IEC,x=6cm,y=1cm,semithick,
+                    every info/.style={font=\tiny},
+                    small circuit symbols,
+                    set resistor graphic=var resistor IEC graphic,
+                    % set capacitor graphic=var capacitor IEC graphic,
+                    set make contact graphic= var make contact IEC graphic]
+        % Let us start with some contacts:
+        \foreach \contact/\y in {1/1,2/2}
+        {
+            \node [contact] (left contact \contact) at (0,\y) {};
+            \node [contact] (right contact \contact) at (1,\y) {};
+        }
+        \draw (left contact 1) -- (left contact 2);
+        \draw (right contact 1) -- (right contact 2);
+        \draw (left contact 1) to ++(down:1) to [ac source={info=$V_0e^{i\omega t}$}] ++(right:1) to (right contact 1);
+        \draw (left contact 1) to [capacitor={near start, info={$C_{DS}(x_1)$}},resistor={info={$R(x_1)$}},capacitor={near end, info={$C_{DL}(x_1)$}}] (right contact 1);
+        \draw (left contact 2) to [capacitor={near start, info={$C_{DS}(x_1+\Delta x)$}},resistor={info={$R(x_1+\Delta x)$}},capacitor={near end, info={$C_{DL}(x_1+\Delta x)$}}] (right contact 2);
+        \draw (left contact 2) to ++(up:2) to [capacitor={near start, info={$C_{DS}(x_2)$}},resistor={info={$R(x_2)$},label={[label distance=0.75cm]south:\dots}},capacitor={near end, info={$C_{DL}(x_2)$}}] ++(right:1) to (right contact 2);
+    \end{tikzpicture}

@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+        \fill[color=Au] (0, 1.2) rectangle (5, 2);
+        \foreach \n in {0.25,0.75,...,4.75} {
+            \pic at (\n, 1.8) {negativecharge};
+        }
+        \foreach \p in {0.5,1.3,2.1,2.9,3.7,4.5} {  % Strangely, using {0.5,1.3,...,4.5} will not show the last node
+            \pic at (\p, 2.2) {positivecharge};
+        }
+        \draw [dashed] (0, 2.45) -- (5, 2.45);
+        \pic at (4, 3) {positivecharge};
+        \pic at (1, 3.25) {positivecharge};
+        \pic at (2.5, 3.75) {negativecharge};
+        \pic at (4.25, 4) {positivecharge};
+        \pic at (2.75, 4.5) {positivecharge};
+        \pic at (0.5, 5) {negativecharge};
+        \pic at (2.25, 5.25) {positivecharge};
+        \pic at (3.5, 5.5) {negativecharge};
+        % \pic at (1.5, 6) {negativecharge};
+        % \pic at (4.25, 7) {negativecharge};
+        % \pic at (2.25, 6.75) {positivecharge};
+        \draw (5, 2) -- (5.5, 2);
+        \draw (5, 2.45) -- (5.5, 2.45);
+        \draw [Latex-Latex] (5.25, 2) -- (5.25, 2.45);
+        \node (a) at (6.25, 2.2) {Stern layer};
+        % \draw (5, 7.2) -- (5.5, 7.2);
+        % \draw [Latex-Latex] (5.25, 2.45) -- (5.25, 7.2);
+        \draw [Latex-] (5.25, 2.45) -- (5.25, 5.7);
+        % \node (b) at (6.25, 4.825) {Diffuse layer};
+        \node (b) at (6.25, 4.075) {Diffuse layer};
+    \end{tikzpicture}

@@ -1,0 +1,54 @@
+\begin{figure*}[htpb]
+    \centering
+    \begin{tikzpicture}[
+    level 1/.style={sibling distance = 40mm, level distance=25mm},
+    edge from parent/.style = {black,thick, draw},
+    edge from parent path = {(\tikzparentnode.south) -- (\tikzchildnode.north)} >=latex,node distance = 1.2cm, edge from parent fork down
+    ]
+% root of the the initial tree, level 1
+    \node[root] {Required properties of Microrobots in the ocean}
+% The first level, as children of the initial tree
+    child {node[level-2] (c1) {Low working voltages and low power consumption}}
+    child {node[level-2] (c2) {Ability to integrated with CMOS circuits}}
+    child {node[level-2] (c3) {Ability to provide a high and stable speed}}
+    child {node[level-2] (c4) {Wireless power transmission}};
+
+% The second level, relatively positioned nodes
+    \begin{scope}[every node/.style={level-3}, node distance = 16mm]
+    \node [below of = c1] (c11) {ACEO Pump};
+    \node [below of = c11] (c12) {SEAs microrobot};
+    \node [below of = c12] (c13) {Magnetic controlled microrobot};
+
+    \node [below of = c2] (c21) {ACEO Pump};
+    \node [below of = c21] (c22) {SEAs microrobot};
+
+    \node [below of = c3] (c31) {ACEO Pump};
+    \node [below of = c31] (c32) {Other pumping approaches};
+
+    \node [below of = c4] (c41) {ACEO Pump};
+    \node [below of = c41] (c42) {SEAs microrobot};
+    \node [below of = c42,text width=9.5em] (c43) {Laser/solar/magnetic driven microrobot};
+    
+    \end{scope}
+
+% lines from each level 1 node to every one of its "children"
+    
+    \draw[very thick] (c1.south) -- (c11.north);
+    \draw[very thick] (c11.south) -- (c12.north);
+    \draw[very thick] (c12.south) -- (c13.north);
+    
+    \draw[very thick] (c2.south) -- (c21.north);
+    \draw[very thick] (c21.south) -- (c22.north);
+  
+    \draw[very thick] (c3.south) -- (c31.north);
+    \draw[very thick] (c31.south) -- (c32.north);
+        
+    \draw[very thick] (c4.south) -- (c41.north);
+    \draw[very thick] (c41.south) -- (c42.north);
+    \draw[very thick] (c42.south) -- (c43.north);
+        
+    \end{tikzpicture}
+    \vspace*{3mm}
+    \caption{Tree structure of the expected properties for microrobots in the ocean. Level 1 contains several basic properties, and the children refer to corresponding techniques that reach the expectations.}
+    \label{Comparison}
+\end{figure*}

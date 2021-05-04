@@ -1,0 +1,31 @@
+\begin{figure}[htp]
+    \centering
+
+    \begin{tikzpicture}[baseline=(current bounding box.north)]
+    \fill[color={Au}] (-0.5, 0) rectangle (0, 0.1);
+    \fill[color={Au}] (0.5, 0) rectangle (2.5, 0.1);
+    \fill[color={Au}] (4, 0) rectangle (4.5, 0.1);
+    \fill[color={Au}] (5, 0) rectangle (7, 0.1);
+    %axe
+    \draw [->] (-1,0) -- (7.5,0) node[above=0.5em] {$x$};
+    %line
+    \draw [thick,>=latex,<->] (-0.5,-0.5) -- (0,-0.5);
+    \draw [thick,>=latex,<->] (0,-0.5) -- (0.5,-0.5);
+    \draw [thick,>=latex,<->] (0.5,-0.5) -- (2.5,-0.5);
+    \draw [thick,>=latex,<->] (2.5,-0.5) -- (4,-0.5);
+    
+    \draw [dashed] (-0.5, 0) -- (-0.5, -0.5);
+    \draw [dashed] (0, 0) -- (0, -0.5);
+    \draw [dashed] (0.5, 0) -- (0.5, -0.5);
+    \draw [dashed] (2.5, 0) -- (2.5, -0.5);
+    \draw [dashed] (4, 0) -- (4, -0.5);
+    %label
+    \path[inner sep=0pt]
+        (-0.25, 0) node[below=2em] {$S$}
+        (0.25, 0) node[below=2em] {$G$}
+        (1.5, 0) node[below=2em] {$L$}
+        (3.25, 0) node[below=2em] {$G_{1}$};
+    \end{tikzpicture}
+    \caption{Coordinate system used for the computation of the average velocity.}
+    \label{simplified}
+\end{figure}
