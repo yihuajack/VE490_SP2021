@@ -20,6 +20,6 @@ Techniques:
 
 Result:
 
-![Result](./Final Report/fluid_flow.jpg)
+![Result](https://github.com/yihuajack/VE490_SP2021/blob/main/Final%20Report/fluid_flow.jpg)
 
 See the final report for details.
