@@ -20,6 +20,6 @@ Techniques:
 
 Result:
 
-![](Final Report/fluid_flow.jpg)
+![Result](./Final Report/fluid_flow.jpg)
 
 See the final report for details.
