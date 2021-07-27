@@ -2,13 +2,15 @@
 
 Field: Design, simulation, and fabrication of microfludic chip and channel
 
-Course: VE490
+Course: VE490, Undergraduate Research
 
 Term: Spring 2021
 
-Instructor: Prof. Xuyang Lu
+Instructor: [Prof. Xuyang Lu](https://sites.ji.sjtu.edu.cn/xuyang-lu/)
 
 Students: [Kexin Li](https://github.com/Salt-ops), [Yihua Liu](https://github.com/yihuajack)
+
+Laboratory: [Laboratory of Ultrafast Integrated Systems (LUIS)](https://sites.ji.sjtu.edu.cn/xuyang-lu/) at the University of Michigan – Shanghai Jiao Tong University Joint Institute
 
 Techniques:
 
